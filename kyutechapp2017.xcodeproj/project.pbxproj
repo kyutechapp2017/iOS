@@ -14,6 +14,9 @@
 		20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D521E546AD600D36C38 /* LaunchScreen.storyboard */; };
 		20BF1D5F1E546AD600D36C38 /* kyutechapp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D5E1E546AD600D36C38 /* kyutechapp2017Tests.swift */; };
 		20BF1D6A1E546AD600D36C38 /* kyutechapp2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D691E546AD600D36C38 /* kyutechapp2017UITests.swift */; };
+		20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
+		20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
+		20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		20BF1D651E546AD600D36C38 /* kyutechapp2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kyutechapp2017UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF1D691E546AD600D36C38 /* kyutechapp2017UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kyutechapp2017UITests.swift; sourceTree = "<group>"; };
 		20BF1D6B1E546AD600D36C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BulletinBoard.storyboard; sourceTree = "<group>"; };
+		20BF1D981E54795E00D36C38 /* Timetable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
+		20BF1D9A1E54798900D36C38 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,9 @@
 		20BF1D481E546AD600D36C38 /* kyutechapp2017 */ = {
 			isa = PBXGroup;
 			children = (
-				20BF1D491E546AD600D36C38 /* AppDelegate.swift */,
-				20BF1D4B1E546AD600D36C38 /* ViewController.swift */,
-				20BF1D4D1E546AD600D36C38 /* Main.storyboard */,
-				20BF1D501E546AD600D36C38 /* Assets.xcassets */,
-				20BF1D521E546AD600D36C38 /* LaunchScreen.storyboard */,
-				20BF1D551E546AD600D36C38 /* Info.plist */,
+				20BF1D771E546ADE00D36C38 /* Classes */,
+				20BF1D791E546AF400D36C38 /* Resources */,
+				20BF1D811E546B6400D36C38 /* Supporting Files */,
 			);
 			path = kyutechapp2017;
 			sourceTree = "<group>";
@@ -123,6 +126,244 @@
 				20BF1D6B1E546AD600D36C38 /* Info.plist */,
 			);
 			path = kyutechapp2017UITests;
+			sourceTree = "<group>";
+		};
+		20BF1D771E546ADE00D36C38 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D491E546AD600D36C38 /* AppDelegate.swift */,
+				20BF1D7B1E546B1A00D36C38 /* Utility */,
+				20BF1D7C1E546B2400D36C38 /* Config */,
+				20BF1D7D1E546B3D00D36C38 /* Model */,
+				20BF1D7F1E546B4900D36C38 /* View */,
+				20BF1D801E546B4E00D36C38 /* Controller */,
+				20BF1D821E546BB200D36C38 /* Layout */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		20BF1D791E546AF400D36C38 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D501E546AD600D36C38 /* Assets.xcassets */,
+				20BF1D7A1E546B0800D36C38 /* font */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20BF1D7A1E546B0800D36C38 /* font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = font;
+			sourceTree = "<group>";
+		};
+		20BF1D7B1E546B1A00D36C38 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		20BF1D7C1E546B2400D36C38 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D931E546CE700D36C38 /* BulletinBoard */,
+				20BF1D941E546CF200D36C38 /* Timetable */,
+				20BF1D951E546CFA00D36C38 /* Setting */,
+				20BF1D551E546AD600D36C38 /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		20BF1D7D1E546B3D00D36C38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D8D1E546C9A00D36C38 /* BulletinBoard */,
+				20BF1D8E1E546CA700D36C38 /* Timetable */,
+				20BF1D8F1E546CB100D36C38 /* Setting */,
+				20BF1D7E1E546B4200D36C38 /* Entity */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		20BF1D7E1E546B4200D36C38 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D901E546CBB00D36C38 /* BulletinBoard */,
+				20BF1D911E546CC400D36C38 /* Timetable */,
+				20BF1D921E546CCC00D36C38 /* Setting */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		20BF1D7F1E546B4900D36C38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D8A1E546C6C00D36C38 /* BulletinBoard */,
+				20BF1D8B1E546C7400D36C38 /* Timetable */,
+				20BF1D8C1E546C7D00D36C38 /* Setting */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		20BF1D801E546B4E00D36C38 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D871E546C4700D36C38 /* BulletinBoard */,
+				20BF1D881E546C5300D36C38 /* Timetable */,
+				20BF1D891E546C5E00D36C38 /* Setting */,
+				20BF1D4B1E546AD600D36C38 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		20BF1D811E546B6400D36C38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20BF1D821E546BB200D36C38 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D521E546AD600D36C38 /* LaunchScreen.storyboard */,
+				20BF1D4D1E546AD600D36C38 /* Main.storyboard */,
+				20BF1D841E546C1300D36C38 /* BulletinBoard */,
+				20BF1D851E546C2800D36C38 /* Timetable */,
+				20BF1D861E546C3900D36C38 /* Setting */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		20BF1D841E546C1300D36C38 /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */,
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		20BF1D851E546C2800D36C38 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D981E54795E00D36C38 /* Timetable.storyboard */,
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		20BF1D861E546C3900D36C38 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D9A1E54798900D36C38 /* Setting.storyboard */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		20BF1D871E546C4700D36C38 /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		20BF1D881E546C5300D36C38 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		20BF1D891E546C5E00D36C38 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		20BF1D8A1E546C6C00D36C38 /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		20BF1D8B1E546C7400D36C38 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		20BF1D8C1E546C7D00D36C38 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		20BF1D8D1E546C9A00D36C38 /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		20BF1D8E1E546CA700D36C38 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		20BF1D8F1E546CB100D36C38 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		20BF1D901E546CBB00D36C38 /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		20BF1D911E546CC400D36C38 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		20BF1D921E546CCC00D36C38 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		20BF1D931E546CE700D36C38 /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		20BF1D941E546CF200D36C38 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		20BF1D951E546CFA00D36C38 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +475,10 @@
 			files = (
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
 				20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */,
+				20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */,
+				20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */,
 				20BF1D4F1E546AD600D36C38 /* Main.storyboard in Resources */,
+				20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
