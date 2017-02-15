@@ -17,6 +17,9 @@
 		20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
 		20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
+		2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
+		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
+		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C274BEE76854B0948CC3B92 /* Pods-kyutechapp2017Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3E9EE4B8F3545C40B579DF /* Pods-kyutechapp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
 		20BF1D461E546AD600D36C38 /* kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyutechapp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF1D491E546AD600D36C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BF1D4B1E546AD600D36C38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,12 @@
 		20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BulletinBoard.storyboard; sourceTree = "<group>"; };
 		20BF1D981E54795E00D36C38 /* Timetable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		20BF1D9A1E54798900D36C38 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D28811FF21FCEE4AA80B819 /* Pods-kyutechapp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.debug.xcconfig"; sourceTree = "<group>"; };
+		491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A823575E550BFC38C3114FA /* Pods-kyutechapp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB34C82910D9749BC69E4D27 /* Pods-kyutechapp2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,8 @@
 				20BF1D5D1E546AD600D36C38 /* kyutechapp2017Tests */,
 				20BF1D681E546AD600D36C38 /* kyutechapp2017UITests */,
 				20BF1D471E546AD600D36C38 /* Products */,
+				DE4421695142AF42372EBCEB /* Pods */,
+				A16C10464AB2B03AC166D049 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -366,6 +383,29 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		A16C10464AB2B03AC166D049 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */,
+				1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */,
+				491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE4421695142AF42372EBCEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D28811FF21FCEE4AA80B819 /* Pods-kyutechapp2017.debug.xcconfig */,
+				FB34C82910D9749BC69E4D27 /* Pods-kyutechapp2017.release.xcconfig */,
+				862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */,
+				0C274BEE76854B0948CC3B92 /* Pods-kyutechapp2017Tests.release.xcconfig */,
+				6A823575E550BFC38C3114FA /* Pods-kyutechapp2017UITests.debug.xcconfig */,
+				1D3E9EE4B8F3545C40B579DF /* Pods-kyutechapp2017UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -373,9 +413,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20BF1D6E1E546AD600D36C38 /* Build configuration list for PBXNativeTarget "kyutechapp2017" */;
 			buildPhases = (
+				59DC80C4F009DFAD65474603 /* [CP] Check Pods Manifest.lock */,
 				20BF1D421E546AD600D36C38 /* Sources */,
 				20BF1D431E546AD600D36C38 /* Frameworks */,
 				20BF1D441E546AD600D36C38 /* Resources */,
+				9A3D6DF5438ED1B9DCD30ABE /* [CP] Embed Pods Frameworks */,
+				07865233890AEC2C850F07A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,9 +433,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20BF1D711E546AD600D36C38 /* Build configuration list for PBXNativeTarget "kyutechapp2017Tests" */;
 			buildPhases = (
+				930ECBFC8BD91DC66B1E2AF8 /* [CP] Check Pods Manifest.lock */,
 				20BF1D561E546AD600D36C38 /* Sources */,
 				20BF1D571E546AD600D36C38 /* Frameworks */,
 				20BF1D581E546AD600D36C38 /* Resources */,
+				122C4E50F4104E9B90FFD700 /* [CP] Embed Pods Frameworks */,
+				85E347D637DA849A5550D12D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,9 +454,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20BF1D741E546AD600D36C38 /* Build configuration list for PBXNativeTarget "kyutechapp2017UITests" */;
 			buildPhases = (
+				C9B8A8625C82885FBB54849B /* [CP] Check Pods Manifest.lock */,
 				20BF1D611E546AD600D36C38 /* Sources */,
 				20BF1D621E546AD600D36C38 /* Frameworks */,
 				20BF1D631E546AD600D36C38 /* Resources */,
+				41312301EE154ED552ACA3D4 /* [CP] Embed Pods Frameworks */,
+				82DA456AE5A0B9A1334142EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -497,6 +546,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07865233890AEC2C850F07A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		122C4E50F4104E9B90FFD700 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41312301EE154ED552ACA3D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59DC80C4F009DFAD65474603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82DA456AE5A0B9A1334142EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85E347D637DA849A5550D12D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		930ECBFC8BD91DC66B1E2AF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A3D6DF5438ED1B9DCD30ABE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9B8A8625C82885FBB54849B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20BF1D421E546AD600D36C38 /* Sources */ = {
@@ -654,6 +841,7 @@
 		};
 		20BF1D6F1E546AD600D36C38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D28811FF21FCEE4AA80B819 /* Pods-kyutechapp2017.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
@@ -666,6 +854,7 @@
 		};
 		20BF1D701E546AD600D36C38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB34C82910D9749BC69E4D27 /* Pods-kyutechapp2017.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
@@ -678,6 +867,7 @@
 		};
 		20BF1D721E546AD600D36C38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -692,6 +882,7 @@
 		};
 		20BF1D731E546AD600D36C38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C274BEE76854B0948CC3B92 /* Pods-kyutechapp2017Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -706,6 +897,7 @@
 		};
 		20BF1D751E546AD600D36C38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A823575E550BFC38C3114FA /* Pods-kyutechapp2017UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kyutechapp2017UITests/Info.plist;
@@ -719,6 +911,7 @@
 		};
 		20BF1D761E546AD600D36C38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D3E9EE4B8F3545C40B579DF /* Pods-kyutechapp2017UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kyutechapp2017UITests/Info.plist;
