@@ -1,14 +1,14 @@
 //
-//  DayOfWeek.swift
+//  PeriodOfTime.swift
 //  kyutechapp2017
 //
-//  Created by 塩田宰 on 2017/02/17.
+//  Created by 塩田宰 on 2017/02/18.
 //  Copyright © 2017年 塩田宰. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable class DayOfWeek: UIView {
+@IBDesignable class PeriodOfTime: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -17,7 +17,7 @@ import UIKit
         // Drawing code
     }
     */
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib()
@@ -30,7 +30,7 @@ import UIKit
     
     private func loadFromNib() {
         // ここは UINib を使っても良い
-        let v = Bundle(for: type(of: self)).loadNibNamed("DayOfWeek", owner: self, options: nil)?.first as! UIView
+        let v = Bundle(for: type(of: self)).loadNibNamed("PeriodOfTime", owner: self, options: nil)?.first as! UIView
         addSubview(v)
         
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -43,5 +43,5 @@ import UIKit
                                                       metrics: nil,
                                                       views: ["view" : v]))
     }
-
+    
 }

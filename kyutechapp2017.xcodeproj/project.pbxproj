@@ -20,6 +20,8 @@
 		20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
 		20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B181E57436600C53FF1 /* TimetableViewController.swift */; };
+		20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
+		20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
 		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
@@ -65,6 +67,8 @@
 		20C47B121E570F7700C53FF1 /* DayOfWeek.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayOfWeek.xib; sourceTree = "<group>"; };
 		20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		20C47B181E57436600C53FF1 /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		20CBD4671E57F519006333C3 /* PeriodOfTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriodOfTime.xib; sourceTree = "<group>"; };
+		20CBD4691E57F883006333C3 /* PeriodOfTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodOfTime.swift; sourceTree = "<group>"; };
 		2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D28811FF21FCEE4AA80B819 /* Pods-kyutechapp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.debug.xcconfig"; sourceTree = "<group>"; };
 		491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2023421D1E585A0D00C8DA0F /* TopComponent */ = {
+			isa = PBXGroup;
+			children = (
+				20C47B121E570F7700C53FF1 /* DayOfWeek.xib */,
+				20CBD4671E57F519006333C3 /* PeriodOfTime.xib */,
+			);
+			name = TopComponent;
+			sourceTree = "<group>";
+		};
 		20BF1D3D1E546AD600D36C38 = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +284,7 @@
 		20BF1D851E546C2800D36C38 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
-				20C47B121E570F7700C53FF1 /* DayOfWeek.xib */,
+				2023421D1E585A0D00C8DA0F /* TopComponent */,
 				20BF1D981E54795E00D36C38 /* Timetable.storyboard */,
 			);
 			name = Timetable;
@@ -318,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */,
+				20CBD4691E57F883006333C3 /* PeriodOfTime.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -531,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */,
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
 				20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */,
 				20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */,
@@ -703,6 +718,7 @@
 				20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */,
 				20BF1D4C1E546AD600D36C38 /* ViewController.swift in Sources */,
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
+				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

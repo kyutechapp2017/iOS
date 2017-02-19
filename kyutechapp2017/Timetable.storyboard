@@ -28,12 +28,30 @@
                                     <constraint firstAttribute="height" constant="40" id="2Uf-ab-7xT"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujJ-RQ-JjG" customClass="PeriodOfTime" customModule="kyutechapp2017" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="50" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3od-Sq-IUg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5S-US-gWO" customClass="Table" customModule="kyutechapp2017" customModuleProvider="target">
+                                <rect key="frame" x="50" y="104" width="325" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O5S-US-gWO" secondAttribute="trailing" id="1YK-oL-5Ec"/>
+                            <constraint firstItem="ujJ-RQ-JjG" firstAttribute="leading" secondItem="VvR-zJ-R80" secondAttribute="leading" id="FNy-Pz-UhX"/>
+                            <constraint firstItem="q59-Jx-2yL" firstAttribute="top" secondItem="O5S-US-gWO" secondAttribute="bottom" id="J1Z-3H-dcb"/>
+                            <constraint firstItem="ujJ-RQ-JjG" firstAttribute="top" secondItem="zSe-dt-H3F" secondAttribute="bottom" id="eZ4-sZ-ARx"/>
                             <constraint firstAttribute="trailing" secondItem="zSe-dt-H3F" secondAttribute="trailing" id="jsp-zO-dho"/>
                             <constraint firstItem="zSe-dt-H3F" firstAttribute="top" secondItem="XsF-QI-FT7" secondAttribute="bottom" id="m0f-Pv-JyC"/>
+                            <constraint firstItem="O5S-US-gWO" firstAttribute="leading" secondItem="ujJ-RQ-JjG" secondAttribute="trailing" id="nkG-0t-QlU"/>
                             <constraint firstItem="zSe-dt-H3F" firstAttribute="leading" secondItem="VvR-zJ-R80" secondAttribute="leading" id="sA5-9e-XjR"/>
+                            <constraint firstItem="O5S-US-gWO" firstAttribute="top" secondItem="zSe-dt-H3F" secondAttribute="bottom" id="sRx-yb-Qdu"/>
+                            <constraint firstItem="q59-Jx-2yL" firstAttribute="top" secondItem="ujJ-RQ-JjG" secondAttribute="bottom" id="tdf-25-Z8b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Btp-OU-Lga"/>
