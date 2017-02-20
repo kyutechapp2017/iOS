@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bulletin Board View Controller-->
+        <!--Kyutech-->
         <scene sceneID="IaP-3j-ABG">
             <objects>
                 <viewController id="Gt6-Em-QZO" customClass="BulletinBoardViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,9 +21,126 @@
                     <view key="view" contentMode="scaleToFill" id="XQJ-MJ-PvE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.078579241978415704" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MJv-cS-Be3" userLabel="all">
+                                <rect key="frame" x="8" y="72" width="359" height="538"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-SF-PoV" userLabel="top">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="145.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-Qd-AbJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="251.5" height="145.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="授業"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
+                                                <rect key="frame" x="259.5" y="0.0" width="99.5" height="145.5"/>
+                                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="集中講義"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kxp-Qd-AbJ" firstAttribute="width" secondItem="XqG-SF-PoV" secondAttribute="width" multiplier="0.7" id="zR1-sT-VBs"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-A9-vtU" userLabel="middle">
+                                        <rect key="frame" x="0.0" y="153.5" width="359" height="194"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-BO-c7x">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="194"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-ss-FIw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="93"/>
+                                                        <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="お知らせ"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-g7-wUF">
+                                                        <rect key="frame" x="0.0" y="101" width="125" height="93"/>
+                                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="各種変更手続き"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="8IK-g7-wUF" firstAttribute="height" secondItem="Py0-ss-FIw" secondAttribute="height" id="4Ml-bw-9sP"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-L2-Z64">
+                                                <rect key="frame" x="133" y="0.0" width="226" height="194"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="学科別"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4xs-L2-Z64" secondAttribute="trailing" id="1Ua-Id-r4d"/>
+                                            <constraint firstItem="4xs-L2-Z64" firstAttribute="width" secondItem="Wf0-A9-vtU" secondAttribute="width" multiplier="0.63" id="4Al-Kw-hFO"/>
+                                            <constraint firstItem="4xs-L2-Z64" firstAttribute="top" secondItem="Wf0-A9-vtU" secondAttribute="top" id="6EK-xh-Umt"/>
+                                            <constraint firstItem="b3g-BO-c7x" firstAttribute="leading" secondItem="Wf0-A9-vtU" secondAttribute="leading" id="6V2-vu-cWc"/>
+                                            <constraint firstAttribute="bottom" secondItem="4xs-L2-Z64" secondAttribute="bottom" id="8nX-Un-paI"/>
+                                            <constraint firstAttribute="bottom" secondItem="b3g-BO-c7x" secondAttribute="bottom" id="nq6-Jl-u0B"/>
+                                            <constraint firstItem="b3g-BO-c7x" firstAttribute="top" secondItem="Wf0-A9-vtU" secondAttribute="top" id="qVH-yW-nAH"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-n5-lki" userLabel="bottom">
+                                        <rect key="frame" x="0.0" y="355.5" width="359" height="182.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="182.5"/>
+                                                <color key="backgroundColor" red="1" green="0.41954855238743594" blue="0.58456804303698351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="学生呼び出し"/>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-xr-IGv">
+                                                <rect key="frame" x="179.5" y="0.0" width="179.5" height="182.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="87"/>
+                                                        <color key="backgroundColor" red="0.29550126570000002" green="0.69537698510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="留学"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
+                                                        <rect key="frame" x="0.0" y="95" width="179.5" height="87.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="奨学金"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="yNa-Ff-f5A" firstAttribute="height" secondItem="U9t-fd-tWQ" secondAttribute="height" id="FUN-wq-cAH"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ifv-4l-4bq" firstAttribute="leading" secondItem="BQb-n5-lki" secondAttribute="leading" id="0og-wO-d6v"/>
+                                            <constraint firstItem="ifv-4l-4bq" firstAttribute="width" secondItem="BQb-n5-lki" secondAttribute="width" multiplier="0.48" id="2ZF-wO-5sh"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Av-xr-IGv" secondAttribute="bottom" id="58h-Y9-tLd"/>
+                                            <constraint firstAttribute="bottom" secondItem="ifv-4l-4bq" secondAttribute="bottom" id="6YU-hy-p6a"/>
+                                            <constraint firstItem="ifv-4l-4bq" firstAttribute="top" secondItem="BQb-n5-lki" secondAttribute="top" id="CJQ-al-ugZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Av-xr-IGv" secondAttribute="trailing" id="Cqs-Xn-Mtd"/>
+                                            <constraint firstItem="1Av-xr-IGv" firstAttribute="top" secondItem="BQb-n5-lki" secondAttribute="top" id="K0G-8z-8vL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Wf0-A9-vtU" secondAttribute="trailing" id="HU1-fn-QBS"/>
+                                    <constraint firstItem="Wf0-A9-vtU" firstAttribute="leading" secondItem="MJv-cS-Be3" secondAttribute="leading" id="Ldx-jD-i3h"/>
+                                    <constraint firstAttribute="bottom" secondItem="BQb-n5-lki" secondAttribute="bottom" id="OVk-y6-vze"/>
+                                    <constraint firstItem="Wf0-A9-vtU" firstAttribute="height" secondItem="MJv-cS-Be3" secondAttribute="height" multiplier="0.36" id="Q5g-Cy-McV"/>
+                                    <constraint firstAttribute="trailing" secondItem="XqG-SF-PoV" secondAttribute="trailing" id="SZT-NT-2j9"/>
+                                    <constraint firstItem="XqG-SF-PoV" firstAttribute="leading" secondItem="MJv-cS-Be3" secondAttribute="leading" id="cpj-AF-fTa"/>
+                                    <constraint firstAttribute="trailing" secondItem="BQb-n5-lki" secondAttribute="trailing" id="cuO-Yo-GDb"/>
+                                    <constraint firstItem="BQb-n5-lki" firstAttribute="leading" secondItem="MJv-cS-Be3" secondAttribute="leading" id="fkC-Yx-b4h"/>
+                                    <constraint firstItem="XqG-SF-PoV" firstAttribute="height" secondItem="MJv-cS-Be3" secondAttribute="height" multiplier="0.27" id="noz-If-Bdj"/>
+                                    <constraint firstItem="XqG-SF-PoV" firstAttribute="top" secondItem="MJv-cS-Be3" secondAttribute="top" id="oxV-IE-YP2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MJv-cS-Be3" firstAttribute="top" secondItem="MyK-Sg-H3J" secondAttribute="bottom" constant="8" id="79j-bl-2XI"/>
+                            <constraint firstItem="Iyg-cp-65D" firstAttribute="top" secondItem="MJv-cS-Be3" secondAttribute="bottom" constant="8" id="Gc6-LK-o0U"/>
+                            <constraint firstItem="MJv-cS-Be3" firstAttribute="leading" secondItem="XQJ-MJ-PvE" secondAttribute="leading" constant="8" id="dFs-AS-S9R"/>
+                            <constraint firstAttribute="trailing" secondItem="MJv-cS-Be3" secondAttribute="trailing" constant="8" id="g8g-nB-9f4"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oKK-W4-VZk"/>
+                    <navigationItem key="navigationItem" title="Kyutech" id="oKK-W4-VZk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndy-ee-igJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
