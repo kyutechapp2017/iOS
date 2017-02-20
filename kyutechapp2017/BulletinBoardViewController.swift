@@ -9,10 +9,14 @@
 import UIKit
 
 class BulletinBoardViewController: UIViewController {
-
+    
+    @IBOutlet weak var classesButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setBackView(Button: classesButton)
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +25,19 @@ class BulletinBoardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func setBackView(Button: UIButton){
+        let layer = CAGradientLayer()
+        let startColor = UIColor(red: 129, green: 171, blue: 115, alpha: 1)
+        let endColor = UIColor(red: 103, green: 179, blue: 126, alpha: 1)
+        layer.colors = [startColor, endColor]
+        layer.frame = Button.bounds
+        //        Button.layer.insertSublayer(layer, at: 0)
+        Button.layer.addSublayer(layer)
+    }
+    
+}
+
 
     /*
     // MARK: - Navigation
@@ -32,4 +49,4 @@ class BulletinBoardViewController: UIViewController {
     }
     */
 
-}
+
