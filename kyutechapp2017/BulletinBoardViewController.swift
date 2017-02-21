@@ -13,7 +13,6 @@ class BulletinBoardViewController: UIViewController {
     @IBOutlet weak var classesButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackView(Button: classesButton)
@@ -32,7 +31,6 @@ class BulletinBoardViewController: UIViewController {
         let endColor = UIColor(red: 103, green: 179, blue: 126, alpha: 1)
         layer.colors = [startColor, endColor]
         layer.frame = Button.bounds
-        //        Button.layer.insertSublayer(layer, at: 0)
         Button.layer.addSublayer(layer)
     }
     
