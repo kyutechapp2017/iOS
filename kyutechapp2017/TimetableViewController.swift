@@ -56,19 +56,22 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     
     // セルのサイズを設定
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        // RootViewControllerの取得
+        let navigationController = storyboard?.instantiateInitialViewController() as! UINavigationController
+        let rootViewController = navigationController.viewControllers.first as! UITabBarController
+        
+        // StatusBar,NavigationBar,TabBarの高さを取得
+        let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+        let navigationBarHeight = self.navigationController?.navigationBar.frame.size.height
+        let tabBarHeight = rootViewController.tabBarController?.tabBar.frame.size.height
+    
+        
         let tableWidth = (UIScreen.main.bounds.size.width - CGFloat(45)) / CGFloat(5)
-        let tableHeight = (UIScreen.main.bounds.size.height - CGFloat(45)) / CGFloat(6)
+        let tableHeight = (UIScreen.main.bounds.size.height - CGFloat(statusBarHeight) - CGFloat(navigationBarHeight!) - CGFloat(tabBarHeight!)) / CGFloat(6)
+        
         
         return CGSize(width: tableWidth, height: tableHeight)
-    }
-    
-    // セルの間の余白を設定
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
     }
     
     // カスタムセルの紐付け
