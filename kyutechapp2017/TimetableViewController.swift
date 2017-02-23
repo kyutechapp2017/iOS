@@ -9,9 +9,11 @@
 import UIKit
 
 class TimetableViewController: UIViewController {
-    
-    @IBOutlet weak var timetableView: UICollectionView!
 
+    // 曜日と時限のカスタムビュー
+    @IBOutlet weak var dayOfWeekView: DayOfWeek!
+    @IBOutlet weak var periodOfTimeView: PeriodOfTime!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,8 +34,7 @@ class TimetableViewController: UIViewController {
 extension TimetableViewController {
 
     func setUp() {
-        timetableView.delegate = self
-        timetableView.dataSource = self
+        
     }
     
 }
@@ -57,18 +58,17 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     // セルのサイズを設定
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        // RootViewControllerの取得
-        let navigationController = storyboard?.instantiateInitialViewController() as! UINavigationController
-        let rootViewController = navigationController.viewControllers.first as! UITabBarController
-        
         // StatusBar,NavigationBar,TabBarの高さを取得
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
         let navigationBarHeight = self.navigationController?.navigationBar.frame.size.height
-        let tabBarHeight = rootViewController.tabBarController?.tabBar.frame.size.height
+        let tabBarHeight = self.tabBarController?.tabBar.frame.size.height
     
+        // 曜日のカスタムビューの高さと時限のカスタムビューの幅を取得
+        let dowHeight = self.dayOfWeekView.frame.size.height
+        let potWidth = self.periodOfTimeView.frame.size.width
         
-        let tableWidth = (UIScreen.main.bounds.size.width - CGFloat(45)) / CGFloat(5)
-        let tableHeight = (UIScreen.main.bounds.size.height - CGFloat(statusBarHeight) - CGFloat(navigationBarHeight!) - CGFloat(tabBarHeight!)) / CGFloat(6)
+        let tableWidth = (UIScreen.main.bounds.size.width - CGFloat(potWidth)) / CGFloat(5)
+        let tableHeight = (UIScreen.main.bounds.size.height - CGFloat(statusBarHeight) - CGFloat(navigationBarHeight!) - CGFloat(tabBarHeight!) - CGFloat(dowHeight)) / CGFloat(6)
         
         
         return CGSize(width: tableWidth, height: tableHeight)

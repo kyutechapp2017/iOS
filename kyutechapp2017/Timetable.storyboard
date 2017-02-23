@@ -38,14 +38,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pQh-u9-hoM">
                                 <rect key="frame" x="45" y="99" width="330" height="519"/>
                                 <color key="backgroundColor" red="0.81951814889907837" green="0.81965965032577515" blue="0.81950914859771729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="ahj-PC-UOr">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ahj-PC-UOr">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classCell" id="Pvz-oX-2c0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classCell" id="Pvz-oX-2c0" customClass="TableCell" customModule="kyutechapp2017" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -66,8 +66,17 @@
                                             <constraint firstItem="FBz-N6-j9u" firstAttribute="centerX" secondItem="Pvz-oX-2c0" secondAttribute="centerX" id="boo-0w-91Y"/>
                                         </constraints>
                                         <size key="customSize" width="100" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="3EO-ZI-lsB" id="o4c-Og-cup"/>
+                                    <outlet property="delegate" destination="3EO-ZI-lsB" id="PND-AX-3ae"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,15 +95,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="Btp-OU-Lga"/>
                     <connections>
-                        <outlet property="timetableView" destination="pQh-u9-hoM" id="bNx-IK-dEJ"/>
-                        <segue destination="Mfw-Dm-7X6" kind="presentation" identifier="toDetailPageVC" id="aDD-a6-tAo"/>
+                        <outlet property="dayOfWeekView" destination="zSe-dt-H3F" id="k3H-iR-e81"/>
+                        <outlet property="periodOfTimeView" destination="ujJ-RQ-JjG" id="UTX-qS-Oow"/>
+                        <segue destination="Mfw-Dm-7X6" kind="show" identifier="toDetailPageVC" id="QOx-4T-BL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0b6-2w-FAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="-62.518740629685162"/>
         </scene>
-        <!--Detail Page View Controller-->
+        <!--Title-->
         <scene sceneID="ijx-hQ-iwl">
             <objects>
                 <viewController id="Mfw-Dm-7X6" customClass="DetailPageViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,31 +115,14 @@
                     <view key="view" contentMode="scaleToFill" id="Chx-IZ-ntc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oM7-fX-fuZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="gX0-xf-bam">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="KIl-6o-yDZ">
-                                            <connections>
-                                                <action selector="backButton:" destination="Mfw-Dm-7X6" id="21l-6X-vKa"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" red="0.66524621492736002" green="1" blue="0.83819250807792578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="sY6-Ub-VYc"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3t-pP-2Wl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-63"/>
+            <point key="canvasLocation" x="1996" y="-63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Au9-HV-k2t">

@@ -19,6 +19,7 @@
 		20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
 		20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B181E57436600C53FF1 /* TimetableViewController.swift */; };
+		20C745AF1E5EA9B400978A72 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TableCell.swift */; };
 		20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
 		20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
@@ -66,6 +67,7 @@
 		20C47B121E570F7700C53FF1 /* DayOfWeek.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayOfWeek.xib; sourceTree = "<group>"; };
 		20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		20C47B181E57436600C53FF1 /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		20C745AE1E5EA9B400978A72 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		20CBD4671E57F519006333C3 /* PeriodOfTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriodOfTime.xib; sourceTree = "<group>"; };
 		20CBD4691E57F883006333C3 /* PeriodOfTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodOfTime.swift; sourceTree = "<group>"; };
 		20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */,
 				20CBD4691E57F883006333C3 /* PeriodOfTime.swift */,
+				20C745AE1E5EA9B400978A72 /* TableCell.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */,
 				20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */,
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
+				20C745AF1E5EA9B400978A72 /* TableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 			);
