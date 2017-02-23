@@ -7,21 +7,59 @@
 //
 
 import UIKit
+import BTNavigationDropdownMenu
 
 class TimetableViewController: UIViewController {
 
     // 曜日と時限のカスタムビュー
-    @IBOutlet weak var dayOfWeekView: DayOfWeek!
-    @IBOutlet weak var periodOfTimeView: PeriodOfTime!
+    @IBOutlet weak fileprivate var dayOfWeekView: DayOfWeek!
+    @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
+    
+    // BTNavigationDropdownMenu
+    var menuView: BTNavigationDropdownMenu!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.setUp()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+/*
+    setUp --------------------
+*/
+extension TimetableViewController {
+    
+    func setUp() {
+        let items = ["第1クォーター", "第2クォーター", "第3クォーター", "第4クォーター"]
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "学期を選択", items: items as [AnyObject])
+        menuView.cellHeight = 50
+        menuView.cellBackgroundColor = self.navigationController?.navigationBar.barTintColor
+        menuView.cellSelectionColor = UIColor(red: 0.0/255.0, green:160.0/255.0, blue:195.0/255.0, alpha: 1.0)
+        menuView.shouldKeepSelectedCellColor = true
+        menuView.cellTextLabelColor = UIColor.white
+        menuView.cellTextLabelFont = UIFont(name: "Avenir-Heavy", size: 17)
+        menuView.cellTextLabelAlignment = .left // .center // .right // .left
+        menuView.arrowPadding = 15
+        menuView.animationDuration = 0.5
+        menuView.maskBackgroundColor = UIColor.black
+        menuView.maskBackgroundOpacity = 0.3
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+//            print("Did select item at index: \(indexPath)")
+//            self.selectedCellLabel.text = items[indexPath]
+        }
+        
+        self.navigationItem.titleView = menuView
     }
     
 }

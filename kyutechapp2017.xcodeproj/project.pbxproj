@@ -107,15 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2023421D1E585A0D00C8DA0F /* TopComponent */ = {
-			isa = PBXGroup;
-			children = (
-				20C47B121E570F7700C53FF1 /* DayOfWeek.xib */,
-				20CBD4671E57F519006333C3 /* PeriodOfTime.xib */,
-			);
-			name = TopComponent;
-			sourceTree = "<group>";
-		};
 		20BF1D3D1E546AD600D36C38 = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +276,8 @@
 		20BF1D851E546C2800D36C38 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
-				2023421D1E585A0D00C8DA0F /* TopComponent */,
+				20C47B121E570F7700C53FF1 /* DayOfWeek.xib */,
+				20CBD4671E57F519006333C3 /* PeriodOfTime.xib */,
 				20BF1D981E54795E00D36C38 /* Timetable.storyboard */,
 			);
 			name = Timetable;

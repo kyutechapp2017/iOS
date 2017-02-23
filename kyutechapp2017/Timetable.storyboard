@@ -93,7 +93,9 @@
                             <constraint firstItem="q59-Jx-2yL" firstAttribute="top" secondItem="ujJ-RQ-JjG" secondAttribute="bottom" id="tdf-25-Z8b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Btp-OU-Lga"/>
+                    <navigationItem key="navigationItem" id="Btp-OU-Lga">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="CAb-AU-fCo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="dayOfWeekView" destination="zSe-dt-H3F" id="k3H-iR-e81"/>
                         <outlet property="periodOfTimeView" destination="ujJ-RQ-JjG" id="UTX-qS-Oow"/>
