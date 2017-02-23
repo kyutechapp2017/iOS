@@ -30,7 +30,7 @@ import UIKit
     
     private func loadFromNib() {
         // ここは UINib を使っても良い
-        let v = Bundle(for: type(of: self)).loadNibNamed("DayOfWeek", owner: self, options: nil)?.first as! UIView
+        guard let v = Bundle(for: type(of: self)).loadNibNamed("DayOfWeek", owner: self, options: nil)?.first as? UIView else { return }
         addSubview(v)
         
         v.translatesAutoresizingMaskIntoConstraints = false

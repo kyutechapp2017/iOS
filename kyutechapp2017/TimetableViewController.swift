@@ -17,7 +17,6 @@ class TimetableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.setUp()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,19 +25,6 @@ class TimetableViewController: UIViewController {
     }
     
 }
-
-
-/*
-    Set up --------------------
-*/
-extension TimetableViewController {
-
-    func setUp() {
-        
-    }
-    
-}
-
 
 /*
     Collectionview --------------------
