@@ -39,23 +39,25 @@ extension TimetableViewController {
     func setUp() {
         let items = ["第1クォーター", "第2クォーター", "第3クォーター", "第4クォーター"]
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: #colorLiteral(red: 0.3333333333, green: 0.7294117647, blue: 0.8823529412, alpha: 1)]
         
         menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "学期を選択", items: items as [AnyObject])
         menuView.cellHeight = 50
-        menuView.cellBackgroundColor = self.navigationController?.navigationBar.barTintColor
-        menuView.cellSelectionColor = UIColor(red: 0.0/255.0, green:160.0/255.0, blue:195.0/255.0, alpha: 1.0)
-        menuView.shouldKeepSelectedCellColor = true
-        menuView.cellTextLabelColor = UIColor.white
+        menuView.cellBackgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        menuView.cellSelectionColor = #colorLiteral(red: 0.3333333333, green: 0.7294117647, blue: 0.8823529412, alpha: 1)
+        menuView.cellSeparatorColor = #colorLiteral(red: 0.6666666667, green: 0.6980392157, blue: 0.7411764706, alpha: 1)
+        menuView.shouldKeepSelectedCellColor = false
+        menuView.cellTextLabelColor = #colorLiteral(red: 0.6666666667, green: 0.6980392157, blue: 0.7411764706, alpha: 1)
+        menuView.selectedCellTextLabelColor = #colorLiteral(red: 0.9333333333, green: 0.9411764706, blue: 0.9490196078, alpha: 1)
         menuView.cellTextLabelFont = UIFont(name: "Avenir-Heavy", size: 17)
         menuView.cellTextLabelAlignment = .left // .center // .right // .left
         menuView.arrowPadding = 15
         menuView.animationDuration = 0.5
-        menuView.maskBackgroundColor = UIColor.black
+        menuView.maskBackgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         menuView.maskBackgroundOpacity = 0.3
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-//            print("Did select item at index: \(indexPath)")
+            print("Did select item at index: \(indexPath)")
 //            self.selectedCellLabel.text = items[indexPath]
         }
         
