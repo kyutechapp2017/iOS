@@ -58,6 +58,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-II-sQO">
+                                                    <rect key="frame" x="22" y="62" width="57" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.15002925204268847" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -71,6 +76,9 @@
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="editCellView" destination="Piz-II-sQO" id="7Kn-Gx-kPc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -94,7 +102,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Btp-OU-Lga">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="CAb-AU-fCo"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="CAb-AU-fCo">
+                            <connections>
+                                <action selector="pushEditButton:" destination="3EO-ZI-lsB" id="QhI-tr-86c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dayOfWeekView" destination="zSe-dt-H3F" id="k3H-iR-e81"/>

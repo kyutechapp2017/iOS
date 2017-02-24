@@ -9,14 +9,19 @@
 import UIKit
 import BTNavigationDropdownMenu
 
-class TimetableViewController: UIViewController {
+protocol EditViewDisplayDelegate {
+    func didTappedEditButton()
+}
+
+class TimetableViewController: UIViewController{
 
     // 曜日と時限のカスタムビュー
     @IBOutlet weak fileprivate var dayOfWeekView: DayOfWeek!
     @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
-    
     // BTNavigationDropdownMenu
-    var menuView: BTNavigationDropdownMenu!
+    fileprivate weak var menuView: BTNavigationDropdownMenu!
+    // TableCellDelegate
+    var editViewDisplayDelegate: EditViewDisplayDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +34,13 @@ class TimetableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Edit timetable
+    @IBAction func pushEditButton(_ sender: Any) {
+        self.editViewDisplayDelegate?.didTappedEditButton()
+    }
+    
 }
+
 
 /*
     setUp --------------------
@@ -37,6 +48,8 @@ class TimetableViewController: UIViewController {
 extension TimetableViewController {
     
     func setUp() {
+        
+        // BTNavigationDropdownMenuの設定
         let items = ["第1クォーター", "第2クォーター", "第3クォーター", "第4クォーター"]
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -58,13 +71,14 @@ extension TimetableViewController {
         menuView.maskBackgroundOpacity = 0.3
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
-//            self.selectedCellLabel.text = items[indexPath]
         }
         
         self.navigationItem.titleView = menuView
+        
     }
     
 }
+
 
 /*
     Collectionview --------------------
