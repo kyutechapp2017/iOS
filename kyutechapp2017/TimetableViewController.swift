@@ -19,7 +19,7 @@ class TimetableViewController: UIViewController{
     @IBOutlet weak fileprivate var dayOfWeekView: DayOfWeek!
     @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
     // BTNavigationDropdownMenu
-    fileprivate weak var menuView: BTNavigationDropdownMenu!
+    var menuView: BTNavigationDropdownMenu!
     // TableCellDelegate
     var editViewDisplayDelegate: EditViewDisplayDelegate?
     
