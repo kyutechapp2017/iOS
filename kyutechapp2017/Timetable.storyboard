@@ -111,6 +111,7 @@
                     <connections>
                         <outlet property="dayOfWeekView" destination="zSe-dt-H3F" id="k3H-iR-e81"/>
                         <outlet property="periodOfTimeView" destination="ujJ-RQ-JjG" id="UTX-qS-Oow"/>
+                        <outlet property="timetable" destination="pQh-u9-hoM" id="TTR-lV-rPb"/>
                         <segue destination="Mfw-Dm-7X6" kind="show" identifier="toDetailPageVC" id="QOx-4T-BL0"/>
                     </connections>
                 </viewController>

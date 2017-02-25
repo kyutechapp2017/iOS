@@ -9,10 +9,6 @@
 import UIKit
 import BTNavigationDropdownMenu
 
-protocol EditViewDisplayDelegate {
-    func didTappedEditButton()
-}
-
 class TimetableViewController: UIViewController{
 
     // 曜日と時限のカスタムビュー
@@ -20,8 +16,10 @@ class TimetableViewController: UIViewController{
     @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
     // BTNavigationDropdownMenu
     var menuView: BTNavigationDropdownMenu!
-    // TableCellDelegate
-    var editViewDisplayDelegate: EditViewDisplayDelegate?
+    // 時間割全体(collectionView)
+    @IBOutlet weak var timetable: UICollectionView!
+    // 入力ボタンのフラグ
+    var isDisplay: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +34,8 @@ class TimetableViewController: UIViewController{
     
     // Edit timetable
     @IBAction func pushEditButton(_ sender: Any) {
-        self.editViewDisplayDelegate?.didTappedEditButton()
+        isDisplay = !isDisplay
+        self.timetable.reloadData()
     }
     
 }
@@ -72,7 +71,7 @@ extension TimetableViewController {
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
         }
-        
+
         self.navigationItem.titleView = menuView
         
     }
@@ -114,9 +113,10 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         return CGSize(width: tableWidth, height: tableHeight)
     }
     
-    // カスタムセルの紐付け
+    // カスタムセル生成する
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath) as! TableCell
+        cell.editCellView.isHidden = isDisplay
         return cell
     }
     
