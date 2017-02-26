@@ -20,18 +20,19 @@ enum ButtonTag:Int{
     
     static let allValues = [classes,intensive,news,procedure,department,summon,studyAbroad,scholarship]
     
-    func name() -> String{
+    var name: String?{
         switch self {
-        case .classes: return "classesButton"
-        case .intensive: return "intensiveButton"
-        case .news: return "newsButton"
-        case .procedure: return "procedureButton"
-        case .department: return "departmentButton"
-        case .summon: return "summonButton"
-        case .studyAbroad: return "studyAbroadButton"
-        case .scholarship: return "scholarshipButton"
+        case .classes: return "授業"
+        case .intensive: return "集中講義"
+        case .news: return "お知らせ"
+        case .procedure: return "各種変更手続き"
+        case .department: return "学科別"
+        case .summon: return "学生呼び出し"
+        case .studyAbroad: return "留学"
+        case .scholarship: return "奨学金"
         }
     }
+    
 }
 
 
@@ -40,12 +41,17 @@ struct CategoryButton {
     var color2: UIColor!
     var startPoint: CGPoint!
     var endPoint: CGPoint!
-    var tag: ButtonTag!
-    mutating func setTag(button: UIButton){
-    }
-    mutating func setColorValues(value: Int){
-        switch value {
-        case 1: //Classes
+    var tag: Int?
+    
+    mutating func setting(button: UIButton){
+        for number in ButtonTag.allValues{
+            if button.currentTitle == number.name{
+                tag = number.rawValue
+                break
+            }
+        }
+        switch tag! {
+        case 1:
             color1 = UIColor.classesColor_1
             color2 = UIColor.classesColor_2
             startPoint = CGPoint(x: 0.0, y: 0.0)
@@ -82,7 +88,7 @@ struct CategoryButton {
             endPoint = CGPoint(x: 1.0, y: 1.0)
         case 8: //scholarship
             color1 = UIColor.scholarship_1
-            color2 = UIColor.studyAbroad_2
+            color2 = UIColor.scholarship_2
             startPoint = CGPoint(x: 0.0, y: 0.0)
             endPoint = CGPoint(x: 1.0, y: 1.0)
         default:
