@@ -16,6 +16,8 @@ class TimetableViewController: UIViewController{
     @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
     // BTNavigationDropdownMenu
     var menuView: BTNavigationDropdownMenu!
+    // 時間割編集入力ボタン
+    @IBOutlet weak var editModeButton: UIBarButtonItem!
     // 時間割全体(collectionView)
     @IBOutlet weak var timetable: UICollectionView!
     // 入力ボタンのフラグ
@@ -34,6 +36,7 @@ class TimetableViewController: UIViewController{
     
     // Edit timetable
     @IBAction func pushEditButton(_ sender: Any) {
+        self.editModeButton.title = !isDisplay ? "編集" : "保存"
         isDisplay = !isDisplay
         self.timetable.reloadData()
     }
@@ -116,7 +119,7 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     // カスタムセル生成する
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath) as! TableCell
-        cell.editCellView.isHidden = isDisplay
+        cell.editButton.isHidden = isDisplay
         return cell
     }
     
