@@ -12,7 +12,7 @@
         <!--Timetable View Controller-->
         <scene sceneID="Dde-39-AnU">
             <objects>
-                <viewController id="3EO-ZI-lsB" customClass="TimetableViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3EO-ZI-lsB" customClass="TimetableViewController" customModule="demo_kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XsF-QI-FT7"/>
                         <viewControllerLayoutGuide type="bottom" id="q59-Jx-2yL"/>
@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-dt-H3F" customClass="DayOfWeek" customModule="kyutechapp2017" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-dt-H3F" customClass="DayOfWeek" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2Uf-ab-7xT"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujJ-RQ-JjG" customClass="PeriodOfTime" customModule="kyutechapp2017" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujJ-RQ-JjG" customClass="PeriodOfTime" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="99" width="45" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -45,7 +45,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classCell" id="Pvz-oX-2c0" customClass="TableCell" customModule="kyutechapp2017" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classCell" id="Pvz-oX-2c0" customClass="TableCell" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -133,7 +133,7 @@
         <!--Title-->
         <scene sceneID="ijx-hQ-iwl">
             <objects>
-                <viewController id="Mfw-Dm-7X6" customClass="DetailPageViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mfw-Dm-7X6" customClass="DetailPageViewController" customModule="demo_kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EGb-ut-jsN"/>
                         <viewControllerLayoutGuide type="bottom" id="Dv5-0k-C4x"/>

@@ -37,6 +37,10 @@
 		20613F641E628C2300FCC3FA /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20613F651E628C2300FCC3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20613F661E628C2300FCC3FA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
+		20613F751E62969C00FCC3FA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
+		20613F781E6296FF00FCC3FA /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F771E6296FF00FCC3FA /* Api.plist */; };
+		20613F7A1E62972100FCC3FA /* DevApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F791E62972100FCC3FA /* DevApi.plist */; };
+		20613F7C1E62973200FCC3FA /* DemoApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F7B1E62973200FCC3FA /* DemoApi.plist */; };
 		20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D491E546AD600D36C38 /* AppDelegate.swift */; };
 		20BF1D4F1E546AD600D36C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
@@ -83,6 +87,10 @@
 		20613F6C1E628C2300FCC3FA /* demo-kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "demo-kyutechapp2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20613F701E628DA000FCC3FA /* dev-kyutechapp2017.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "dev-kyutechapp2017.plist"; sourceTree = "<group>"; };
 		20613F721E628DAD00FCC3FA /* demo-kyutechapp2017.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "demo-kyutechapp2017.plist"; sourceTree = "<group>"; };
+		20613F741E62969C00FCC3FA /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		20613F771E6296FF00FCC3FA /* Api.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
+		20613F791E62972100FCC3FA /* DevApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DevApi.plist; sourceTree = "<group>"; };
+		20613F7B1E62973200FCC3FA /* DemoApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DemoApi.plist; sourceTree = "<group>"; };
 		20BF1D461E546AD600D36C38 /* kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyutechapp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF1D491E546AD600D36C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BF1D4E1E546AD600D36C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +165,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20613F761E6296DB00FCC3FA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				20613F771E6296FF00FCC3FA /* Api.plist */,
+				20613F791E62972100FCC3FA /* DevApi.plist */,
+				20613F7B1E62973200FCC3FA /* DemoApi.plist */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		20613F7D1E62981C00FCC3FA /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				20BF1D551E546AD600D36C38 /* Info.plist */,
+				20613F701E628DA000FCC3FA /* dev-kyutechapp2017.plist */,
+				20613F721E628DAD00FCC3FA /* demo-kyutechapp2017.plist */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		20BF1D3D1E546AD600D36C38 = {
 			isa = PBXGroup;
 			children = (
@@ -249,12 +277,12 @@
 		20BF1D7C1E546B2400D36C38 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				20613F7D1E62981C00FCC3FA /* Info */,
+				20613F761E6296DB00FCC3FA /* API */,
 				20BF1D931E546CE700D36C38 /* BulletinBoard */,
 				20BF1D941E546CF200D36C38 /* Timetable */,
 				20BF1D951E546CFA00D36C38 /* Setting */,
-				20BF1D551E546AD600D36C38 /* Info.plist */,
-				20613F701E628DA000FCC3FA /* dev-kyutechapp2017.plist */,
-				20613F721E628DAD00FCC3FA /* demo-kyutechapp2017.plist */,
+				20613F741E62969C00FCC3FA /* Config.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -643,6 +671,7 @@
 				20613F481E628C1D00FCC3FA /* BulletinBoard.storyboard in Resources */,
 				20613F491E628C1D00FCC3FA /* Timetable.storyboard in Resources */,
 				20613F4A1E628C1D00FCC3FA /* Main.storyboard in Resources */,
+				20613F7A1E62972100FCC3FA /* DevApi.plist in Resources */,
 				20613F4B1E628C1D00FCC3FA /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +682,7 @@
 			files = (
 				20613F5F1E628C2300FCC3FA /* PeriodOfTime.xib in Resources */,
 				20613F601E628C2300FCC3FA /* LaunchScreen.storyboard in Resources */,
+				20613F7C1E62973200FCC3FA /* DemoApi.plist in Resources */,
 				20613F611E628C2300FCC3FA /* Assets.xcassets in Resources */,
 				20613F621E628C2300FCC3FA /* DayOfWeek.xib in Resources */,
 				20613F631E628C2300FCC3FA /* BulletinBoard.storyboard in Resources */,
@@ -666,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20613F781E6296FF00FCC3FA /* Api.plist in Resources */,
 				20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */,
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
 				20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */,
@@ -955,6 +986,7 @@
 				20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */,
 				20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */,
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
+				20613F751E62969C00FCC3FA /* Config.swift in Sources */,
 				20C745AF1E5EA9B400978A72 /* TableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
@@ -1019,6 +1051,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "kyutechapp2017/dev-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planningdev.kyutechapp2017.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1032,6 +1065,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "kyutechapp2017/dev-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planningdev.kyutechapp2017.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1045,6 +1079,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "kyutechapp2017/demo-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEMO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planningdev.kyutechapp2017.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1058,6 +1093,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "kyutechapp2017/demo-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEMO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planningdev.kyutechapp2017.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1164,6 +1200,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D PRODUCTION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planningdev.kyutechapp2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1177,6 +1214,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D PRODUCTION";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planningdev.kyutechapp2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
