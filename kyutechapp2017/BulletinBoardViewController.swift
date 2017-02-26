@@ -24,34 +24,32 @@ class BulletinBoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setColors()
+        setBackgroundColor(sender: classesButton)
+        setBackgroundColor(sender: intensiveButton)
+        setBackgroundColor(sender: newsButton)
+        setBackgroundColor(sender: procedureButton)
+        setBackgroundColor(sender: departmentButton)
+        setBackgroundColor(sender: summonButton)
+        setBackgroundColor(sender: studyAbroadButton)
+        setBackgroundColor(sender: scholarshipButton)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func setColors(){
-        setClassesBackView(button: classesButton)
-        setIntensiveBackView(button: intensiveButton)
-        setNewsBackView(button: newsButton)
-        setProcedureBackView(button: procedureButton)
-        setDepartmentBackView(button: departmentButton)
-        setSummonBackView(button: summonButton)
-        setStudyAbroadBackView(button: studyAbroadButton)
-        setScholarshipBackView(button: scholarshipButton)
+    func setBackgroundColor(sender: UIButton){
+        let gradient = CAGradientLayer()
+        let position_1 = NSNumber(value: 0.0 as Float)
+        let position_2 = NSNumber(value: 1.0 as Float)
+        var button = CategoryButton()
+        button.setTag(button: sender)
+        button.setColorValues(value: button.tag)
+        gradient.colors = [button.color1.cgColor,button.color2.cgColor]
+        gradient.startPoint = button.startPoint
+        gradient.endPoint = button.endPoint
+        gradient.frame = sender.bounds
+        gradient.locations = [position_1, position_2]
+        sender.layer.insertSublayer(gradient, at:0)
     }
 }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
