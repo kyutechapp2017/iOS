@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timetable View Controller-->
         <scene sceneID="Dde-39-AnU">
             <objects>
-                <viewController id="3EO-ZI-lsB" sceneMemberID="viewController">
+                <viewController id="3EO-ZI-lsB" customClass="TimetableViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XsF-QI-FT7"/>
                         <viewControllerLayoutGuide type="bottom" id="q59-Jx-2yL"/>
@@ -20,19 +20,141 @@
                     <view key="view" contentMode="scaleToFill" id="VvR-zJ-R80">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.096852732044021117" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-dt-H3F" customClass="DayOfWeek" customModule="kyutechapp2017" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2Uf-ab-7xT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujJ-RQ-JjG" customClass="PeriodOfTime" customModule="kyutechapp2017" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99" width="45" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="3od-Sq-IUg"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pQh-u9-hoM">
+                                <rect key="frame" x="45" y="99" width="330" height="519"/>
+                                <color key="backgroundColor" red="0.81951814889907837" green="0.81965965032577515" blue="0.81950914859771729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ahj-PC-UOr">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classCell" id="Pvz-oX-2c0" customClass="TableCell" customModule="kyutechapp2017" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-N6-j9u">
+                                                    <rect key="frame" x="29" y="40" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZG-MU-690" userLabel="Edit Button">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="pushEditButton:" destination="Pvz-oX-2c0" eventType="touchUpInside" id="e3d-Hf-GQF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="2ZG-MU-690" secondAttribute="bottom" id="Cwa-rg-WKp"/>
+                                            <constraint firstItem="2ZG-MU-690" firstAttribute="leading" secondItem="Pvz-oX-2c0" secondAttribute="leading" id="TQM-ob-SkW"/>
+                                            <constraint firstItem="FBz-N6-j9u" firstAttribute="centerY" secondItem="Pvz-oX-2c0" secondAttribute="centerY" id="Ucc-7f-KGG"/>
+                                            <constraint firstItem="FBz-N6-j9u" firstAttribute="centerX" secondItem="Pvz-oX-2c0" secondAttribute="centerX" id="boo-0w-91Y"/>
+                                            <constraint firstItem="2ZG-MU-690" firstAttribute="top" secondItem="Pvz-oX-2c0" secondAttribute="top" id="eHJ-Lt-SbU"/>
+                                            <constraint firstAttribute="trailing" secondItem="2ZG-MU-690" secondAttribute="trailing" id="mso-Nc-Tc5"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="editButton" destination="2ZG-MU-690" id="iar-aX-RQG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="3EO-ZI-lsB" id="o4c-Og-cup"/>
+                                    <outlet property="delegate" destination="3EO-ZI-lsB" id="PND-AX-3ae"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q59-Jx-2yL" firstAttribute="top" secondItem="pQh-u9-hoM" secondAttribute="bottom" id="9Id-1Q-Kdo"/>
+                            <constraint firstItem="ujJ-RQ-JjG" firstAttribute="leading" secondItem="VvR-zJ-R80" secondAttribute="leading" id="FNy-Pz-UhX"/>
+                            <constraint firstItem="pQh-u9-hoM" firstAttribute="leading" secondItem="ujJ-RQ-JjG" secondAttribute="trailing" id="Kmh-fZ-5jn"/>
+                            <constraint firstItem="ujJ-RQ-JjG" firstAttribute="top" secondItem="zSe-dt-H3F" secondAttribute="bottom" id="eZ4-sZ-ARx"/>
+                            <constraint firstAttribute="trailing" secondItem="zSe-dt-H3F" secondAttribute="trailing" id="jsp-zO-dho"/>
+                            <constraint firstItem="zSe-dt-H3F" firstAttribute="top" secondItem="XsF-QI-FT7" secondAttribute="bottom" id="m0f-Pv-JyC"/>
+                            <constraint firstItem="pQh-u9-hoM" firstAttribute="top" secondItem="zSe-dt-H3F" secondAttribute="bottom" id="oMI-u7-3ed"/>
+                            <constraint firstAttribute="trailing" secondItem="pQh-u9-hoM" secondAttribute="trailing" id="pQ8-ka-KtM"/>
+                            <constraint firstItem="zSe-dt-H3F" firstAttribute="leading" secondItem="VvR-zJ-R80" secondAttribute="leading" id="sA5-9e-XjR"/>
+                            <constraint firstItem="q59-Jx-2yL" firstAttribute="top" secondItem="ujJ-RQ-JjG" secondAttribute="bottom" id="tdf-25-Z8b"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Btp-OU-Lga"/>
+                    <navigationItem key="navigationItem" id="Btp-OU-Lga">
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="CAb-AU-fCo">
+                            <connections>
+                                <action selector="pushEditButton:" destination="3EO-ZI-lsB" id="QhI-tr-86c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dayOfWeekView" destination="zSe-dt-H3F" id="k3H-iR-e81"/>
+                        <outlet property="editModeButton" destination="CAb-AU-fCo" id="a1V-oH-iGL"/>
+                        <outlet property="periodOfTimeView" destination="ujJ-RQ-JjG" id="UTX-qS-Oow"/>
+                        <outlet property="timetable" destination="pQh-u9-hoM" id="TTR-lV-rPb"/>
+                        <segue destination="Mfw-Dm-7X6" kind="show" identifier="toDetailPageVC" id="QOx-4T-BL0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0b6-2w-FAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="-62.518740629685162"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="ijx-hQ-iwl">
+            <objects>
+                <viewController id="Mfw-Dm-7X6" customClass="DetailPageViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EGb-ut-jsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dv5-0k-C4x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Chx-IZ-ntc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.66524621492736002" green="1" blue="0.83819250807792578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="sY6-Ub-VYc"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3t-pP-2Wl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-63"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Au9-HV-k2t">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4cc-WH-abT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="yUa-aH-vdW"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="bookmarks" id="yUa-aH-vdW"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UHH-xE-eCS">
