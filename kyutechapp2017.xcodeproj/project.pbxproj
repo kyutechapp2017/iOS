@@ -183,6 +183,13 @@
 			name = Info;
 			sourceTree = "<group>";
 		};
+		20613F7F1E62FD5200FCC3FA /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BulletinBoard;
+			sourceTree = "<group>";
+		};
 		20BF1D3D1E546AD600D36C38 = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +284,7 @@
 			children = (
 				20613F7D1E62981C00FCC3FA /* Info */,
 				20613F761E6296DB00FCC3FA /* API */,
-				20BF1D931E546CE700D36C38 /* BulletinBoard */,
+				20613F7F1E62FD5200FCC3FA /* BulletinBoard */,
 				20BF1D941E546CF200D36C38 /* Timetable */,
 				20BF1D951E546CFA00D36C38 /* Setting */,
 				20613F741E62969C00FCC3FA /* Config.swift */,
@@ -458,13 +465,6 @@
 			children = (
 			);
 			name = Setting;
-			sourceTree = "<group>";
-		};
-		20BF1D931E546CE700D36C38 /* BulletinBoard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = BulletinBoard;
 			sourceTree = "<group>";
 		};
 		20BF1D941E546CF200D36C38 /* Timetable */ = {
