@@ -43,7 +43,8 @@ class BulletinBoardViewController: UIViewController {
         let position_1 = NSNumber(value: 0.0 as Float)
         let position_2 = NSNumber(value: 1.0 as Float)
         var button = CategoryButton()
-        button.setting(button: sender)
+        button.setTag(button: sender)
+        button.setColorValues(value: button.tag)
         gradient.colors = [button.color1.cgColor,button.color2.cgColor]
         gradient.startPoint = button.startPoint
         gradient.endPoint = button.endPoint
