@@ -142,14 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Kyutech" id="oKK-W4-VZk"/>
                     <connections>
-                        <outlet property="StudyAbroadButton" destination="U9t-fd-tWQ" id="XvE-hK-gNx"/>
                         <outlet property="classesButton" destination="kxp-Qd-AbJ" id="vcR-QW-IFD"/>
-                        <outlet property="departmentButton" destination="4xs-L2-Z64" id="WaE-Ij-GEj"/>
-                        <outlet property="intensiveButton" destination="Web-0C-FB8" id="nWT-rq-lrv"/>
-                        <outlet property="newsButton" destination="Py0-ss-FIw" id="Xq3-GT-mE0"/>
-                        <outlet property="procedureButton" destination="8IK-g7-wUF" id="6HT-63-zkT"/>
-                        <outlet property="scholarshipButton" destination="yNa-Ff-f5A" id="F3N-gb-I4G"/>
-                        <outlet property="summonButton" destination="ifv-4l-4bq" id="GVR-4p-B4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndy-ee-igJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
