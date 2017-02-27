@@ -27,14 +27,6 @@ class TimetableViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setUp()
-        
-#if DEMO
-    print("demo")
-#elseif DEV
-    print("development")
-#else
-    print("production")
-#endif
     }
 
     override func didReceiveMemoryWarning() {
