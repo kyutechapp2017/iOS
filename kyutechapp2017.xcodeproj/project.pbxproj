@@ -621,7 +621,7 @@
 				TargetAttributes = {
 					20BF1D451E546AD600D36C38 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = DSH8Z98H89;
+						DevelopmentTeam = 2E5E462W28;
 						ProvisioningStyle = Automatic;
 					};
 					20BF1D591E546AD600D36C38 = {
@@ -1120,7 +1120,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = DSH8Z98H89;
+				DEVELOPMENT_TEAM = 2E5E462W28;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D PRODUCTION";
@@ -1136,7 +1136,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = DSH8Z98H89;
+				DEVELOPMENT_TEAM = 2E5E462W28;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D PRODUCTION";
