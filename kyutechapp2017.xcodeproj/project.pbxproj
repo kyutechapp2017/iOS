@@ -39,6 +39,9 @@
 		20613F781E6296FF00FCC3FA /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F771E6296FF00FCC3FA /* Api.plist */; };
 		20613F7A1E62972100FCC3FA /* DevApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F791E62972100FCC3FA /* DevApi.plist */; };
 		20613F7C1E62973200FCC3FA /* DemoApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F7B1E62973200FCC3FA /* DemoApi.plist */; };
+		20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
+		20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
+		20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
 		20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D491E546AD600D36C38 /* AppDelegate.swift */; };
 		20BF1D4F1E546AD600D36C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
@@ -90,6 +93,7 @@
 		20613F771E6296FF00FCC3FA /* Api.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
 		20613F791E62972100FCC3FA /* DevApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DevApi.plist; sourceTree = "<group>"; };
 		20613F7B1E62973200FCC3FA /* DemoApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DemoApi.plist; sourceTree = "<group>"; };
+		20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kyutechapp2017.swift; sourceTree = "<group>"; };
 		20BF1D461E546AD600D36C38 /* kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyutechapp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF1D491E546AD600D36C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BF1D4E1E546AD600D36C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 				20BF1D941E546CF200D36C38 /* Timetable */,
 				20BF1D951E546CFA00D36C38 /* Setting */,
 				20613F741E62969C00FCC3FA /* Config.swift */,
+				20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -875,6 +880,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20613F3B1E628C1D00FCC3FA /* DetailPageViewController.swift in Sources */,
+				20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 				20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */,
 				20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F3E1E628C1D00FCC3FA /* TableCell.swift in Sources */,
@@ -888,6 +894,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20613F561E628C2300FCC3FA /* DetailPageViewController.swift in Sources */,
+				20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 				20613F571E628C2300FCC3FA /* DayOfWeek.swift in Sources */,
 				20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F591E628C2300FCC3FA /* TableCell.swift in Sources */,
@@ -907,6 +914,7 @@
 				20C745AF1E5EA9B400978A72 /* TableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
+				20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
