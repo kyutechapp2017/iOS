@@ -24,14 +24,6 @@ class BulletinBoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setColors()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func setColors(){
         setClassesBackView(button: classesButton)
         setIntensiveBackView(button: intensiveButton)
         setNewsBackView(button: newsButton)
@@ -40,6 +32,10 @@ class BulletinBoardViewController: UIViewController {
         setSummonBackView(button: summonButton)
         setStudyAbroadBackView(button: studyAbroadButton)
         setScholarshipBackView(button: scholarshipButton)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
 
