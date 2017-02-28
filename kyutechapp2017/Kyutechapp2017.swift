@@ -8,110 +8,115 @@
 
 import UIKit
 
-struct Kyutechapp2017 {
+fileprivate struct Kyutechapp2017 {
     
     // App's basic color
-    fileprivate let themecolor: UIColor = #colorLiteral(red: 0.3333333333, green: 0.7294117647, blue: 0.8823529412, alpha: 1)
-    fileprivate let lightgray: UIColor = #colorLiteral(red: 0.9333333333, green: 0.9411764706, blue: 0.9490196078, alpha: 1)
-    fileprivate let darkgray: UIColor = #colorLiteral(red: 0.6666666667, green: 0.6980392157, blue: 0.7411764706, alpha: 1)
+    struct color {
+        static let themeColor: UIColor = #colorLiteral(red: 0.3333333333, green: 0.7294117647, blue: 0.8823529412, alpha: 1)
+        static let lightGray: UIColor = #colorLiteral(red: 0.9333333333, green: 0.9411764706, blue: 0.9490196078, alpha: 1)
+        static let darkGray: UIColor = #colorLiteral(red: 0.6666666667, green: 0.6980392157, blue: 0.7411764706, alpha: 1)
+    }
     
     // Timetable's color
-    fileprivate let cellbackground1: UIColor = #colorLiteral(red: 0.4274509804, green: 0.7411764706, blue: 0.5215686275, alpha: 1)
-    fileprivate let cellbackgroundsub1: UIColor = #colorLiteral(red: 0.6039215686, green: 0.8156862745, blue: 0.6705882353, alpha: 1)
-    fileprivate let cellbackground2: UIColor = #colorLiteral(red: 0.5294117647, green: 0.8, blue: 0.7843137255, alpha: 1)
-    fileprivate let cellbackgroundsub2: UIColor = #colorLiteral(red: 0.6745098039, green: 0.8588235294, blue: 0.8509803922, alpha: 1)
-    fileprivate let cellbackground3: UIColor = #colorLiteral(red: 0.3333333333, green: 0.7294117647, blue: 0.8823529412, alpha: 1)
-    fileprivate let cellbackgroundsub3: UIColor = #colorLiteral(red: 0.5411764706, green: 0.8117647059, blue: 0.9098039216, alpha: 1)
-    fileprivate let cellbackground4: UIColor = #colorLiteral(red: 0.3725490196, green: 0.6666666667, blue: 0.8509803922, alpha: 1)
-    fileprivate let cellbackgroundsub4: UIColor = #colorLiteral(red: 0.5529411765, green: 0.768627451, blue: 0.8941176471, alpha: 1)
-    fileprivate let cellbackground5: UIColor = #colorLiteral(red: 0.9607843137, green: 0.5725490196, blue: 0.2705882353, alpha: 1)
-    fileprivate let cellbackgroundsub5: UIColor = #colorLiteral(red: 0.9607843137, green: 0.7019607843, blue: 0.5058823529, alpha: 1)
-    fileprivate let cellbackground6: UIColor = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.2705882353, alpha: 1)
-    fileprivate let cellbackgroundsub6: UIColor = #colorLiteral(red: 0.9960784314, green: 0.831372549, blue: 0.5137254902, alpha: 1)
-    fileprivate let cellbackground7: UIColor = #colorLiteral(red: 0.9215686275, green: 0.3411764706, blue: 0.4078431373, alpha: 1)
-    fileprivate let cellbackgroundsub7: UIColor = #colorLiteral(red: 0.937254902, green: 0.5411764706, blue: 0.5882352941, alpha: 1)
-    fileprivate let cellbackground8: UIColor = #colorLiteral(red: 0.9333333333, green: 0.4156862745, blue: 0.4117647059, alpha: 1)
-    fileprivate let cellbackgroundsub8: UIColor = #colorLiteral(red: 0.9450980392, green: 0.5960784314, blue: 0.5960784314, alpha: 1)
+    struct timetableColor {
+        static let cellBackground1: UIColor = #colorLiteral(red: 0.4274509804, green: 0.7411764706, blue: 0.5215686275, alpha: 1)
+        static let cellBackgroundSub1: UIColor = #colorLiteral(red: 0.6039215686, green: 0.8156862745, blue: 0.6705882353, alpha: 1)
+        static let cellBackground2: UIColor = #colorLiteral(red: 0.5294117647, green: 0.8, blue: 0.7843137255, alpha: 1)
+        static let cellBackgroundSub2: UIColor = #colorLiteral(red: 0.6745098039, green: 0.8588235294, blue: 0.8509803922, alpha: 1)
+        static let cellBackground3: UIColor = #colorLiteral(red: 0.3333333333, green: 0.7294117647, blue: 0.8823529412, alpha: 1)
+        static let cellBackgroundSub3: UIColor = #colorLiteral(red: 0.5411764706, green: 0.8117647059, blue: 0.9098039216, alpha: 1)
+        static let cellBackground4: UIColor = #colorLiteral(red: 0.3725490196, green: 0.6666666667, blue: 0.8509803922, alpha: 1)
+        static let cellBackgroundSub4: UIColor = #colorLiteral(red: 0.5529411765, green: 0.768627451, blue: 0.8941176471, alpha: 1)
+        static let cellBackground5: UIColor = #colorLiteral(red: 0.9607843137, green: 0.5725490196, blue: 0.2705882353, alpha: 1)
+        static let cellBackgroundSub5: UIColor = #colorLiteral(red: 0.9607843137, green: 0.7019607843, blue: 0.5058823529, alpha: 1)
+        static let cellBackground6: UIColor = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.2705882353, alpha: 1)
+        static let cellBackgroundSub6: UIColor = #colorLiteral(red: 0.9960784314, green: 0.831372549, blue: 0.5137254902, alpha: 1)
+        static let cellBackground7: UIColor = #colorLiteral(red: 0.9215686275, green: 0.3411764706, blue: 0.4078431373, alpha: 1)
+        static let cellBackgroundSub7: UIColor = #colorLiteral(red: 0.937254902, green: 0.5411764706, blue: 0.5882352941, alpha: 1)
+        static let cellBackground8: UIColor = #colorLiteral(red: 0.9333333333, green: 0.4156862745, blue: 0.4117647059, alpha: 1)
+        static let cellBackgroundSub8: UIColor = #colorLiteral(red: 0.9450980392, green: 0.5960784314, blue: 0.5960784314, alpha: 1)
+    }
+    
 }
 
 /*
     Timetable's
 */
-extension Kyutechapp2017 {
+struct KyutechColor {
   
-    func themeColor() -> UIColor {
-        return self.themecolor
+    static func themeColor() -> UIColor {
+        return Kyutechapp2017.color.themeColor
     }
     
-    func lightGray() -> UIColor {
-        return self.lightgray
+    static func lightGray() -> UIColor {
+        return Kyutechapp2017.color.lightGray
     }
     
-    func darkGray() -> UIColor {
-        return self.darkgray
+    static func darkGray() -> UIColor {
+        return Kyutechapp2017.color.darkGray
     }
     
-    func cellBackground1() -> UIColor {
-        return self.cellbackground1
+    static func cellBackground1() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground1
     }
     
-    func cellBackgroundSub1() -> UIColor {
-        return self.cellbackgroundsub1
+    static func cellBackgroundSub1() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub1
     }
     
-    func cellBackground2() -> UIColor {
-        return self.cellbackground2
+    static func cellBackground2() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground2
     }
     
-    func cellBackgroundSub2() -> UIColor {
-        return self.cellbackgroundsub2
+    static func cellBackgroundSub2() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub2
     }
     
-    func cellBackground3() -> UIColor {
-        return self.cellbackground3
+    static func cellBackground3() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground3
     }
     
-    func cellBackgroundSub3() -> UIColor {
-        return self.cellbackgroundsub3
+    static func cellBackgroundSub3() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub3
     }
     
-    func cellBackground4() -> UIColor {
-        return self.cellbackground4
+    static func cellBackground4() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground4
     }
     
-    func cellBackgroundSub4() -> UIColor {
-        return self.cellbackgroundsub4
+    static func cellBackgroundSub4() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub4
     }
     
-    func cellBackground5() -> UIColor {
-        return self.cellbackground5
+    static func cellBackground5() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground5
     }
     
-    func cellBackgroundSub5() -> UIColor {
-        return self.cellbackgroundsub5
+    static func cellBackgroundSub5() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub5
     }
     
-    func cellBackground6() -> UIColor {
-        return self.cellbackground6
+    static func cellBackground6() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground6
     }
     
-    func cellBackgroundSub6() -> UIColor {
-        return self.cellbackgroundsub6
+    static func cellBackgroundSub6() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub6
     }
     
-    func cellBackground7() -> UIColor {
-        return self.cellbackground7
+    static func cellBackground7() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground7
     }
     
-    func cellBackgroundSub7() -> UIColor {
-        return self.cellbackgroundsub7
+    static func cellBackgroundSub7() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub7
     }
     
-    func cellBackground8() -> UIColor {
-        return self.cellbackground8
+    static func cellBackground8() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackground8
     }
     
-    func cellBackgroundSub8() -> UIColor {
-        return self.cellbackgroundsub8
+    static func cellBackgroundSub8() -> UIColor {
+        return Kyutechapp2017.timetableColor.cellBackgroundSub8
     }
 }

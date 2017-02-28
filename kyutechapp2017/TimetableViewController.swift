@@ -22,8 +22,6 @@ class TimetableViewController: UIViewController{
     @IBOutlet weak var timetable: UICollectionView!
     // 入力ボタンのフラグ
     var isDisplay: Bool = true
-    // Kyutechapp2017クラスのインスタンス
-    var kyutechapp2017 = Kyutechapp2017()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,21 +55,21 @@ extension TimetableViewController {
         let items = ["第1クォーター", "第2クォーター", "第3クォーター", "第4クォーター"]
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: self.kyutechapp2017.themeColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: KyutechColor.themeColor()]
         
         menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "学期を選択", items: items as [AnyObject])
         menuView.cellHeight = 50
         menuView.cellBackgroundColor = UIColor.white
-        menuView.cellSelectionColor = self.kyutechapp2017.themeColor()
-        menuView.cellSeparatorColor = self.kyutechapp2017.darkGray()
+        menuView.cellSelectionColor = KyutechColor.themeColor()
+        menuView.cellSeparatorColor = KyutechColor.darkGray()
         menuView.shouldKeepSelectedCellColor = false
-        menuView.cellTextLabelColor = self.kyutechapp2017.darkGray()
-        menuView.selectedCellTextLabelColor = self.kyutechapp2017.lightGray()
+        menuView.cellTextLabelColor = KyutechColor.darkGray()
+        menuView.selectedCellTextLabelColor = KyutechColor.lightGray()
         menuView.cellTextLabelFont = UIFont(name: "Avenir-Heavy", size: 17)
         menuView.cellTextLabelAlignment = .left // .center // .right // .left
         menuView.arrowPadding = 15
         menuView.animationDuration = 0.5
-        menuView.maskBackgroundColor = self.kyutechapp2017.lightGray()
+        menuView.maskBackgroundColor = KyutechColor.lightGray()
         menuView.maskBackgroundOpacity = 0.3
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")

@@ -18,7 +18,6 @@
 		20613F461E628C1D00FCC3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
 		20613F471E628C1D00FCC3FA /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20613F481E628C1D00FCC3FA /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
-		20613F491E628C1D00FCC3FA /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20613F4A1E628C1D00FCC3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20613F4B1E628C1D00FCC3FA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		20613F561E628C2300FCC3FA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
@@ -32,7 +31,6 @@
 		20613F611E628C2300FCC3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
 		20613F621E628C2300FCC3FA /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20613F631E628C2300FCC3FA /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
-		20613F641E628C2300FCC3FA /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20613F651E628C2300FCC3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20613F661E628C2300FCC3FA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		20613F751E62969C00FCC3FA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
@@ -49,7 +47,6 @@
 		20BF1D5F1E546AD600D36C38 /* kyutechapp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D5E1E546AD600D36C38 /* kyutechapp2017Tests.swift */; };
 		20BF1D6A1E546AD600D36C38 /* kyutechapp2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D691E546AD600D36C38 /* kyutechapp2017UITests.swift */; };
 		20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
-		20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
@@ -58,6 +55,11 @@
 		20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
 		20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
+		20F03E0C1E654F9F002A3480 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
+		20F03E0D1E654F9F002A3480 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
+		20F03E111E655021002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
+		20F03E121E655022002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
+		20F03E131E655023002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
 		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
@@ -666,9 +668,9 @@
 				20613F441E628C1D00FCC3FA /* PeriodOfTime.xib in Resources */,
 				20613F451E628C1D00FCC3FA /* LaunchScreen.storyboard in Resources */,
 				20613F461E628C1D00FCC3FA /* Assets.xcassets in Resources */,
+				20F03E121E655022002A3480 /* Timetable.storyboard in Resources */,
 				20613F471E628C1D00FCC3FA /* DayOfWeek.xib in Resources */,
 				20613F481E628C1D00FCC3FA /* BulletinBoard.storyboard in Resources */,
-				20613F491E628C1D00FCC3FA /* Timetable.storyboard in Resources */,
 				20613F4A1E628C1D00FCC3FA /* Main.storyboard in Resources */,
 				20613F7A1E62972100FCC3FA /* DevApi.plist in Resources */,
 				20613F4B1E628C1D00FCC3FA /* Setting.storyboard in Resources */,
@@ -682,10 +684,10 @@
 				20613F5F1E628C2300FCC3FA /* PeriodOfTime.xib in Resources */,
 				20613F601E628C2300FCC3FA /* LaunchScreen.storyboard in Resources */,
 				20613F7C1E62973200FCC3FA /* DemoApi.plist in Resources */,
+				20F03E131E655023002A3480 /* Timetable.storyboard in Resources */,
 				20613F611E628C2300FCC3FA /* Assets.xcassets in Resources */,
 				20613F621E628C2300FCC3FA /* DayOfWeek.xib in Resources */,
 				20613F631E628C2300FCC3FA /* BulletinBoard.storyboard in Resources */,
-				20613F641E628C2300FCC3FA /* Timetable.storyboard in Resources */,
 				20613F651E628C2300FCC3FA /* Main.storyboard in Resources */,
 				20613F661E628C2300FCC3FA /* Setting.storyboard in Resources */,
 			);
@@ -698,10 +700,10 @@
 				20613F781E6296FF00FCC3FA /* Api.plist in Resources */,
 				20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */,
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
+				20F03E111E655021002A3480 /* Timetable.storyboard in Resources */,
 				20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */,
 				20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */,
 				20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */,
-				20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */,
 				20BF1D4F1E546AD600D36C38 /* Main.storyboard in Resources */,
 				20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */,
 			);
@@ -884,6 +886,7 @@
 				20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */,
 				20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F3E1E628C1D00FCC3FA /* TableCell.swift in Sources */,
+				20F03E0C1E654F9F002A3480 /* Config.swift in Sources */,
 				20613F3F1E628C1D00FCC3FA /* PeriodOfTime.swift in Sources */,
 				20613F401E628C1D00FCC3FA /* AppDelegate.swift in Sources */,
 			);
@@ -898,6 +901,7 @@
 				20613F571E628C2300FCC3FA /* DayOfWeek.swift in Sources */,
 				20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F591E628C2300FCC3FA /* TableCell.swift in Sources */,
+				20F03E0D1E654F9F002A3480 /* Config.swift in Sources */,
 				20613F5A1E628C2300FCC3FA /* PeriodOfTime.swift in Sources */,
 				20613F5B1E628C2300FCC3FA /* AppDelegate.swift in Sources */,
 			);
