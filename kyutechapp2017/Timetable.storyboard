@@ -104,7 +104,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="pushEditButton:" destination="onB-we-HNw" eventType="touchUpInside" id="5fP-42-E5z"/>
+                                                        <action selector="pushEditButton:" destination="onB-we-HNw" eventType="touchUpInside" id="J7N-yS-OcP"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

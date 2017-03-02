@@ -116,17 +116,25 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         return CGSize(width: tableWidth, height: tableHeight)
     }
     
-    // カスタムセル生成する
+    // セルの描画
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // カスタムセルの生成
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath) as! TableCell
         cell.editButton.isHidden = isDisplay
+        cell.editButton.tag = indexPath.row
         return cell
     }
     
     // セルが選ばれたとき
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // segueの呼び出し
+        print(indexPath.row)
         performSegue(withIdentifier: "toDetailPageVC",sender: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print(indexPath.row)
+        return true
     }
 
 }

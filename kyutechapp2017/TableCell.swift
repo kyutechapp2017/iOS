@@ -18,7 +18,8 @@ class TableCell: UICollectionViewCell {
     }
     
     @IBAction func pushEditButton(_ sender: Any) {
-        print("hoge")
+        print(self.editButton.tag)
     }
+    
     
 }
