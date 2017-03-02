@@ -19,6 +19,7 @@
 		20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
+		E63AEE201E68441E00C20F4A /* BulletinBoardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* BulletinBoardDetailViewController.swift */; };
 		E643D7191E648A17003F540A /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D7181E648A17003F540A /* ColorManager.swift */; };
 		E643D71B1E648A3D003F540A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71A1E648A3D003F540A /* Color.swift */; };
 		E643D71D1E648A68003F540A /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryLabel.swift */; };
@@ -68,6 +69,7 @@
 		491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A823575E550BFC38C3114FA /* Pods-kyutechapp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E63AEE1F1E68441E00C20F4A /* BulletinBoardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardDetailViewController.swift; sourceTree = "<group>"; };
 		E643D7181E648A17003F540A /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E643D71A1E648A3D003F540A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		20BF1D871E546C4700D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				E63AEE1F1E68441E00C20F4A /* BulletinBoardDetailViewController.swift */,
 				E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */,
 			);
 			name = BulletinBoard;
@@ -708,6 +711,7 @@
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 				E643D71B1E648A3D003F540A /* Color.swift in Sources */,
 				E643D7191E648A17003F540A /* ColorManager.swift in Sources */,
+				E63AEE201E68441E00C20F4A /* BulletinBoardDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

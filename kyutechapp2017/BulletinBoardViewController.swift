@@ -11,6 +11,13 @@ import UIKit
 class BulletinBoardViewController: UIViewController {
     
     @IBOutlet weak var classesButton: UIButton!
+    @IBOutlet weak var intensiveButton: UIButton!
+    @IBOutlet weak var newsButton: UIButton!
+    @IBOutlet weak var procedureButton: UIButton!
+    @IBOutlet weak var departmentButton: UIButton!
+    @IBOutlet weak var summonButton: UIButton!
+    @IBOutlet weak var studyAbroadButton: UIButton!
+    @IBOutlet weak var scholarshipButton: UIButton!
     
     
     override func viewDidLoad() {

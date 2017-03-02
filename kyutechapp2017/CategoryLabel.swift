@@ -8,40 +8,23 @@
 
 import UIKit
 
-
-struct CategoryLabel {
-    static let color = UIColor.labelColor
-    var position: CGPoint!
-    static let alignment = NSTextAlignment.center
-    //    static let font =
-    
-    
-    struct classes{
-        static let size = UIFont.systemFont(ofSize: 40.0)
-    }
-    
-    struct intensive{
-        static let size = UIFont.systemFont(ofSize: 35.0)
-    }
-    
-    struct news {
-        static let size = UIFont.systemFont(ofSize: 30.0)
-    }
-    
-    struct procedure {
-    }
-    
-    struct department {
-    }
-    
-    struct summon {
-    }
-    
-    struct studyAbroad {
-    }
-    
-    struct scholarship {
-    }
+enum Size:CGFloat{
+    case big = 40.0
+    case normal = 35.0
+    case small = 30.0
 }
+
+
+//struct CategoryLabel {
+//    static let color = UIColor.labelColor
+//    var position: CGPoint!
+//    static let alignment = NSTextAlignment.center
+//    //    static let font =
+//    
+//    mutating func init(fontSize:CGFloat){
+//        static let size = UIFont.systemFont(ofSize: fontSize)
+//        
+//    }
+//}
 
 

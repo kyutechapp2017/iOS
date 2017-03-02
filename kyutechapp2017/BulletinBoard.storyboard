@@ -26,15 +26,15 @@
                                 <rect key="frame" x="8" y="72" width="359" height="538"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-SF-PoV" userLabel="top">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="145.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="146"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-Qd-AbJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="251.5" height="145.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="252" height="146"/>
                                                 <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="授業"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
-                                                <rect key="frame" x="259.5" y="0.0" width="99.5" height="145.5"/>
+                                                <rect key="frame" x="260" y="0.0" width="99" height="146"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="集中講義"/>
                                             </button>
@@ -44,7 +44,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-A9-vtU" userLabel="middle">
-                                        <rect key="frame" x="0.0" y="153.5" width="359" height="194"/>
+                                        <rect key="frame" x="0.0" y="154" width="359" height="194"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-BO-c7x">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="194"/>
@@ -81,23 +81,23 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-n5-lki" userLabel="bottom">
-                                        <rect key="frame" x="0.0" y="355.5" width="359" height="182.5"/>
+                                        <rect key="frame" x="0.0" y="356" width="359" height="182"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
-                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="182.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="182"/>
                                                 <color key="backgroundColor" red="1" green="0.41954855238743594" blue="0.58456804303698351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="学生呼び出し"/>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-xr-IGv">
-                                                <rect key="frame" x="179.5" y="0.0" width="179.5" height="182.5"/>
+                                                <rect key="frame" x="181" y="0.0" width="178" height="182"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="87"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="178" height="87"/>
                                                         <color key="backgroundColor" red="0.29550126570000002" green="0.69537698510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="留学"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
-                                                        <rect key="frame" x="0.0" y="95" width="179.5" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="95" width="178" height="87"/>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="奨学金"/>
                                                     </button>
@@ -131,6 +131,10 @@
                                     <constraint firstItem="XqG-SF-PoV" firstAttribute="top" secondItem="MJv-cS-Be3" secondAttribute="top" id="oxV-IE-YP2"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-Qj-Ckv">
+                                <rect key="frame" x="142" y="260" width="91" height="146"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -143,16 +147,23 @@
                     <navigationItem key="navigationItem" title="Kyutech" id="oKK-W4-VZk"/>
                     <connections>
                         <outlet property="classesButton" destination="kxp-Qd-AbJ" id="vcR-QW-IFD"/>
+                        <outlet property="departmentButton" destination="4xs-L2-Z64" id="2iw-lI-GLL"/>
+                        <outlet property="intensiveButton" destination="Web-0C-FB8" id="9IB-Vq-ih2"/>
+                        <outlet property="newsButton" destination="Py0-ss-FIw" id="M41-Fy-e9C"/>
+                        <outlet property="procedureButton" destination="8IK-g7-wUF" id="a1N-ze-8R3"/>
+                        <outlet property="scholarshipButton" destination="yNa-Ff-f5A" id="ilr-W3-8Ux"/>
+                        <outlet property="studyAbroadButton" destination="U9t-fd-tWQ" id="5vd-Pj-xsF"/>
+                        <outlet property="summonButton" destination="ifv-4l-4bq" id="SL1-8J-mHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndy-ee-igJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="868" y="-43.628185907046479"/>
         </scene>
-        <!--View Controller-->
+        <!--Bulletin Board Detail View Controller-->
         <scene sceneID="zOy-5R-YNb">
             <objects>
-                <viewController id="iNK-NX-ApQ" sceneMemberID="viewController">
+                <viewController id="iNK-NX-ApQ" customClass="BulletinBoardDetailViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QkL-O5-cYt"/>
                         <viewControllerLayoutGuide type="bottom" id="NWy-vR-lZe"/>
@@ -162,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
-                                <rect key="frame" x="0.0" y="173" width="304" height="217"/>
+                                <rect key="frame" x="0.0" y="152" width="375" height="444"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -174,10 +185,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="COR-Oe-Xsv" id="lS0-1r-gLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="-44"/>
+            <point key="canvasLocation" x="1940" y="-44.527736131934034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrW-8s-Y3x">
