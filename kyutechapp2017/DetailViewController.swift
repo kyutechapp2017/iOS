@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BulletinBoardDetailViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class BulletinBoardDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
 
@@ -39,7 +40,7 @@ class BulletinBoardDetailViewController: UIViewController {
 
 
 
-extension BulletinBoardDetailViewController: UITableViewDelegate,UITableViewDataSource{
+extension DetailViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
