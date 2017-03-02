@@ -14,10 +14,13 @@ class TimetableViewController: UIViewController{
     // 曜日と時限のカスタムビュー
     @IBOutlet weak fileprivate var dayOfWeekView: DayOfWeek!
     @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
+    // 曜日と時限の集合
+    fileprivate let dow = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日"]
+    fileprivate let pot = ["1限", "2限", "3限", "4限", "5限", "6限"]
     // BTNavigationDropdownMenu
     var menuView: BTNavigationDropdownMenu!
-    // 時間割編集入力ボタン
-    @IBOutlet weak var editModeButton: UIBarButtonItem!
+    // 時間割編集モード切り替えボタン
+    @IBOutlet weak var modeChangeButton: UIBarButtonItem!
     // 時間割全体(collectionView)
     @IBOutlet weak var timetable: UICollectionView!
     // 入力ボタンのフラグ
@@ -33,12 +36,17 @@ class TimetableViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // Edit timetable
-    @IBAction func pushEditButton(_ sender: Any) {
-        self.editModeButton.title = !isDisplay ? "編集" : "保存"
+    // モード切り替えボタンが押されたとき
+    @IBAction func pushModeChangeButton(_ sender: Any) {
+        self.modeChangeButton.title = !isDisplay ? "編集" : "保存"
         isDisplay = !isDisplay
         self.timetable.reloadData()
+    }
+    // 授業編集ボタンが押されたとき
+    @IBAction func pushEditClassButton(_ sender: Any) {
+        let buttonTag = TableCell.returnButtonTag()
+        print(dow[buttonTag % 5])
+        print(pot[buttonTag / 5])
     }
     
 }
@@ -50,7 +58,6 @@ class TimetableViewController: UIViewController{
 extension TimetableViewController {
     
     func setUp() {
-        
         // BTNavigationDropdownMenuの設定
         let items = ["第1クォーター", "第2クォーター", "第3クォーター", "第4クォーター"]
         self.navigationController?.navigationBar.isTranslucent = false
@@ -76,9 +83,7 @@ extension TimetableViewController {
         }
 
         self.navigationItem.titleView = menuView
-        
     }
-    
 }
 
 
@@ -91,12 +96,10 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
     // セルの数の決定
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
     }
-    
     // セルのサイズを設定
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -104,37 +107,26 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
         let navigationBarHeight = self.navigationController?.navigationBar.frame.size.height
         let tabBarHeight = self.tabBarController?.tabBar.frame.size.height
-    
         // 曜日のカスタムビューの高さと時限のカスタムビューの幅を取得
         let dowHeight = self.dayOfWeekView.frame.size.height
         let potWidth = self.periodOfTimeView.frame.size.width
         
         let tableWidth = (UIScreen.main.bounds.size.width - CGFloat(potWidth)) / CGFloat(5)
         let tableHeight = (UIScreen.main.bounds.size.height - CGFloat(statusBarHeight) - CGFloat(navigationBarHeight!) - CGFloat(tabBarHeight!) - CGFloat(dowHeight)) / CGFloat(6)
-        
-        
         return CGSize(width: tableWidth, height: tableHeight)
     }
-    
     // セルの描画
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // カスタムセルの生成
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath) as! TableCell
-        cell.editButton.isHidden = isDisplay
-        cell.editButton.tag = indexPath.row
+        cell.editClassButton.isHidden = isDisplay
+        cell.editClassButton.tag = indexPath.row
         return cell
     }
-    
     // セルが選ばれたとき
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // segueの呼び出し
         print(indexPath.row)
         performSegue(withIdentifier: "toDetailPageVC",sender: nil)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print(indexPath.row)
-        return true
-    }
-
 }

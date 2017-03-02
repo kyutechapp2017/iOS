@@ -68,7 +68,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ug-f4-bL5" userLabel="Class Number View">
-                                                    <rect key="frame" x="10.5" y="60" width="80" height="30"/>
+                                                    <rect key="frame" x="10" y="60" width="80" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-DD-v5a" userLabel="Class Number Label">
                                                             <rect key="frame" x="5" y="5" width="70" height="20"/>
@@ -96,7 +96,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHR-0u-Uha">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHR-0u-Uha" userLabel="Edit Class Button">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -104,7 +104,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="pushEditButton:" destination="onB-we-HNw" eventType="touchUpInside" id="J7N-yS-OcP"/>
+                                                        <action selector="pushEditClassButton:" destination="3EO-ZI-lsB" eventType="touchUpInside" id="YpZ-6J-05T"/>
+                                                        <action selector="pushEditClassButton:" destination="onB-we-HNw" eventType="touchUpInside" id="pKL-mm-JzY"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -131,7 +132,7 @@
                                             <constraint firstItem="KbF-Oq-RMm" firstAttribute="top" secondItem="onB-we-HNw" secondAttribute="top" id="zuO-Ut-nik"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="editButton" destination="DHR-0u-Uha" id="5mn-Vh-vas"/>
+                                            <outlet property="editClassButton" destination="DHR-0u-Uha" id="8o4-h5-tif"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -158,13 +159,13 @@
                     <navigationItem key="navigationItem" id="Btp-OU-Lga">
                         <barButtonItem key="rightBarButtonItem" title="編集" id="CAb-AU-fCo">
                             <connections>
-                                <action selector="pushEditButton:" destination="3EO-ZI-lsB" id="QhI-tr-86c"/>
+                                <action selector="pushModeChangeButton:" destination="3EO-ZI-lsB" id="6ZH-K8-L16"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dayOfWeekView" destination="zSe-dt-H3F" id="k3H-iR-e81"/>
-                        <outlet property="editModeButton" destination="CAb-AU-fCo" id="a1V-oH-iGL"/>
+                        <outlet property="modeChangeButton" destination="CAb-AU-fCo" id="FH4-hf-PvG"/>
                         <outlet property="periodOfTimeView" destination="ujJ-RQ-JjG" id="UTX-qS-Oow"/>
                         <outlet property="timetable" destination="pQh-u9-hoM" id="TTR-lV-rPb"/>
                         <segue destination="Mfw-Dm-7X6" kind="show" identifier="toDetailPageVC" id="QOx-4T-BL0"/>
