@@ -128,6 +128,7 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     
     // 授業編集ボタンが押されたときの処理
     func didPushedEditClassButton(tag: Int) {
-        print(tag)
+        print(dow[tag % 5])
+        print(pot[tag / 5])
     }
 }

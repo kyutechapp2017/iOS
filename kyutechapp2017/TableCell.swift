@@ -23,7 +23,6 @@ class TableCell: UICollectionViewCell {
     }
     
     @IBAction func pushEditClassButton(_ sender: Any) {
-        print("hoge")
         self.delegate?.didPushedEditClassButton(tag: self.editClassButton.tag)
     }
 }
