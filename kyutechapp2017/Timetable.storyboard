@@ -30,14 +30,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujJ-RQ-JjG" customClass="PeriodOfTime" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="99" width="45" height="519"/>
+                                <rect key="frame" x="0.0" y="99" width="40" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="3od-Sq-IUg"/>
+                                    <constraint firstAttribute="width" constant="40" id="3od-Sq-IUg"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="classCell" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pQh-u9-hoM">
-                                <rect key="frame" x="45" y="99" width="330" height="519"/>
+                                <rect key="frame" x="40" y="99" width="335" height="519"/>
                                 <color key="backgroundColor" red="0.81951814889907837" green="0.81965965032577515" blue="0.81950914859771729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ahj-PC-UOr">
                                     <size key="itemSize" width="100" height="100"/>
@@ -72,7 +72,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-DD-v5a" userLabel="Class Number Label">
                                                             <rect key="frame" x="5" y="5" width="70" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -92,7 +92,7 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WV-Rb-GT1" userLabel="Class Name Label">
                                                     <rect key="frame" x="10" y="0.0" width="80" height="60"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -104,8 +104,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="pushEditClassButton:" destination="3EO-ZI-lsB" eventType="touchUpInside" id="YpZ-6J-05T"/>
-                                                        <action selector="pushEditClassButton:" destination="onB-we-HNw" eventType="touchUpInside" id="pKL-mm-JzY"/>
+                                                        <action selector="pushEditClassButton:" destination="onB-we-HNw" eventType="touchUpInside" id="xDA-7T-jml"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -132,7 +131,7 @@
                                             <constraint firstItem="KbF-Oq-RMm" firstAttribute="top" secondItem="onB-we-HNw" secondAttribute="top" id="zuO-Ut-nik"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="editClassButton" destination="DHR-0u-Uha" id="8o4-h5-tif"/>
+                                            <outlet property="editClassButton" destination="DHR-0u-Uha" id="hfd-gH-Mhz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

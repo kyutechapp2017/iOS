@@ -42,12 +42,6 @@ class TimetableViewController: UIViewController{
         isDisplay = !isDisplay
         self.timetable.reloadData()
     }
-    // 授業編集ボタンが押されたとき
-    @IBAction func pushEditClassButton(_ sender: Any) {
-        let buttonTag = TableCell.returnButtonTag()
-        print(dow[buttonTag % 5])
-        print(pot[buttonTag / 5])
-    }
     
 }
 
@@ -83,6 +77,7 @@ extension TimetableViewController {
         }
 
         self.navigationItem.titleView = menuView
+        
     }
 }
 
@@ -90,7 +85,7 @@ extension TimetableViewController {
 /*
     Collectionview --------------------
 */
-extension TimetableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TimetableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, TableCellDelegate {
     
     // セクション数の決定
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -121,6 +116,7 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath) as! TableCell
         cell.editClassButton.isHidden = isDisplay
         cell.editClassButton.tag = indexPath.row
+        cell.delegate = self
         return cell
     }
     // セルが選ばれたとき
@@ -128,5 +124,10 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         // segueの呼び出し
         print(indexPath.row)
         performSegue(withIdentifier: "toDetailPageVC",sender: nil)
+    }
+    
+    // 授業編集ボタンが押されたときの処理
+    func didPushedEditClassButton(tag: Int) {
+        print(tag)
     }
 }
