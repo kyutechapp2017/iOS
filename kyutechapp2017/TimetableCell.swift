@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol TableCellDelegate {
+protocol TimetableCellDelegate {
     func didPushedEditClassButton(tag: Int)
 }
 
-class TableCell: UICollectionViewCell {
+class TimetableCell: UICollectionViewCell {
     
     @IBOutlet weak var editClassButton: UIButton!
-    var delegate: TableCellDelegate?
+    var delegate: TimetableCellDelegate?
     
     override func draw(_ rect: CGRect) {
         self.layer.borderWidth = 1
@@ -25,4 +25,5 @@ class TableCell: UICollectionViewCell {
     @IBAction func pushEditClassButton(_ sender: Any) {
         self.delegate?.didPushedEditClassButton(tag: self.editClassButton.tag)
     }
+    
 }

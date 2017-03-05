@@ -25,6 +25,9 @@ class TimetableViewController: UIViewController{
     @IBOutlet weak var timetable: UICollectionView!
     // 入力ボタンのフラグ
     var isDisplay: Bool = true
+    // 授業及び担当教員のテスト配列
+    fileprivate let classes = ["数学", "英語", "情報"]
+    fileprivate let teachers = ["江崎 茉美", "山本 和夫", "山浦 功"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +78,6 @@ extension TimetableViewController {
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
         }
-
         self.navigationItem.titleView = menuView
         
     }
@@ -83,9 +85,9 @@ extension TimetableViewController {
 
 
 /*
-    Collectionview --------------------
+    UICollectionviewController --------------------
 */
-extension TimetableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, TableCellDelegate {
+extension TimetableViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // セクション数の決定
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -97,7 +99,6 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     }
     // セルのサイズを設定
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         // StatusBar,NavigationBar,TabBarの高さを取得
         let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
         let navigationBarHeight = self.navigationController?.navigationBar.frame.size.height
@@ -113,7 +114,7 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     // セルの描画
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // カスタムセルの生成
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "classCell", for: indexPath) as! TableCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "timetableCell", for: indexPath) as! TimetableCell
         cell.editClassButton.isHidden = isDisplay
         cell.editClassButton.tag = indexPath.row
         cell.delegate = self
@@ -126,9 +127,62 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         performSegue(withIdentifier: "toDetailPageVC",sender: nil)
     }
     
+}
+
+
+/*
+    UITableViewController --------------------
+*/
+extension TimetableViewController: TimetableCellDelegate {
     // 授業編集ボタンが押されたときの処理
     func didPushedEditClassButton(tag: Int) {
-        print(dow[tag % 5])
-        print(pot[tag / 5])
+        // AlertControllerの設定
+        let alert = UIAlertController(title: dow[tag % 5] + " " + pot[tag / 5], message: "", preferredStyle: .alert)
+        alert.addAction( UIAlertAction(title: "削除", style: .destructive) {
+            action in NSLog("削除")
+        })
+        alert.addAction( UIAlertAction(title: "追加", style: .default) {
+            action in NSLog("追加")
+        })
+        
+        // AlertController内のUITableViewControllerの設定
+        let tableViewController = UITableViewController()
+        let nib = UINib(nibName: "classtableCell", bundle: nil)
+        
+        tableViewController.tableView.delegate = self
+        tableViewController.tableView.register(nib, forCellReuseIdentifier: "classtableCell")
+        
+        tableViewController.preferredContentSize = CGSize(width: 272, height: 176)
+        
+        alert.setValue(tableViewController, forKey: "contentViewController")
+        present(alert, animated: true, completion: nil)
     }
+    
+}
+
+
+/*
+    UITableViewController --------------------
+*/
+extension TimetableViewController: UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return classes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "classtableCell", for: indexPath) as! ClasstableCell
+        cell.classNameLabel.text = classes[indexPath.row]
+        cell.teacherNameLabel.text = teachers[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    
 }
