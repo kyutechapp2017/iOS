@@ -21,3 +21,14 @@ func categoryButton(button: UIButton, color_start:UIColor, color_end:UIColor, st
     gradient.locations = [position_1, position_2]
     button.layer.insertSublayer(gradient, at: 0)
 }
+
+enum labelName: String{
+    case classes = "授業"
+    case intensive = "集中講義"
+    case news = "お知らせ"
+    case procedure = "各種変更手続き"
+    case department = "学科別"
+    case summon = "学生呼び出し"
+    case studyAbroad = "留学"
+    case scholarship = "奨学金"
+}

@@ -22,6 +22,12 @@ class BulletinBoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    func setting(){
         categoryButton(button: classesButton, color_start: .classesColor_1, color_end:.classesColor_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
         categoryButton(button: intensiveButton, color_start: .intensiveColor_1, color_end: .intensiveColor_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
         categoryButton(button: newsButton, color_start: .news_1, color_end: .news_2, start_x: 1.0, start_y: 0.0, end_x: 0.0, end_y: 1.0)
@@ -30,9 +36,5 @@ class BulletinBoardViewController: UIViewController {
         categoryButton(button: summonButton, color_start: .summon_1, color_end: .summon_2, start_x: 1.0, start_y: 0.0, end_x: 0.0, end_y: 1.0)
         categoryButton(button: studyAbroadButton, color_start: .studyAbroad_1, color_end: .studyAbroad_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
         categoryButton(button: scholarshipButton, color_start: .scholarship_1, color_end: .scholarship_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
