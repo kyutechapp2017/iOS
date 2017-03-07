@@ -147,9 +147,10 @@ extension TimetableViewController: TimetableCellDelegate {
         
         // AlertController内のUITableViewControllerの設定
         let tableViewController = UITableViewController()
-        let nib = UINib(nibName: "classtableCell", bundle: nil)
+        let nib = UINib(nibName: "ClasstableCell", bundle: nil)
         
         tableViewController.tableView.delegate = self
+        tableViewController.tableView.dataSource = self
         tableViewController.tableView.register(nib, forCellReuseIdentifier: "classtableCell")
         
         tableViewController.preferredContentSize = CGSize(width: 272, height: 176)
@@ -164,7 +165,7 @@ extension TimetableViewController: TimetableCellDelegate {
 /*
     UITableViewController --------------------
 */
-extension TimetableViewController: UITableViewDelegate {
+extension TimetableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
