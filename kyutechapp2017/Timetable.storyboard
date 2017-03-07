@@ -70,7 +70,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ug-f4-bL5" userLabel="Class Number View">
                                                     <rect key="frame" x="10" y="60" width="80" height="30"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-DD-v5a" userLabel="Class Number Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-DD-v5a" userLabel="Classroom Number Label">
                                                             <rect key="frame" x="5" y="5" width="70" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
@@ -90,7 +90,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WV-Rb-GT1" userLabel="Class Name Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WV-Rb-GT1" userLabel="Class Name Label">
                                                     <rect key="frame" x="10" y="0.0" width="80" height="60"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -131,6 +131,8 @@
                                             <constraint firstItem="KbF-Oq-RMm" firstAttribute="top" secondItem="onB-we-HNw" secondAttribute="top" id="zuO-Ut-nik"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="classNameLabel" destination="1WV-Rb-GT1" id="wrc-dr-Ex3"/>
+                                            <outlet property="classroomNumberLabel" destination="Uk7-DD-v5a" id="313-nP-cwV"/>
                                             <outlet property="editClassButton" destination="DHR-0u-Uha" id="vY1-xL-V2J"/>
                                         </connections>
                                     </collectionViewCell>

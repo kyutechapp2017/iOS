@@ -9,11 +9,13 @@
 import UIKit
 
 protocol TimetableCellDelegate {
-    func didPushedEditClassButton(tag: Int)
+    func didPushedEditClassButton(tag: Int, classNameLabel: UILabel, classroomNumberLabel: UILabel)
 }
 
 class TimetableCell: UICollectionViewCell {
     
+    @IBOutlet weak var classNameLabel: UILabel!
+    @IBOutlet weak var classroomNumberLabel: UILabel!
     @IBOutlet weak var editClassButton: UIButton!
     var delegate: TimetableCellDelegate?
     
@@ -23,7 +25,7 @@ class TimetableCell: UICollectionViewCell {
     }
     
     @IBAction func pushEditClassButton(_ sender: Any) {
-        self.delegate?.didPushedEditClassButton(tag: self.editClassButton.tag)
+        self.delegate?.didPushedEditClassButton(tag: self.editClassButton.tag, classNameLabel: self.classNameLabel, classroomNumberLabel: self.classroomNumberLabel)
     }
     
 }

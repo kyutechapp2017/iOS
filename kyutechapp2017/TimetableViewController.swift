@@ -25,9 +25,12 @@ class TimetableViewController: UIViewController{
     @IBOutlet weak var timetable: UICollectionView!
     // 入力ボタンのフラグ
     var isDisplay: Bool = true
+    // UITableViewで選択された行を一時記憶する変数
+    var selectedRow: Int = -1
     // 授業及び担当教員のテスト配列
     fileprivate let classes = ["データ構造とアルゴリズム", "情報メディアとコミュニケーション", "コンピュータ革命と現代社会", "英語III", "棒と軸の力学"]
     fileprivate let teachers = ["中村　貞吾", "西野　和典", "安河内　恵子", "ウィリアムソン　ロジャー　スティル", "石原　大輔"]
+    fileprivate let classrooms = ["1101講義室", "MILAiS(講義棟側)", "1204講義室", "1301講義室", "2102講義室"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,14 +138,16 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
 */
 extension TimetableViewController: TimetableCellDelegate {
     // 授業編集ボタンが押されたときの処理
-    func didPushedEditClassButton(tag: Int) {
+    func didPushedEditClassButton(tag: Int, classNameLabel: UILabel, classroomNumberLabel: UILabel) {
         // AlertControllerの設定
         let alert = UIAlertController(title: dow[tag % 5] + " " + pot[tag / 5], message: "", preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "削除", style: .destructive) {
-            action in NSLog("削除")
+        alert.addAction( UIAlertAction(title: "削除", style: .destructive) { action in
+            classNameLabel.text = ""
+            classroomNumberLabel.text = ""
         })
-        alert.addAction( UIAlertAction(title: "追加", style: .default) {
-            action in NSLog("追加")
+        alert.addAction( UIAlertAction(title: "追加", style: .default) { action in
+            classNameLabel.text = self.classes[self.selectedRow]
+            classroomNumberLabel.text = self.classrooms[self.selectedRow]
         })
         
         // AlertController内のUITableViewControllerの設定
@@ -183,7 +188,7 @@ extension TimetableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        self.selectedRow = indexPath.row
     }
     
 }
