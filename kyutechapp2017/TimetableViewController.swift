@@ -26,8 +26,8 @@ class TimetableViewController: UIViewController{
     // 入力ボタンのフラグ
     var isDisplay: Bool = true
     // 授業及び担当教員のテスト配列
-    fileprivate let classes = ["数学", "英語", "情報"]
-    fileprivate let teachers = ["江崎 茉美", "山本 和夫", "山浦 功"]
+    fileprivate let classes = ["データ構造とアルゴリズム", "情報メディアとコミュニケーション", "コンピュータ革命と現代社会", "英語III", "棒と軸の力学"]
+    fileprivate let teachers = ["中村　貞吾", "西野　和典", "安河内　恵子", "ウィリアムソン　ロジャー　スティル", "石原　大輔"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,38 +16,54 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZsK-Ns-x1C" id="M2E-3H-eH6">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvW-80-9oR" userLabel="Left Space View">
+                        <rect key="frame" x="0.0" y="0.0" width="15" height="43"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="データ構造とアルゴリズム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-qY-8T9" userLabel="Class Name Label">
+                        <rect key="frame" x="15" y="0.0" width="244" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッカーシー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-CF-4Z9" userLabel="Teacher Name Label">
-                        <rect key="frame" x="244" y="22" width="131" height="21.5"/>
+                        <rect key="frame" x="274" y="22" width="93.5" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="データ構造とアルゴリズム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-qY-8T9" userLabel="Class Name Label">
-                        <rect key="frame" x="0.0" y="0.0" width="281.5" height="43.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uof-88-g7Z" userLabel="Right Space View">
+                        <rect key="frame" x="367" y="0.0" width="7.5" height="44"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Afe-qY-8T9" secondAttribute="bottom" id="EJJ-Zm-P6w"/>
-                    <constraint firstAttribute="trailing" secondItem="Fgg-CF-4Z9" secondAttribute="trailing" id="KW7-1O-EeK"/>
-                    <constraint firstItem="Afe-qY-8T9" firstAttribute="top" secondItem="M2E-3H-eH6" secondAttribute="top" id="hf3-wz-K84"/>
-                    <constraint firstItem="Fgg-CF-4Z9" firstAttribute="height" secondItem="Afe-qY-8T9" secondAttribute="height" multiplier="0.5" id="mIr-yN-rye"/>
-                    <constraint firstItem="Fgg-CF-4Z9" firstAttribute="width" secondItem="M2E-3H-eH6" secondAttribute="width" multiplier="0.35" id="t8z-pL-LPn"/>
-                    <constraint firstAttribute="bottom" secondItem="Fgg-CF-4Z9" secondAttribute="bottom" id="toX-hJ-riA"/>
-                    <constraint firstItem="Afe-qY-8T9" firstAttribute="leading" secondItem="M2E-3H-eH6" secondAttribute="leading" id="uZ4-HY-gVC"/>
-                    <constraint firstItem="Afe-qY-8T9" firstAttribute="width" secondItem="M2E-3H-eH6" secondAttribute="width" multiplier="0.75" id="xeJ-CI-M0X"/>
+                    <constraint firstItem="Afe-qY-8T9" firstAttribute="top" secondItem="M2E-3H-eH6" secondAttribute="top" id="3Vy-10-gIs"/>
+                    <constraint firstAttribute="bottom" secondItem="Fgg-CF-4Z9" secondAttribute="bottom" id="6yV-V9-hsg"/>
+                    <constraint firstAttribute="bottom" secondItem="Afe-qY-8T9" secondAttribute="bottom" id="Csc-eF-hR4"/>
+                    <constraint firstItem="Uof-88-g7Z" firstAttribute="top" secondItem="M2E-3H-eH6" secondAttribute="top" id="HiL-dF-3zT"/>
+                    <constraint firstItem="gvW-80-9oR" firstAttribute="leading" secondItem="M2E-3H-eH6" secondAttribute="leading" id="JuY-kh-wpL"/>
+                    <constraint firstAttribute="bottom" secondItem="Uof-88-g7Z" secondAttribute="bottom" id="K4Q-MO-Rcb"/>
+                    <constraint firstItem="gvW-80-9oR" firstAttribute="width" secondItem="M2E-3H-eH6" secondAttribute="width" multiplier="0.04" id="LJN-wV-7BB"/>
+                    <constraint firstItem="Uof-88-g7Z" firstAttribute="width" secondItem="M2E-3H-eH6" secondAttribute="width" multiplier="0.02" id="MLS-1B-hkB"/>
+                    <constraint firstItem="Uof-88-g7Z" firstAttribute="leading" secondItem="Fgg-CF-4Z9" secondAttribute="trailing" id="RgR-RT-Zrk"/>
+                    <constraint firstItem="Afe-qY-8T9" firstAttribute="leading" secondItem="gvW-80-9oR" secondAttribute="trailing" id="V6x-wu-65Z"/>
+                    <constraint firstItem="Fgg-CF-4Z9" firstAttribute="height" secondItem="Afe-qY-8T9" secondAttribute="height" multiplier="0.5" id="a3c-kT-X7k"/>
+                    <constraint firstItem="Fgg-CF-4Z9" firstAttribute="width" secondItem="M2E-3H-eH6" secondAttribute="width" multiplier="0.25" id="hdZ-Rs-ByI"/>
+                    <constraint firstItem="Afe-qY-8T9" firstAttribute="width" secondItem="M2E-3H-eH6" secondAttribute="width" multiplier="0.65" id="og9-fb-QlG"/>
+                    <constraint firstItem="gvW-80-9oR" firstAttribute="top" secondItem="M2E-3H-eH6" secondAttribute="top" id="quQ-yG-p7W"/>
+                    <constraint firstAttribute="bottom" secondItem="gvW-80-9oR" secondAttribute="bottom" id="rD6-pG-ryq"/>
+                    <constraint firstAttribute="trailing" secondItem="Uof-88-g7Z" secondAttribute="trailing" id="xWq-sP-oBu"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="classNameLabel" destination="Afe-qY-8T9" id="Knk-p4-2rs"/>
                 <outlet property="teacherNameLabel" destination="Fgg-CF-4Z9" id="qqN-Mf-49D"/>
             </connections>
-            <point key="canvasLocation" x="92" y="109"/>
+            <point key="canvasLocation" x="91.5" y="109"/>
         </tableViewCell>
     </objects>
 </document>
