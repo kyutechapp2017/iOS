@@ -19,7 +19,7 @@ class BulletinBoardViewController: UIViewController {
     @IBOutlet weak var studyAbroadButton: UIButton!
     @IBOutlet weak var scholarshipButton: UIButton!
     
-    
+    let imageName = ["classes","department","intensive","news","proceduce","scholarship","studyAbroad","summon"]
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryButton(button: classesButton, color_start: .classesColor_1, color_end:.classesColor_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
@@ -36,8 +36,9 @@ class BulletinBoardViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     func categoryButton(button: UIButton, color_start:UIColor, color_end:UIColor, start_x:CGFloat, start_y:CGFloat, end_x:CGFloat, end_y:CGFloat){
+        var indexPath = IndexPath()
         let gradient = CAGradientLayer()
-        let image = UIImage(named: "cl")
+        let image = UIImage(named: imageName[indexPath.row])
         let position_1 = NSNumber(value: 0.0 as Float)
         let position_2 = NSNumber(value: 1.0 as Float)
         let startPoint = CGPoint(x: start_x, y: start_y)

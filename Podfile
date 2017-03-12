@@ -8,6 +8,7 @@ target 'kyutechapp2017' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'AlamofireSwiftyJSON'
+  pod 'FoldingCell', '~> 2.0.3' 
   pod "PDFramework", :git => 'https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git'
 
   # Pods for kyutechapp2017
