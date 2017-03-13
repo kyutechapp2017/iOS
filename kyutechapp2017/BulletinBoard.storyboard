@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="638" y="-45"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail Table View Controller-->
         <scene sceneID="zOy-5R-YNb">
             <objects>
-                <viewController id="iNK-NX-ApQ" customClass="DetailViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iNK-NX-ApQ" customClass="DetailTableViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QkL-O5-cYt"/>
                         <viewControllerLayoutGuide type="bottom" id="NWy-vR-lZe"/>
@@ -231,9 +231,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="tableView" destination="COR-Oe-Xsv" id="lS0-1r-gLP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
