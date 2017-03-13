@@ -11,6 +11,17 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    fileprivate struct C{
+        struct CellHeight {
+            static let close: CGFloat = 70
+            static let open: CGFloat = 500
+        }
+    }
+    
+    var cellHeights = (0..<CELLCOUNT).map{ _ in C.CellHeight.close}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,26 +32,15 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
 
 extension DetailViewController: UITableViewDelegate,UITableViewDataSource{
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeights[indexPath.row]
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
