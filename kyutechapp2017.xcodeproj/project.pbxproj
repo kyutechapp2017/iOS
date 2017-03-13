@@ -24,7 +24,7 @@
 		E643D71B1E648A3D003F540A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71A1E648A3D003F540A /* Color.swift */; };
 		E643D71D1E648A68003F540A /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryLabel.swift */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
-		E6F4E5C71E76528B0049E007 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C61E76528B0049E007 /* DetailTableViewCell.swift */; };
+		E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C61E76528B0049E007 /* DetailCell.swift */; };
 		E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */; };
 		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
 /* End PBXBuildFile section */
@@ -76,7 +76,7 @@
 		E643D71A1E648A3D003F540A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewController.swift; sourceTree = "<group>"; };
-		E6F4E5C61E76528B0049E007 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		E6F4E5C61E76528B0049E007 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		FB34C82910D9749BC69E4D27 /* Pods-kyutechapp2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,7 +318,7 @@
 		20BF1D8A1E546C6C00D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				E6F4E5C61E76528B0049E007 /* DetailTableViewCell.swift */,
+				E6F4E5C61E76528B0049E007 /* DetailCell.swift */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";
@@ -713,7 +713,7 @@
 			files = (
 				E643D71D1E648A68003F540A /* CategoryLabel.swift in Sources */,
 				E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */,
-				E6F4E5C71E76528B0049E007 /* DetailTableViewCell.swift in Sources */,
+				E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */,
 				20BF1D4C1E546AD600D36C38 /* ViewController.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 				E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */,

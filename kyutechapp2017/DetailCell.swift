@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailTableViewCell: FoldingCell {
+class DetailCell: FoldingCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
