@@ -21,8 +21,8 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
-    var cellHeights = (0..<CELLCOUNT).map{ _ in C.CellHeight.close}
-//    var cellHeights = [CGFloat]()
+//    var cellHeights = (0..<CELLCOUNT).map{ _ in C.CellHeight.close}
+    var cellHeights = [CGFloat]()
     
 
     
@@ -55,7 +55,7 @@ extension DetailTableViewController{
             cell.selectedAnimation(true, animated: true, completion: nil)
             duration = 0.5
         }else{
-            cellHeights[indexPath.row] == kCloseCellHeight
+            cellHeights[indexPath.row] = kCloseCellHeight
             cell.selectedAnimation(false, animated: true, completion: nil)
             duration = 1.1
         }
@@ -73,7 +73,7 @@ extension DetailTableViewController{
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if case let cell as FoldingCell = cell {
-            if cellHeights![indexPath.row] == C.CellHeight.close{
+            if cellHeights[indexPath.row] == C.CellHeight.close{
                 cell.selectedAnimation(false, animated: false, completion: nil)
             }else {
                 cell.selectedAnimation(true, animated: false, completion: nil)
