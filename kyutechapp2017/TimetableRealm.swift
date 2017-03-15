@@ -28,9 +28,9 @@ class TimetableRealm: NSObject {
     }
     
     func removeUserTimetableInfo(cellTag: Int) {
-        userTimetable = realm.objects(UserTimetable.self).filter("cellTag == %@", cellTag)
+        let classData = realm.objects(UserTimetable.self).filter("cellTag == %@", cellTag)
         _ = try? realm.write {
-            realm.delete(userTimetable)
+            realm.delete(classData)
         }
     }
     
