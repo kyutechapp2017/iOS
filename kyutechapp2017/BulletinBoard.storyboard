@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -178,13 +179,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="159"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="ban-lm-ke7">
-                                                <rect key="frame" x="62.333333333333343" y="24.666666666666664" width="289.33333333333337" height="110.66666666666669"/>
+                                                <rect key="frame" x="122.33333333333331" y="47" width="169.33333333333337" height="65"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-a8-uAe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="110.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Agy-a8-uAe" secondAttribute="height" multiplier="1:1" id="aSP-fW-IF7"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0d-5i-OsB">
-                                                        <rect key="frame" x="127.00000000000001" y="39" width="162.33333333333337" height="32.333333333333329"/>
+                                                        <rect key="frame" x="86.333333333333329" y="16.333333333333329" width="83.000000000000043" height="32.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -197,9 +201,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="ban-lm-ke7" firstAttribute="height" secondItem="HG7-go-X8r" secondAttribute="height" multiplier="0.7" id="RK8-rO-cLX"/>
+                                            <constraint firstItem="z0d-5i-OsB" firstAttribute="width" secondItem="HG7-go-X8r" secondAttribute="width" multiplier="0.2" id="Jzg-l8-5ze"/>
+                                            <constraint firstItem="ban-lm-ke7" firstAttribute="height" secondItem="HG7-go-X8r" secondAttribute="height" multiplier="0.41" id="RK8-rO-cLX"/>
                                             <constraint firstItem="ban-lm-ke7" firstAttribute="centerY" secondItem="HG7-go-X8r" secondAttribute="centerY" id="jU8-tk-AxP"/>
-                                            <constraint firstItem="ban-lm-ke7" firstAttribute="width" secondItem="HG7-go-X8r" secondAttribute="width" multiplier="0.7" id="nmB-mT-jaL"/>
                                             <constraint firstItem="ban-lm-ke7" firstAttribute="centerX" secondItem="HG7-go-X8r" secondAttribute="centerX" id="zqg-iS-fmW"/>
                                         </constraints>
                                     </view>
@@ -271,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.5797101449277" y="-58.695652173913047"/>
+            <point key="canvasLocation" x="1607" y="-46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrW-8s-Y3x">
