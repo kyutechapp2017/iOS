@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200161CC1E75A7280052DD93 /* TimetableRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200161CB1E75A7280052DD93 /* TimetableRealm.swift */; };
+		200161CD1E75A7280052DD93 /* TimetableRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200161CB1E75A7280052DD93 /* TimetableRealm.swift */; };
+		200161CE1E75A7280052DD93 /* TimetableRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200161CB1E75A7280052DD93 /* TimetableRealm.swift */; };
 		20613F3B1E628C1D00FCC3FA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
 		20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
 		20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B181E57436600C53FF1 /* TimetableViewController.swift */; };
@@ -43,6 +46,9 @@
 		206BC82F1E6C51AA0089BA6B /* ClasstableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */; };
 		206BC8301E6C51AA0089BA6B /* ClasstableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */; };
 		206BC8311E6C51AA0089BA6B /* ClasstableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */; };
+		2076FA891E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */; };
+		2076FA8A1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */; };
+		2076FA8B1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */; };
 		20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
 		20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
 		20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
@@ -92,6 +98,7 @@
 		0C274BEE76854B0948CC3B92 /* Pods-kyutechapp2017Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3E9EE4B8F3545C40B579DF /* Pods-kyutechapp2017UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests.release.xcconfig"; sourceTree = "<group>"; };
+		200161CB1E75A7280052DD93 /* TimetableRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableRealm.swift; sourceTree = "<group>"; };
 		20613F511E628C1D00FCC3FA /* dev-kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dev-kyutechapp2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20613F6C1E628C2300FCC3FA /* demo-kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "demo-kyutechapp2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20613F701E628DA000FCC3FA /* dev-kyutechapp2017.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "dev-kyutechapp2017.plist"; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 		20613F7B1E62973200FCC3FA /* DemoApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DemoApi.plist; sourceTree = "<group>"; };
 		206BC82A1E6C516F0089BA6B /* ClasstableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasstableCell.swift; sourceTree = "<group>"; };
 		206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClasstableCell.xib; sourceTree = "<group>"; };
+		2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimetable.swift; sourceTree = "<group>"; };
 		20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kyutechapp2017.swift; sourceTree = "<group>"; };
 		20BF1D461E546AD600D36C38 /* kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyutechapp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF1D491E546AD600D36C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -450,6 +458,7 @@
 		20BF1D8E1E546CA700D36C38 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				200161CB1E75A7280052DD93 /* TimetableRealm.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -471,6 +480,7 @@
 		20BF1D911E546CC400D36C38 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -896,10 +906,12 @@
 				20613F3B1E628C1D00FCC3FA /* DetailPageViewController.swift in Sources */,
 				20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 				20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */,
+				2076FA8A1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F3E1E628C1D00FCC3FA /* TimetableCell.swift in Sources */,
 				20F03E0C1E654F9F002A3480 /* Config.swift in Sources */,
 				20613F3F1E628C1D00FCC3FA /* PeriodOfTime.swift in Sources */,
+				200161CD1E75A7280052DD93 /* TimetableRealm.swift in Sources */,
 				20613F401E628C1D00FCC3FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,10 +924,12 @@
 				20613F561E628C2300FCC3FA /* DetailPageViewController.swift in Sources */,
 				20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 				20613F571E628C2300FCC3FA /* DayOfWeek.swift in Sources */,
+				2076FA8B1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F591E628C2300FCC3FA /* TimetableCell.swift in Sources */,
 				20F03E0D1E654F9F002A3480 /* Config.swift in Sources */,
 				20613F5A1E628C2300FCC3FA /* PeriodOfTime.swift in Sources */,
+				200161CE1E75A7280052DD93 /* TimetableRealm.swift in Sources */,
 				20613F5B1E628C2300FCC3FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,10 +942,12 @@
 				20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */,
 				20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */,
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
+				2076FA891E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F751E62969C00FCC3FA /* Config.swift in Sources */,
 				20C745AF1E5EA9B400978A72 /* TimetableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
+				200161CC1E75A7280052DD93 /* TimetableRealm.swift in Sources */,
 				20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

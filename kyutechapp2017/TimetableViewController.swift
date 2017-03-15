@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 import BTNavigationDropdownMenu
 
 class TimetableViewController: UIViewController{
@@ -27,10 +28,14 @@ class TimetableViewController: UIViewController{
     var isDisplay: Bool = true
     // UITableViewで選択された行を一時記憶する変数
     var selectedRow: Int = -1
+    // UserTimetableのインスタンス
+    let userTimetableRealm = TimetableRealm()
+    // ユーザの時間割データを格納する配列
+    let classes = Array(repeatElement(UserTimetable(), count: 30))
     // 授業及び担当教員のテスト配列
-    fileprivate let classes = ["データ構造とアルゴリズム", "情報メディアとコミュニケーション", "コンピュータ革命と現代社会", "英語III", "棒と軸の力学"]
-    fileprivate let teachers = ["中村　貞吾", "西野　和典", "安河内　恵子", "ウィリアムソン　ロジャー　スティル", "石原　大輔"]
-    fileprivate let classrooms = ["1101講義室", "MILAiS(講義棟側)", "1204講義室", "1301講義室", "2102講義室"]
+    fileprivate let classesTestData = ["データ構造とアルゴリズム", "情報メディアとコミュニケーション", "コンピュータ革命と現代社会", "英語III", "棒と軸の力学"]
+    fileprivate let teachersTestData = ["中村　貞吾", "西野　和典", "安河内　恵子", "ウィリアムソン　ロジャー　スティル", "石原　大輔"]
+    fileprivate let classroomsTestData = ["1101講義室", "MILAiS(講義棟側)", "1204講義室", "1301講義室", "2102講義室"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +63,7 @@ class TimetableViewController: UIViewController{
 extension TimetableViewController {
     
     func setUp() {
-        // BTNavigationDropdownMenuの設定
+        // NavigationDropdownMenuの設定
         let items = ["第1クォーター", "第2クォーター", "第3クォーター", "第4クォーター"]
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.white
@@ -82,6 +87,15 @@ extension TimetableViewController {
             print("Did select item at index: \(indexPath)")
         }
         self.navigationItem.titleView = menuView
+        
+        // ユーザの時間割情報を配列に格納
+        let classesObjects = Array(userTimetableRealm.getUserTimetableObjects())
+
+        for classesObject in classesObjects {
+            self.classes[classesObject.cellTag].cellTag = classesObject.cellTag
+            self.classes[classesObject.cellTag].classname = classesObject.classname
+            self.classes[classesObject.cellTag].classroom = classesObject.classroom
+        }
         
     }
 }
@@ -120,7 +134,8 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "timetableCell", for: indexPath) as! TimetableCell
         cell.editClassButton.isHidden = isDisplay
         cell.editClassButton.tag = indexPath.row
-        cell.delegate = self
+        cell.classNameLabel.text = classes[indexPath.row].classname
+        cell.classroomNumberLabel.text = classes[indexPath.row].classroom
         return cell
     }
     // セルが選ばれたとき
@@ -144,10 +159,18 @@ extension TimetableViewController: TimetableCellDelegate {
         alert.addAction( UIAlertAction(title: "削除", style: .destructive) { action in
             classNameLabel.text = ""
             classroomNumberLabel.text = ""
+            self.classes[tag].cellTag = -1
+            self.classes[tag].classname = ""
+            self.classes[tag].classroom = ""
+            self.userTimetableRealm.removeUserTimetableInfo(cellTag: tag)
         })
         alert.addAction( UIAlertAction(title: "追加", style: .default) { action in
-            classNameLabel.text = self.classes[self.selectedRow]
-            classroomNumberLabel.text = self.classrooms[self.selectedRow]
+            classNameLabel.text = self.classesTestData[self.selectedRow]
+            classroomNumberLabel.text = self.classroomsTestData[self.selectedRow]
+            self.classes[tag].cellTag = tag
+            self.classes[tag].classname = self.classesTestData[self.selectedRow]
+            self.classes[tag].classroom = self.classroomsTestData[self.selectedRow]
+            self.userTimetableRealm.addUserTimetableInfo(cellTag: tag, classname: self.classesTestData[self.selectedRow], classroom: self.classroomsTestData[self.selectedRow])
         })
         
         // AlertController内のUITableViewControllerの設定
@@ -177,13 +200,13 @@ extension TimetableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classes.count
+        return classesTestData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "classtableCell", for: indexPath) as! ClasstableCell
-        cell.classNameLabel.text = classes[indexPath.row]
-        cell.teacherNameLabel.text = teachers[indexPath.row]
+        cell.classNameLabel.text = classesTestData[indexPath.row]
+        cell.teacherNameLabel.text = teachersTestData[indexPath.row]
         return cell
     }
     
