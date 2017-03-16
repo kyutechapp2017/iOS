@@ -132,6 +132,7 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // カスタムセルの生成
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "timetableCell", for: indexPath) as! TimetableCell
+        cell.delegate = self
         cell.editClassButton.isHidden = isDisplay
         cell.editClassButton.tag = indexPath.row
         cell.classNameLabel.text = classes[indexPath.row].classname

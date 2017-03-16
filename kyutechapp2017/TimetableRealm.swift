@@ -1,5 +1,5 @@
 //
-//  UserTimetableRealm.swift
+//  TimetableRealm.swift
 //  kyutechapp2017
 //
 //  Created by 塩田宰 on 2017/03/13.
@@ -29,7 +29,10 @@ class TimetableRealm: NSObject {
     
     func removeUserTimetableInfo(cellTag: Int) {
         let classData = realm.objects(UserTimetable.self).filter("cellTag == %@", cellTag)
-        _ = try? realm.write {
+//        _ = try? realm.write {
+//            realm.delete(classData)
+//        }
+        try! realm.write {
             realm.delete(classData)
         }
     }
