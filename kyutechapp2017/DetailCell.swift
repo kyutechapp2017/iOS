@@ -10,6 +10,13 @@ import UIKit
 
 class DetailCell: FoldingCell {
 
+//    var number: Int = 0{
+//        didSet{
+//            closeNumberLabel.text = String(number)
+//            openNumberLabel.text = String(number)
+//        }
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

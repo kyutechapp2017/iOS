@@ -1,4 +1,4 @@
-//
+
 //  BulletinBoardViewController.swift
 //  kyutechapp2017
 //
@@ -19,7 +19,13 @@ class BulletinBoardViewController: UIViewController {
     @IBOutlet weak var studyAbroadButton: UIButton!
     @IBOutlet weak var scholarshipButton: UIButton!
     
+    
+    @IBAction func goToDetail(segue: UIStoryboardSegue){}
+    
+    
     let imageName = ["classes","department","intensive","news","proceduce","scholarship","studyAbroad","summon"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryButton(button: classesButton, color_start: .classesColor_1, color_end:.classesColor_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
@@ -32,26 +38,23 @@ class BulletinBoardViewController: UIViewController {
         categoryButton(button: scholarshipButton, color_start: .scholarship_1, color_end: .scholarship_2, start_x: 0.0, start_y: 0.0, end_x: 1.0, end_y: 1.0)
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
     func categoryButton(button: UIButton, color_start:UIColor, color_end:UIColor, start_x:CGFloat, start_y:CGFloat, end_x:CGFloat, end_y:CGFloat){
-        var indexPath = IndexPath()
+        
         let gradient = CAGradientLayer()
-        let image = UIImage(named: imageName[indexPath.row])!
-        let position_1 = NSNumber(value: 0.0 as Float)
-        let position_2 = NSNumber(value: 1.0 as Float)
-        let startPoint = CGPoint(x: start_x, y: start_y)
-        let endPoint = CGPoint(x: end_x, y: end_y)
+        
         gradient.colors = [color_start.cgColor,color_end.cgColor]
-        gradient.startPoint = startPoint
-        gradient.endPoint = endPoint
+        gradient.startPoint = CGPoint(x: start_x, y: start_y)
+        gradient.endPoint = CGPoint(x: end_x, y: end_y)
         gradient.frame = button.bounds
-        gradient.locations = [position_1, position_2]
-        button.layer.insertSublayer(gradient, at: 0)
-//        button.bringSubview(toFront: )
-//        button.layer.sublayers
-        button.imageView?.image = image
+        gradient.cornerRadius = button.layer.cornerRadius
+        gradient.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: 1.0 as Float)]
+//        button.layer.insertSublayer(gradient, at: 0)
+        button.layer.addSublayer(gradient)
     }
-
 }
