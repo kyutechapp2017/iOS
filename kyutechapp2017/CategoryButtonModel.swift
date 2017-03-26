@@ -109,10 +109,16 @@ struct CategoryButton{
     init(button:UIButton) {
         for number in CategoryType.allValues{
             if button.currentTitle == number.getLabelName{
-                self.category = number
+                category = number
                 break
             }
         }
+        color1 = category.getColor1
+        color2 = category.getColor2
+        startPoint = category.getStartPoint
+        endPoint = category.getEndPoint
+        labelName = category.getLabelName
+        imageName = category.getImageName
     }
     
     mutating func setGradationValues(button: UIButton){
@@ -141,13 +147,11 @@ struct CategoryButton{
 
 
 func SetButtonView(button:UIButton, type:String, image:UIImage, label:UILabel){
-    button.titleRect(forContentRect: <#T##CGRect#>)
     var categoryButton = CategoryButton(button: button)
     
-    //set gradation
     categoryButton.setGradationValues(button: button)
-    //set image
-    //set label
+    categoryButton.setImage(button: button)
+    categoryButton.setImage(button: button)
 }
 
 
