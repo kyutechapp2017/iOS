@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryView: UIView {
     
-//    var view = UIView
+    var view = UIView()
     let nibName = "CategoryView"
     
     @IBOutlet weak var categoryLabel: UILabel!
@@ -21,20 +21,28 @@ class CategoryView: UIView {
         setUp()
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
         setUp()
     }
     
+    
     func setUp(){
         categoryLabel.text = String("gggg")
         categoryImage.image = UIImage(named: "category")
+        view = loadViewFromNib()
+        view.frame = bounds
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth,UIViewAutoresizing.flexibleHeight]
+        addSubview(view)
     }
     
+    
     func loadViewFromNib() -> UIView{
-        let bundle = Bundle(for: self.)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
-        let view = nib.i
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        return view
     }
 }
