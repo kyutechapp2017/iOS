@@ -8,8 +8,15 @@
 
 import UIKit
 
-enum CategoryType{
-    case classes, intensive,news,procedure,department, summon, studyAbroad, scholarship
+enum CategoryType: String{
+    case classes = "classes"
+    case intensive = "intensive"
+    case news = "news"
+    case procedure = "procedure"
+    case department = "department"
+    case summon = "summon"
+    case studyAbroad = "studyAbroad"
+    case scholarship = "scholarship"
     
     static let allValues = [classes,intensive,news,procedure,department,summon,studyAbroad,scholarship]
     
@@ -90,14 +97,13 @@ enum CategoryType{
         case .scholarship: return CGPoint(x: 1.0, y: 1.0)
         }
     }
-}
+} 
 
 
 struct CategoryButton{
     let position1 = NSNumber(value: 0.0 as Float)
     let position2 = NSNumber(value: 1.0 as Float)
     let gradient = CAGradientLayer()
-    
     var category: CategoryType
     var color1: UIColor
     var color2: UIColor
@@ -106,27 +112,23 @@ struct CategoryButton{
     var labelName: String
     var imageName: String
     
-    init(button:UIButton) {
+    init(button:UIButton, buttonCategory:String) {
+//        setCategory(buttonCategory: buttonCategory)
         for number in CategoryType.allValues{
-            if button.currentTitle == number.getLabelName{
+            if buttonCategory == number.rawValue{
                 category = number
                 break
             }
         }
-        color1 = category.getColor1
-        color2 = category.getColor2
-        startPoint = category.getStartPoint
-        endPoint = category.getEndPoint
-        labelName = category.getLabelName
-        imageName = category.getImageName
+        self.color1 = self.category.getColor1
+        self.color2 = self.category.getColor2
+        self.startPoint = self.category.getStartPoint
+        self.endPoint = self.category.getEndPoint
+        self.labelName = self.category.getLabelName
+        self.imageName = self.category.getImageName
     }
     
     mutating func setGradationValues(button: UIButton){
-        color1 = category.getColor1
-        color2 = category.getColor2
-        startPoint = category.getStartPoint
-        endPoint = category.getEndPoint
-        
         gradient.colors = [color1, color2]
         gradient.startPoint = startPoint
         gradient.endPoint = endPoint
@@ -134,11 +136,7 @@ struct CategoryButton{
         gradient.locations = [position1, position2]
         button.layer.insertSublayer(gradient, at: 0)
     }
-    
-    mutating func setImage(button: UIButton){
-//        button.imageView.image = 
-    }
-    
+
     mutating func setLabel(button: UIButton){
         button.titleLabel?.text = category.getLabelName
 //        button.titleRect(forContentRect: button.bounds)
@@ -147,11 +145,16 @@ struct CategoryButton{
 
 
 func SetButtonView(button:UIButton, type:String, image:UIImage, label:UILabel){
-    var categoryButton = CategoryButton(button: button)
+    var categoryButton = CategoryButton(button: button, buttonCategory: type)
     
+    // set backgroundview
     categoryButton.setGradationValues(button: button)
-    categoryButton.setImage(button: button)
-    categoryButton.setImage(button: button)
+    
+    // set image
+    
+    
+    // set label
+    categoryButton.setLabel(button: button)
 }
 
 
