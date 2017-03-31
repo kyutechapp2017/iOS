@@ -33,6 +33,7 @@ class DetailViewController: UIViewController {
 
 
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -70,7 +71,6 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         return cellHeights[indexPath.row]
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
         if cell.isAnimating(){
@@ -92,7 +92,6 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         tableView.beginUpdates()
         tableView.endUpdates()
         }, completion: nil)
-        
     }
 }
 
