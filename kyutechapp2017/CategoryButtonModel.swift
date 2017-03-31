@@ -122,9 +122,12 @@ struct CategoryButton{
         gradient.locations = [position1, position2]
         button.layer.insertSublayer(gradient, at: 0)
     }
-
-    mutating func setLabel(button: UIButton){
-        button.titleLabel?.text = category.getLabelName
+    
+    func setImage(button: UIButton){
+    }
+    
+    func setLabel(button: UIButton){
+        button.titleLabel?.text = self.labelName
 //        button.titleRect(forContentRect: button.bounds)
     }
 }
