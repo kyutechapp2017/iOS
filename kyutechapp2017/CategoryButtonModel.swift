@@ -8,16 +8,8 @@
 
 import UIKit
 
-enum CategoryType: String{
-    case classes = "classes"
-    case intensive = "intensive"
-    case news = "news"
-    case procedure = "procedure"
-    case department = "department"
-    case summon = "summon"
-    case studyAbroad = "studyAbroad"
-    case scholarship = "scholarship"
-    
+enum CategoryType{
+    case classes, intensive, news,procedure,department,summon,studyAbroad,scholarship
     static let allValues = [classes,intensive,news,procedure,department,summon,studyAbroad,scholarship]
     
     var getImageName: String{
@@ -112,14 +104,8 @@ struct CategoryButton{
     var labelName: String
     var imageName: String
     
-    init(button:UIButton, buttonCategory:String) {
-//        setCategory(buttonCategory: buttonCategory)
-        for number in CategoryType.allValues{
-            if buttonCategory == number.rawValue{
-                category = number
-                break
-            }
-        }
+    init(button:UIButton, buttonCategory:CategoryType) {
+        self.category = buttonCategory
         self.color1 = self.category.getColor1
         self.color2 = self.category.getColor2
         self.startPoint = self.category.getStartPoint
@@ -144,7 +130,7 @@ struct CategoryButton{
 }
 
 
-func SetButtonView(button:UIButton, type:String, image:UIImage, label:UILabel){
+func SetButtonView(button:UIButton, type:CategoryType, image:UIImage, label:UILabel){
     var categoryButton = CategoryButton(button: button, buttonCategory: type)
     
     // set backgroundview

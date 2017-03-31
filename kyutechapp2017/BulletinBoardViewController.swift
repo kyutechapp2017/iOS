@@ -45,7 +45,7 @@ class BulletinBoardViewController: UIViewController {
     
     
     func categoryButton(button: UIButton, color_start:UIColor, color_end:UIColor, start_x:CGFloat, start_y:CGFloat, end_x:CGFloat, end_y:CGFloat){
-        var gradient = CAGradientLayer()
+        let gradient = CAGradientLayer()
         let position1 = NSNumber(value: 0.0 as Float)
         let position2 = NSNumber(value: 1.0 as Float)
         gradient.colors = [color_start.cgColor,color_end.cgColor]
