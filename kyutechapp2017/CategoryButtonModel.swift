@@ -92,7 +92,7 @@ enum CategoryType{
 } 
 
 
-struct CategoryButton{
+struct CategoryBackgroundView{
     let position1 = NSNumber(value: 0.0 as Float)
     let position2 = NSNumber(value: 1.0 as Float)
     let gradient = CAGradientLayer()
@@ -134,7 +134,7 @@ struct CategoryButton{
 
 
 func setButtonView(button:UIButton, type:CategoryType){
-    var categoryButton = CategoryButton(button: button, buttonCategory: type)
+    var categoryButton = CategoryBackgroundView(button: button, buttonCategory: type)
     
     // set backgroundview
     categoryButton.setGradationValues(button: button)

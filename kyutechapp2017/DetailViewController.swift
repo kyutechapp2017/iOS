@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailTableViewController: UITableViewController {
+class DetailViewController: UIViewController {
 
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
@@ -22,24 +22,30 @@ class DetailTableViewController: UITableViewController {
 //    var cellHeights = (0..<CELLCOUNT).map{ _ in C.CellHeight.close}
     var cellHeights = [CGFloat]()
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+
+extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = CategoryView()
+        headerView.categoryLabel.text = "あいうえお"
+        headerView.categoryImage.image = UIImage(named: "classes")
+        headerView.backgroundColor = UIColor.blue
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         guard case let cell as DetailCell = cell else {
             return
@@ -54,21 +60,18 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath)
         
         return cell
     }
     
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeights[indexPath.row]
     }
     
     
-    //delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
         if cell.isAnimating(){
             return
@@ -89,11 +92,9 @@ class DetailTableViewController: UITableViewController {
         tableView.beginUpdates()
         tableView.endUpdates()
         }, completion: nil)
+        
     }
-    
-    
-//    func animationDuration(itemIndex: NSInteger, type: CAAnimation.Type) ->TimeInterval{
-//        let durations = [0.33, 0.26,0.26]
-//        return durations[itemIndex]
-//    }
 }
+
+
+

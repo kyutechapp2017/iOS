@@ -21,7 +21,7 @@
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
 		E607C3041E81846200A7881A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607C3031E81846200A7881A /* CategoryView.swift */; };
 		E607C3061E81847E00A7881A /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E607C3051E81847E00A7881A /* CategoryView.xib */; };
-		E63AEE201E68441E00C20F4A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* DetailTableViewController.swift */; };
+		E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */; };
 		E643D7191E648A17003F540A /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D7181E648A17003F540A /* ColorManager.swift */; };
 		E643D71D1E648A68003F540A /* CategoryButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryButtonModel.swift */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
@@ -74,7 +74,7 @@
 		862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E607C3031E81846200A7881A /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E607C3051E81847E00A7881A /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
-		E63AEE1F1E68441E00C20F4A /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E643D7181E648A17003F540A /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButtonModel.swift; sourceTree = "<group>"; };
 		E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewController.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		20BF1D871E546C4700D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				E63AEE1F1E68441E00C20F4A /* DetailTableViewController.swift */,
+				E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */,
 				E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */,
 			);
 			name = BulletinBoard;
@@ -723,7 +723,7 @@
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 				E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */,
 				E643D7191E648A17003F540A /* ColorManager.swift in Sources */,
-				E63AEE201E68441E00C20F4A /* DetailTableViewController.swift in Sources */,
+				E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,36 +15,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2k-zX-GZP">
-                    <rect key="frame" x="43" y="195" width="149" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="j2k-zX-GZP" secondAttribute="height" multiplier="1.5:1.3" id="qgc-WE-lKr"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j2k-zX-GZP">
+                    <rect key="frame" x="16" y="206" width="195" height="206"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-Ye-etU">
-                    <rect key="frame" x="232.5" y="100" width="112.5" height="467"/>
+                    <rect key="frame" x="252" y="268" width="81" height="82"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.62668651501507799" green="0.97680455446243286" blue="0.65245972306051114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="rdR-Ye-etU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="3aF-RF-8sU"/>
-                <constraint firstItem="rdR-Ye-etU" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="Nsa-FQ-Cn6"/>
-                <constraint firstAttribute="trailing" secondItem="rdR-Ye-etU" secondAttribute="trailing" constant="30" id="QlE-er-RV1"/>
-                <constraint firstItem="j2k-zX-GZP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="V2I-Xf-VfW"/>
-                <constraint firstAttribute="trailing" secondItem="j2k-zX-GZP" secondAttribute="trailing" constant="30" id="WLb-fO-FxR"/>
-                <constraint firstItem="j2k-zX-GZP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="gO0-f2-GNL"/>
-                <constraint firstAttribute="bottom" secondItem="j2k-zX-GZP" secondAttribute="bottom" constant="100" id="gcB-hs-odU"/>
-                <constraint firstItem="j2k-zX-GZP" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="n1m-IY-ll7"/>
-                <constraint firstAttribute="bottom" secondItem="rdR-Ye-etU" secondAttribute="bottom" constant="100" id="ocm-Yt-5Jh"/>
-            </constraints>
             <connections>
                 <outlet property="categoryImage" destination="j2k-zX-GZP" id="G8T-b1-npk"/>
                 <outlet property="categoryLabel" destination="rdR-Ye-etU" id="czc-Ru-t5I"/>
             </connections>
-            <point key="canvasLocation" x="-198" y="77"/>
+            <point key="canvasLocation" x="-157.5" y="54.5"/>
         </view>
     </objects>
 </document>

@@ -7,9 +7,8 @@
 //
 
 import UIKit
-
+@IBDesignable
 class CategoryView: UIView {
-    
     var view = UIView()
     let nibName = "CategoryView"
     
@@ -27,7 +26,14 @@ class CategoryView: UIView {
         super.init(coder: aDecoder)
         setUp()
     }
-    
+    //xib　読み込み時に呼ばれる
+    override func awakeFromNib() {
+        print("xibが呼ばれました")
+    }
+    //Autolayoutなどサブビューのレイアウト敵用後に呼ばれる
+    override func layoutSubviews() {
+        print("layoutSubviews")
+    }
     
     func setUp(){
         categoryLabel.text = String("gggg")
