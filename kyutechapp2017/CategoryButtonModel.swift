@@ -115,7 +115,7 @@ struct CategoryButton{
     }
     
     mutating func setGradationValues(button: UIButton){
-        gradient.colors = [color1, color2]
+        gradient.colors = [color1.cgColor, color2.cgColor]
         gradient.startPoint = startPoint
         gradient.endPoint = endPoint
         gradient.frame = button.frame
@@ -133,15 +133,13 @@ struct CategoryButton{
 }
 
 
-func SetButtonView(button:UIButton, type:CategoryType, image:UIImage, label:UILabel){
+func setButtonView(button:UIButton, type:CategoryType){
     var categoryButton = CategoryButton(button: button, buttonCategory: type)
     
     // set backgroundview
     categoryButton.setGradationValues(button: button)
     
     // set image
-    
-    
     // set label
     categoryButton.setLabel(button: button)
 }
