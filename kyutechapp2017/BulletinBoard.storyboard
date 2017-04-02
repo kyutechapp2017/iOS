@@ -34,11 +34,17 @@
                                                 <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="3"/>
                                                 <state key="normal" image="classes"/>
+                                                <connections>
+                                                    <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="4hS-EQ-0Dd"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
                                                 <rect key="frame" x="286.66666666666674" y="0.0" width="111.33333333333331" height="163"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="intensive"/>
+                                                <connections>
+                                                    <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="V5X-ph-H7J"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -51,25 +57,34 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-BO-c7x">
                                                 <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="219"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-ss-FIw">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-ss-FIw">
                                                         <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="105.66666666666669"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="news"/>
+                                                        <connections>
+                                                            <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="eeD-Y5-RFW"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-g7-wUF">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-g7-wUF">
                                                         <rect key="frame" x="0.0" y="113.66666666666669" width="139.33333333333334" height="105.33333333333331"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="procedure"/>
+                                                        <connections>
+                                                            <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="s15-St-6k0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="8IK-g7-wUF" firstAttribute="height" secondItem="Py0-ss-FIw" secondAttribute="height" id="4Ml-bw-9sP"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-L2-Z64">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-L2-Z64">
                                                 <rect key="frame" x="147.33333333333337" y="0.0" width="250.66666666666663" height="219"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="学科別" image="department"/>
+                                                <connections>
+                                                    <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="E90-db-ISq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -85,23 +100,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-n5-lki" userLabel="bottom">
                                         <rect key="frame" x="0.0" y="398" width="398" height="209"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="209"/>
                                                 <color key="backgroundColor" red="1" green="0.41954855238743594" blue="0.58456804303698351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="summon"/>
+                                                <connections>
+                                                    <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="rQT-4B-ksZ"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-xr-IGv">
                                                 <rect key="frame" x="200" y="0.0" width="198" height="209"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="198" height="100.66666666666663"/>
                                                         <color key="backgroundColor" red="0.29550126570000002" green="0.69537698510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="留学" image="studyAbroad"/>
+                                                        <connections>
+                                                            <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="h9j-Xm-JK5"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
                                                         <rect key="frame" x="0.0" y="108.66666666666663" width="198" height="100.33333333333337"/>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="奨学金" image="scholarship"/>
+                                                        <connections>
+                                                            <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="uSj-cQ-u41"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -152,7 +176,7 @@
                         <outlet property="scholarshipButton" destination="yNa-Ff-f5A" id="ilr-W3-8Ux"/>
                         <outlet property="studyAbroadButton" destination="U9t-fd-tWQ" id="5vd-Pj-xsF"/>
                         <outlet property="summonButton" destination="ifv-4l-4bq" id="SL1-8J-mHS"/>
-                        <segue destination="iNK-NX-ApQ" kind="showDetail" identifier="goDetail" id="jKS-DP-jiJ"/>
+                        <segue destination="iNK-NX-ApQ" kind="showDetail" identifier="toDetail" id="jKS-DP-jiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndy-ee-igJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,7 +211,7 @@
                                                 <rect key="frame" x="0.0" y="170" width="414" height="459"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="459"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="FoldingCell">

@@ -10,6 +10,7 @@ import UIKit
 
 class BulletinBoardViewController: UIViewController {
     
+    //未使用
     @IBOutlet weak var classesButton: UIButton!
     @IBOutlet weak var intensiveButton: UIButton!
     @IBOutlet weak var newsButton: UIButton!
@@ -19,8 +20,12 @@ class BulletinBoardViewController: UIViewController {
     @IBOutlet weak var studyAbroadButton: UIButton!
     @IBOutlet weak var scholarshipButton: UIButton!
     
-    @IBAction func goToDetail(segue: UIStoryboardSegue){}
     
+    @IBAction func goToDetail(_ sender: UIButton) {
+        print("ボタン！！")
+        self.performSegue(withIdentifier: "toDetail", sender: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setButtonView(button: classesButton, type: .classes)
@@ -35,5 +40,24 @@ class BulletinBoardViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let NextViewController = (segue.destination as? DetailViewController)!
+        if let button = sender as? UIButton{
+            let tag = button.tag
+            switch tag{
+            case 0: NextViewController.category = CategoryType.classes
+            case 1: NextViewController.category = CategoryType.intensive
+            case 2: NextViewController.category = CategoryType.news
+            case 3: NextViewController.category = CategoryType.procedure
+            case 4: NextViewController.category = CategoryType.department
+            case 5: NextViewController.category = CategoryType.summon
+            case 6: NextViewController.category = CategoryType.studyAbroad
+            case 7: NextViewController.category = CategoryType.scholarship
+            default: print("failed to segue")
+            }
+            print("遷移しますよ！")
+        }
     }
 }

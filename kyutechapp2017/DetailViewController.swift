@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
 
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
+    var category:CategoryType?
 
     fileprivate struct C{
         struct CellHeight {
@@ -68,7 +69,8 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
+//        return cellHeights[indexPath.row]
+        return 70.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
