@@ -204,27 +204,29 @@
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="HG7-go-X8r" userLabel="CategoryView">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.98273235559463501" green="0.52804780964710918" blue="0.20492246763644431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="459" id="cnC-xu-be0" customClass="DetailCell" customModule="FoldingCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="459" id="cnC-xu-be0" customClass="DetailCell" customModule="kyutechapp2017" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="170" width="414" height="459"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="FoldingCell">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="398" height="109"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-EZ-UB0" userLabel="DateLabel">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-EZ-UB0" userLabel="DateLabel">
                                                                     <rect key="frame" x="10" y="13" width="100" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平成28年度後期第四クウォーター授業日調整15回目の授業・試験時間割" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-ZT-yyk" userLabel="TitleLabel">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="平成28年度後期第四クウォーター授業日調整15回目の授業・試験時間割" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-ZT-yyk" userLabel="TitleLabel">
                                                                     <rect key="frame" x="25" y="42" width="348" height="55"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -232,16 +234,6 @@
                                                             </subviews>
                                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstItem="wo1-ZT-yyk" firstAttribute="height" secondItem="4Dn-84-tsy" secondAttribute="height" multiplier="0.5" id="D5V-Tq-cCH"/>
-                                                                <constraint firstItem="X3F-EZ-UB0" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="top" constant="12.5" id="HDO-h2-qwW"/>
-                                                                <constraint firstItem="wo1-ZT-yyk" firstAttribute="top" secondItem="X3F-EZ-UB0" secondAttribute="bottom" constant="8" id="O3H-YF-FdZ"/>
-                                                                <constraint firstAttribute="height" constant="109" id="Y5c-lc-06t"/>
-                                                                <constraint firstItem="X3F-EZ-UB0" firstAttribute="leading" secondItem="4Dn-84-tsy" secondAttribute="leading" constant="10" id="YdX-KX-PeW"/>
-                                                                <constraint firstAttribute="trailing" secondItem="wo1-ZT-yyk" secondAttribute="trailing" constant="25" id="aU2-ap-T2T"/>
-                                                                <constraint firstItem="wo1-ZT-yyk" firstAttribute="leading" secondItem="4Dn-84-tsy" secondAttribute="leading" constant="25" id="nUc-uO-bfM"/>
-                                                                <constraint firstItem="X3F-EZ-UB0" firstAttribute="width" secondItem="4Dn-84-tsy" secondAttribute="width" multiplier="0.25" id="rbN-vu-UKx"/>
-                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                     <real key="value" value="0.0"/>
@@ -255,11 +247,11 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
                                                                     <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="40" width="398" height="117"/>
                                                                     <color key="backgroundColor" red="0.63784738519999995" green="1" blue="0.31592871160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="160" width="398" height="40"/>
                                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </view>
@@ -288,11 +280,11 @@
                                                     <constraints>
                                                         <constraint firstItem="3PX-ep-rBU" firstAttribute="trailing" secondItem="RLs-Qc-6zB" secondAttribute="trailingMargin" id="16F-nk-yHn"/>
                                                         <constraint firstItem="4Dn-84-tsy" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leadingMargin" id="5Ue-Hs-9nF"/>
-                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" constant="110" identifier="ContainerViewTop" id="Kh6-fR-ivj"/>
-                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" identifier="ForegroundViewTop" id="bWh-61-R5P"/>
+                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="bottom" constant="1" id="EoP-nx-Wwe"/>
+                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" identifier="ForegroundViewTop" id="KSI-32-s60"/>
                                                         <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leadingMargin" id="eTe-eF-Pb9"/>
                                                         <constraint firstItem="4Dn-84-tsy" firstAttribute="trailing" secondItem="RLs-Qc-6zB" secondAttribute="trailingMargin" id="kva-4I-EwQ"/>
-                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="bottom" constant="1" id="ufO-bY-UKF"/>
+                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" constant="110" identifier="ContainerViewTop" id="zbJ-Ew-jcL"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <userDefinedRuntimeAttributes>

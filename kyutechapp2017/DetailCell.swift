@@ -27,5 +27,10 @@ class DetailCell: FoldingCell {
 
         // Configure the view for the selected state
     }
+    
+    override func animationDuration(_ itemIndex: NSInteger, type: FoldingCell.AnimationType) -> TimeInterval {
+        let durations = [0.33, 0.22, 0.26]
+        return durations[itemIndex]
+    }
 
 }
