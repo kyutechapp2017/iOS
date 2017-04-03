@@ -20,10 +20,21 @@ class BulletinBoardViewController: UIViewController {
     @IBOutlet weak var studyAbroadButton: UIButton!
     @IBOutlet weak var scholarshipButton: UIButton!
     
+    var category: CategoryType?
     
     @IBAction func goToDetail(_ sender: UIButton) {
-        print("ボタン！！")
-        self.performSegue(withIdentifier: "toDetail", sender: self)
+        switch sender.tag {
+        case 0: category = CategoryType.classes
+        case 1: category = CategoryType.intensive
+        case 2: category = CategoryType.news
+        case 3: category = CategoryType.procedure
+        case 4: category = CategoryType.department
+        case 5: category = CategoryType.summon
+        case 6: category = CategoryType.studyAbroad
+        case 7: category = CategoryType.scholarship
+        default: print("error rrrrr")
+        }
+        self.performSegue(withIdentifier: "toDetail", sender: self.category)
     }
 
     override func viewDidLoad() {
@@ -44,20 +55,7 @@ class BulletinBoardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let NextViewController = (segue.destination as? DetailViewController)!
-        if let button = sender as? UIButton{
-            let tag = button.tag
-            switch tag{
-            case 0: NextViewController.category = CategoryType.classes
-            case 1: NextViewController.category = CategoryType.intensive
-            case 2: NextViewController.category = CategoryType.news
-            case 3: NextViewController.category = CategoryType.procedure
-            case 4: NextViewController.category = CategoryType.department
-            case 5: NextViewController.category = CategoryType.summon
-            case 6: NextViewController.category = CategoryType.studyAbroad
-            case 7: NextViewController.category = CategoryType.scholarship
-            default: print("failed to segue")
-            }
-            print("遷移しますよ！")
-        }
+        NextViewController.category = sender as? CategoryType
+        print("処理が終わりました")
     }
 }

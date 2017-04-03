@@ -297,8 +297,8 @@
 		20BF1D871E546C4700D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */,
 				E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */,
+				E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";

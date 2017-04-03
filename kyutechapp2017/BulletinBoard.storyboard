@@ -207,7 +207,7 @@
                                             <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="459" id="cnC-xu-be0" customClass="DetailCell" customModule="FoldingCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="459" id="cnC-xu-be0" customClass="DetailCell" customModule="FoldingCell">
                                                 <rect key="frame" x="0.0" y="170" width="414" height="459"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">

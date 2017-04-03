@@ -39,13 +39,13 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         return 10
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = CategoryView()
-        headerView.categoryLabel.text = "あいうえお"
-        headerView.categoryImage.image = UIImage(named: "classes")
-        headerView.backgroundColor = UIColor.blue
-        return headerView
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = CategoryView()
+//        headerView.categoryLabel.text = "あいうえお"
+//        headerView.categoryImage.image = UIImage(named: "classes")
+//        headerView.backgroundColor = UIColor.blue
+//        return headerView
+//    }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
@@ -63,7 +63,7 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! FoldingCell
         
         return cell
     }
