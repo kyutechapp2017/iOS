@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndy-ee-igJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="-45"/>
+            <point key="canvasLocation" x="757" y="-46"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="zOy-5R-YNb">
@@ -201,14 +201,14 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="638"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <view key="tableHeaderView" contentMode="scaleToFill" id="HG7-go-X8r" userLabel="CategoryView" customClass="CategoryView" customModule="kyutechapp2017" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+                                        <view key="tableHeaderView" contentMode="scaleToFill" id="Hby-lC-X9E" customClass="CategoryView" customModule="kyutechapp2017" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.98273235559463501" green="0.52804780964710918" blue="0.20492246763644431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.068878941237926483" green="0.847278892993927" blue="0.1118333712220192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="kyutechapp2017" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="170" width="414" height="455"/>
+                                                <rect key="frame" x="0.0" y="152" width="414" height="455"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
@@ -232,13 +232,11 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="0.0"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="109" id="un8-YJ-d9M"/>
+                                                            </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
                                                             <rect key="frame" x="8" y="118" width="398" height="330"/>
@@ -278,13 +276,12 @@
                                                         </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="trailing" secondItem="RLs-Qc-6zB" secondAttribute="trailingMargin" id="16F-nk-yHn"/>
-                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leadingMargin" id="5Ue-Hs-9nF"/>
-                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="bottom" constant="1" id="EoP-nx-Wwe"/>
-                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" identifier="ForegroundViewTop" id="KSI-32-s60"/>
-                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leadingMargin" id="eTe-eF-Pb9"/>
-                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="trailing" secondItem="RLs-Qc-6zB" secondAttribute="trailingMargin" id="kva-4I-EwQ"/>
-                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" constant="110" identifier="ContainerViewTop" id="zbJ-Ew-jcL"/>
+                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leadingMargin" id="8T8-mN-tge"/>
+                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="trailing" secondItem="RLs-Qc-6zB" secondAttribute="trailingMargin" id="9Wr-9T-LGY"/>
+                                                        <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" identifier="ForegroundViewTop" id="9vV-rs-TAs"/>
+                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="118" identifier="ContainerViewTop" id="GxB-cn-fFJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3PX-ep-rBU" secondAttribute="trailing" constant="8" id="LzY-gq-q75"/>
+                                                        <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leading" constant="8" id="d35-WI-gSR"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <userDefinedRuntimeAttributes>
@@ -317,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389.8550724637682" y="-45.652173913043484"/>
+            <point key="canvasLocation" x="1528.985507246377" y="-46.467391304347828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrW-8s-Y3x">

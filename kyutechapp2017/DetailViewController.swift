@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     let kCloseCellHeight: CGFloat = 110
-    let kOpenCellHeight: CGFloat = 210
+    let kOpenCellHeight: CGFloat = 340
     var category:CategoryType?
 
     fileprivate struct C{

@@ -25,10 +25,10 @@
                     <rect key="frame" x="52" y="25" width="348" height="168"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-Yk-Qzv">
-                            <rect key="frame" x="20" y="20" width="152" height="128"/>
+                            <rect key="frame" x="0.0" y="20" width="152" height="128"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-I3-pv5">
-                            <rect key="frame" x="196" y="46" width="132" height="64"/>
+                            <rect key="frame" x="152" y="69.5" width="196" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-507" y="-231.5"/>
+            <point key="canvasLocation" x="-390" y="-232"/>
         </view>
     </objects>
 </document>

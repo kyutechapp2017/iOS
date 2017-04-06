@@ -38,9 +38,7 @@ import UIKit
     }
     
     func setUp(){
-        categoryLabel.text = String("gggg")
-        categoryImage.image = UIImage(named: "category")
-        view = loadViewFromNib()
+//        view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth,UIViewAutoresizing.flexibleHeight]
         addSubview(view)
