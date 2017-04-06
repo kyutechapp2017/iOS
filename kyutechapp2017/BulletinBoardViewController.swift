@@ -56,6 +56,5 @@ class BulletinBoardViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let NextViewController = (segue.destination as? DetailViewController)!
         NextViewController.category = sender as? CategoryType
-        print("処理が終わりました")
     }
 }
