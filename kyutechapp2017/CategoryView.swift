@@ -37,6 +37,14 @@ import UIKit
         print("layoutSubviews")
     }
     
+    private func loadFromNib(){
+        let v = Bundle(for: type(of: self)).loadNibNamed("CategoryView", owner: self, options: nil)?.first as! UIView
+        addSubview(v)
+        
+        v.translatesAutoresizingMaskIntoConstraints = false
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: ["view" : v]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: ["view" : v]))
+    }
     func setUp(){
 //        view = loadViewFromNib()
         view.frame = bounds
