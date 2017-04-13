@@ -244,7 +244,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
-                                                    <rect key="frame" x="8" y="118" width="359" height="330"/>
+                                                    <rect key="frame" x="8" y="126" width="359" height="330"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="109"/>
@@ -284,7 +284,7 @@
                                                 <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" identifier="foregroundViewTop" id="2kd-EA-VwT"/>
                                                 <constraint firstItem="4Dn-84-tsy" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leadingMargin" id="8T8-mN-tge"/>
                                                 <constraint firstItem="4Dn-84-tsy" firstAttribute="trailing" secondItem="RLs-Qc-6zB" secondAttribute="trailingMargin" id="9Wr-9T-LGY"/>
-                                                <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="118" identifier="containerViewTop" id="GxB-cn-fFJ"/>
+                                                <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" constant="118" identifier="containerViewTop" id="GxB-cn-fFJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="3PX-ep-rBU" secondAttribute="trailing" constant="8" id="LzY-gq-q75"/>
                                                 <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leading" constant="8" id="d35-WI-gSR"/>
                                             </constraints>

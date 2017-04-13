@@ -29,7 +29,6 @@ import UIKit
     
     //xib　読み込み時に呼ばれる
     override func awakeFromNib() {
-        print("xibが呼ばれました")
     }
     
     //Autolayoutなどサブビューのレイアウト敵用後に呼ばれる
@@ -38,12 +37,13 @@ import UIKit
     }
     
     private func loadFromNib(){
-        let v = Bundle(for: type(of: self)).loadNibNamed("CategoryView", owner: self, options: nil)?.first as! UIView
-        addSubview(v)
+        let view = Bundle(for: type(of: self)).loadNibNamed("CategoryView", owner: self, options: nil)?.first as! UIView
+        addSubview(view)
         
-        v.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: ["view" : v]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: ["view" : v]))
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: ["view" : view]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: ["view" : view]))
     }
     func setUp(){
 //        view = loadViewFromNib()
