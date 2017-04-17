@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDa-3c-H8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDa-3c-H8F">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -195,20 +195,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="kyutechapp2017" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="kyutechapp2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="129" width="375" height="455"/>
+                                        <rect key="frame" x="0.0" y="106" width="375" height="455"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="454.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
@@ -295,8 +295,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="containerView" destination="3PX-ep-rBU" id="bH9-nl-TMC"/>
-                                            <outlet property="foregroundView" destination="4Dn-84-tsy" id="oj1-NU-5Wj"/>
+                                            <outlet property="containerView" destination="3PX-ep-rBU" id="8dt-hc-jk8"/>
+                                            <outlet property="containerViewTop" destination="GxB-cn-fFJ" id="z0q-RH-EcS"/>
+                                            <outlet property="foregroundView" destination="4Dn-84-tsy" id="6KV-th-yqG"/>
+                                            <outlet property="foregroundViewTop" destination="2kd-EA-VwT" id="3yv-7z-VJd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

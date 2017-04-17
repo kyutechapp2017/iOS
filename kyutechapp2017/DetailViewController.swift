@@ -8,32 +8,36 @@
 
 import UIKit
 
+
 class DetailViewController: UIViewController {
 
+    
     let kCloseCellHeight: CGFloat = 110
     let kOpenCellHeight: CGFloat = 340
     var category:CategoryType?
     
     let kRowsCount = 10
+    
+    let data = ["tinitn", "joaiefj", "jfeow", "yamoko", "yamanko"]
 
-//    fileprivate struct C{
-//        struct CellHeight {
-//            static let close: CGFloat = 110
-//            static let open: CGFloat = 200
-//        }
-//    }
-    
-    var cellHeights = [CGFloat]()
-    
-    func createCellHeightsArray(){
-        for _ in 0...kRowsCount {
-            cellHeights.append(kCloseCellHeight)
+    fileprivate struct C{
+        struct CellHeight {
+            static let close: CGFloat = 110
+            static let open: CGFloat = 200
         }
     }
     
+    var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
+    
+//    func createCellHeightsArray(){
+//        for _ in 0...kRowsCount {
+//            cellHeights.append(kCloseCellHeight)
+//        }
+//    }
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
-        createCellHeightsArray()
+//        createCellHeightsArray()
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,7 +81,7 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return cellHeights[(indexPath as NSIndexPath).row]
+        return cellHeights[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

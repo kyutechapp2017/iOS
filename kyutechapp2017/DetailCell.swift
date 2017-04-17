@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailCell: FoldingCell {
+    
 
 //    var number: Int = 0{
 //        didSet{
