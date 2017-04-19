@@ -25,6 +25,8 @@
 		E643D7191E648A17003F540A /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D7181E648A17003F540A /* ColorManager.swift */; };
 		E643D71D1E648A68003F540A /* CategoryButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryButtonModel.swift */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
+		E6B26B331EA4C8510062B5C0 /* BulletinRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B321EA4C8510062B5C0 /* BulletinRealm.swift */; };
+		E6B26B351EA4CFA70062B5C0 /* Bulletin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B341EA4CFA70062B5C0 /* Bulletin.swift */; };
 		E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C61E76528B0049E007 /* DetailCell.swift */; };
 		E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */; };
 		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
@@ -78,6 +80,8 @@
 		E643D7181E648A17003F540A /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButtonModel.swift; sourceTree = "<group>"; };
 		E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewController.swift; sourceTree = "<group>"; };
+		E6B26B321EA4C8510062B5C0 /* BulletinRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinRealm.swift; sourceTree = "<group>"; };
+		E6B26B341EA4CFA70062B5C0 /* Bulletin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bulletin.swift; sourceTree = "<group>"; };
 		E6F4E5C61E76528B0049E007 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		FB34C82910D9749BC69E4D27 /* Pods-kyutechapp2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.release.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 			children = (
 				E643D71C1E648A68003F540A /* CategoryButtonModel.swift */,
 				E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */,
+				E6B26B321EA4C8510062B5C0 /* BulletinRealm.swift */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 		20BF1D901E546CBB00D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				E6B26B341EA4CFA70062B5C0 /* Bulletin.swift */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";
@@ -719,6 +725,8 @@
 				E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */,
 				E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */,
 				20BF1D4C1E546AD600D36C38 /* ViewController.swift in Sources */,
+				E6B26B331EA4C8510062B5C0 /* BulletinRealm.swift in Sources */,
+				E6B26B351EA4CFA70062B5C0 /* Bulletin.swift in Sources */,
 				E607C3041E81846200A7881A /* CategoryView.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 				E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */,

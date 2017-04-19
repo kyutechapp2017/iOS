@@ -39,6 +39,8 @@ class BulletinBoardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        classesButton.imageView?.contentMode = .scaleToFill
+        
 //        setButtonView(button: classesButton, type: .classes)
 //        setButtonView(button: intensiveButton, type: .intensive)
 //        setButtonView(button: newsButton, type: .news)

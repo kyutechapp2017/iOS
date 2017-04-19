@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDa-3c-H8F">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,17 +20,17 @@
                         <viewControllerLayoutGuide type="bottom" id="Iyg-cp-65D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XQJ-MJ-PvE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MJv-cS-Be3" userLabel="all">
-                                <rect key="frame" x="8" y="72" width="359" height="538"/>
+                                <rect key="frame" x="8" y="72" width="752" height="895"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-SF-PoV" userLabel="top">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="752" height="241"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-Qd-AbJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="251.5" height="144.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="527" height="241"/>
                                                 <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="3"/>
                                                 <state key="normal" image="classes"/>
@@ -39,7 +39,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
-                                                <rect key="frame" x="259.5" y="0.0" width="99.5" height="144.5"/>
+                                                <rect key="frame" x="535" y="0.0" width="217" height="241"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="intensive"/>
                                                 <connections>
@@ -52,13 +52,13 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-A9-vtU" userLabel="middle">
-                                        <rect key="frame" x="0.0" y="152.5" width="359" height="194"/>
+                                        <rect key="frame" x="0.0" y="249" width="752" height="322.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-BO-c7x">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="194"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="322.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-ss-FIw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="93"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="157"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="news"/>
                                                         <connections>
@@ -66,7 +66,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-g7-wUF">
-                                                        <rect key="frame" x="0.0" y="101" width="125" height="93"/>
+                                                        <rect key="frame" x="0.0" y="165" width="270" height="157.5"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="procedure"/>
                                                         <connections>
@@ -79,9 +79,9 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-L2-Z64">
-                                                <rect key="frame" x="133" y="0.0" width="226" height="194"/>
+                                                <rect key="frame" x="278" y="0.0" width="474" height="322.5"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="学科別" image="department"/>
+                                                <state key="normal" image="department"/>
                                                 <connections>
                                                     <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="E90-db-ISq"/>
                                                 </connections>
@@ -98,10 +98,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-n5-lki" userLabel="bottom">
-                                        <rect key="frame" x="0.0" y="354.5" width="359" height="183.5"/>
+                                        <rect key="frame" x="0.0" y="579.5" width="752" height="315.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="183.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="315.5"/>
                                                 <color key="backgroundColor" red="1" green="0.41954855238743594" blue="0.58456804303698351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="summon"/>
                                                 <connections>
@@ -109,20 +109,20 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-xr-IGv">
-                                                <rect key="frame" x="180.5" y="0.0" width="178.5" height="183.5"/>
+                                                <rect key="frame" x="369" y="0.0" width="383" height="315.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="383" height="153.5"/>
                                                         <color key="backgroundColor" red="0.29550126570000002" green="0.69537698510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="留学" image="studyAbroad"/>
+                                                        <state key="normal" image="studyAbroad"/>
                                                         <connections>
                                                             <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="h9j-Xm-JK5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
-                                                        <rect key="frame" x="0.0" y="96" width="178.5" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="161.5" width="383" height="154"/>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="奨学金" image="scholarship"/>
+                                                        <state key="normal" image="scholarship"/>
                                                         <connections>
                                                             <action selector="goToDetail:" destination="Gt6-Em-QZO" eventType="touchUpInside" id="uSj-cQ-u41"/>
                                                         </connections>
@@ -192,27 +192,27 @@
                         <viewControllerLayoutGuide type="bottom" id="NWy-vR-lZe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ILD-hI-Z2k">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="555"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
+                                <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="kyutechapp2017" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="105"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="kyutechapp2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106" width="375" height="455"/>
+                                        <rect key="frame" x="0.0" y="106" width="768" height="455"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="454.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="454.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="359" height="109"/>
+                                                    <rect key="frame" x="8" y="8" width="608" height="109"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-EZ-UB0" userLabel="DateLabel">
                                                             <rect key="frame" x="10" y="13" width="100" height="21"/>
@@ -225,7 +225,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平成28年度後期第四クウォーター授業日調整15回目の授業・試験時間割" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-ZT-yyk" userLabel="TitleLabel">
-                                                            <rect key="frame" x="25" y="42" width="309" height="55"/>
+                                                            <rect key="frame" x="25" y="42" width="558" height="55"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -244,19 +244,22 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
-                                                    <rect key="frame" x="8" y="126" width="359" height="330"/>
+                                                    <rect key="frame" x="8" y="126" width="608" height="330"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="109"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="608" height="109"/>
                                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="109" width="359" height="109"/>
+                                                            <rect key="frame" x="0.0" y="109" width="608" height="109"/>
                                                             <color key="backgroundColor" red="0.63784738519999995" green="1" blue="0.31592871160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="221" width="359" height="109"/>
+                                                            <rect key="frame" x="0.0" y="221" width="398.5" height="109"/>
                                                             <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="398" id="Z41-hg-YSg"/>
+                                                            </constraints>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -266,7 +269,6 @@
                                                         <constraint firstItem="peI-q4-AwM" firstAttribute="top" secondItem="3PX-ep-rBU" secondAttribute="top" id="LHm-1B-pMB"/>
                                                         <constraint firstItem="jpN-dO-CuZ" firstAttribute="top" secondItem="peI-q4-AwM" secondAttribute="bottom" id="QlN-yj-sd4"/>
                                                         <constraint firstItem="peI-q4-AwM" firstAttribute="width" secondItem="3PX-ep-rBU" secondAttribute="width" id="W9m-4f-YFb"/>
-                                                        <constraint firstItem="X2G-x0-Jse" firstAttribute="width" secondItem="3PX-ep-rBU" secondAttribute="width" id="Xgm-em-iMj"/>
                                                         <constraint firstAttribute="trailing" secondItem="X2G-x0-Jse" secondAttribute="trailing" id="ZVz-1f-t7N"/>
                                                         <constraint firstItem="peI-q4-AwM" firstAttribute="height" secondItem="3PX-ep-rBU" secondAttribute="height" multiplier="0.33" id="c05-Ux-7yT"/>
                                                         <constraint firstAttribute="bottom" secondItem="X2G-x0-Jse" secondAttribute="bottom" id="eyV-rh-XGV"/>
