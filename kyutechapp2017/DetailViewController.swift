@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 
 class DetailViewController: UIViewController {
 
@@ -37,6 +38,7 @@ class DetailViewController: UIViewController {
 //    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getInfomations()
 //        createCellHeightsArray()
     }
     
@@ -111,5 +113,14 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     
 }
 
+
+extension DetailViewController{
+    func getInfomations(){
+        Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON{
+            response in
+            let json = JSON(response.result.value)
+        }
+    }
+}
 
 

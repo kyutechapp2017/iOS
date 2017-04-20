@@ -9,4 +9,5 @@
 
 import SwiftyJSON
 import Alamofire
+import AlamofireSwiftyJSON
 

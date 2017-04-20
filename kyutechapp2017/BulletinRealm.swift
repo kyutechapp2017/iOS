@@ -6,6 +6,7 @@
 //  Copyright © 2017年 塩田宰. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import RealmSwift
 import SwiftyJSON
@@ -33,7 +34,10 @@ class IizukaNotice: Object{
     dynamic var attachment_5: String = ""
     dynamic var attachment_5_url: String = ""
     
+    
     override static func primaryKey() -> String { return "id" }
+    
+    
 }
 
 
@@ -151,7 +155,6 @@ class IizukaScholarship: Object{
     
     override static func primaryKey() -> String { return "id" }
 }
-
 
 
 class IizukaOther: Object{
