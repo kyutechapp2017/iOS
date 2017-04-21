@@ -11,3 +11,11 @@ import SwiftyJSON
 import Alamofire
 import AlamofireSwiftyJSON
 
+//Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON {
+//    response in
+//    print(response.request)
+//    print(response.response)
+//    print(response.data)
+//    print(response.result)
+//    
+//    }

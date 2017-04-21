@@ -37,7 +37,28 @@ class IizukaNotice: Object{
     
     override static func primaryKey() -> String { return "id" }
     
-    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        self.title              = json["title"].stringValue
+//        self.date = json["date"].
+        self.period             = json["period"].stringValue
+        self.place_or_before    = json["place_or_before"].stringValue
+        self.content            = json["content"].stringValue
+        self.department         = json["department"].stringValue
+        self.grade              = json["grade"].stringValue
+        self.attachment_1       = json["attachment_1"].stringValue
+        self.attachment_1_url   = json["attachment_1_url"].stringValue
+        self.attachment_2       = json["attachment_2"].stringValue
+        self.attachment_2_url   = json["attachment_2_url"].stringValue
+        self.attachment_3       = json["attachment_3"].stringValue
+        self.attachment_3_url   = json["attachment_3_url"].stringValue
+        self.attachment_4       = json["attachment_4"].stringValue
+        self.attachment_4_url   = json["attachment_4_url"].stringValue
+        self.attachment_5       = json["attachment_5"].stringValue
+        self.attachment_5_url   = json["attachment_5_url"].stringValue
+    }
 }
 
 
@@ -70,6 +91,35 @@ class IizukaLecture: Object{
     dynamic var attachment_5_url: String = ""
     
     override static func primaryKey() -> String { return "id" }
+    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        self.board_id           = json["board_id"].intValue
+        
+        self.title              = json["title"].stringValue
+        self.subject            = json["subject"].stringValue
+        //        self.date = json["date"].
+        self.period             = json["period"].stringValue
+        self.responsibility     = json["responsibility"].stringValue
+        self.place_or_before    = json["place_or_before"].stringValue
+        self.after              = json["after"].stringValue
+        self.content            = json["content"].stringValue
+        self.department         = json["department"].stringValue
+        self.grade              = json["grade"].stringValue
+        self.note               = json["note"].stringValue
+        self.attachment_1       = json["attachment_1"].stringValue
+        self.attachment_1_url   = json["attachment_1_url"].stringValue
+        self.attachment_2       = json["attachment_2"].stringValue
+        self.attachment_2_url   = json["attachment_2_url"].stringValue
+        self.attachment_3       = json["attachment_3"].stringValue
+        self.attachment_3_url   = json["attachment_3_url"].stringValue
+        self.attachment_4       = json["attachment_4"].stringValue
+        self.attachment_4_url   = json["attachment_4_url"].stringValue
+        self.attachment_5       = json["attachment_5"].stringValue
+        self.attachment_5_url   = json["attachment_5_url"].stringValue
+    }
 }
 
 
@@ -88,6 +138,18 @@ class IizukaCall: Object {
     
     override static func primaryKey() -> String { return "id" }
     
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        
+        self.title              = json["title"].stringValue
+        //        self.date = json["date"].
+        self.content            = json["content"].stringValue
+        self.department         = json["department"].stringValue
+        self.grade              = json["grade"].stringValue
+        self.note               = json["note"].stringValue
+    }
 }
 
 
@@ -112,6 +174,27 @@ class IizukaIntensiveLecture: Object {
     dynamic var attachment_5_url: String = ""
     
     override static func primaryKey() -> String { return "id" }
+    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        
+        self.title              = json["title"].stringValue
+        //        self.date = json["date"].
+        self.content            = json["content"].stringValue
+        self.note               = json["note"].stringValue
+        self.attachment_1       = json["attachment_1"].stringValue
+        self.attachment_1_url   = json["attachment_1_url"].stringValue
+        self.attachment_2       = json["attachment_2"].stringValue
+        self.attachment_2_url   = json["attachment_2_url"].stringValue
+        self.attachment_3       = json["attachment_3"].stringValue
+        self.attachment_3_url   = json["attachment_3_url"].stringValue
+        self.attachment_4       = json["attachment_4"].stringValue
+        self.attachment_4_url   = json["attachment_4_url"].stringValue
+        self.attachment_5       = json["attachment_5"].stringValue
+        self.attachment_5_url   = json["attachment_5_url"].stringValue
+    }
 }
 
 
@@ -133,6 +216,25 @@ class IizukaStudyingAbroad: Object{
     dynamic var attachment_4_url: String = ""
     
     override static func primaryKey() -> String { return "id" }
+    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        
+        self.title              = json["title"].stringValue
+        //        self.date = json["date"].
+        self.responsivility     = json["responsibility"].stringValue
+        self.content            = json["content"].stringValue
+        self.attachment_1       = json["attachment_1"].stringValue
+        self.attachment_1_url   = json["attachment_1_url"].stringValue
+        self.attachment_2       = json["attachment_2"].stringValue
+        self.attachment_2_url   = json["attachment_2_url"].stringValue
+        self.attachment_3       = json["attachment_3"].stringValue
+        self.attachment_3_url   = json["attachment_3_url"].stringValue
+        self.attachment_4       = json["attachment_4"].stringValue
+        self.attachment_4_url   = json["attachment_4_url"].stringValue
+    }
 }
 
 
@@ -146,7 +248,7 @@ class IizukaScholarship: Object{
     dynamic var content: String = ""
     dynamic var note: String = ""
     dynamic var attachment_1: String = ""
-    dynamic var attachmen__1_url: String = ""
+    dynamic var attachment_1_url: String = ""
     dynamic var attachment_2: String = ""
     dynamic var attachment_2_url: String = ""
     dynamic var attachment_3: String = ""
@@ -154,6 +256,23 @@ class IizukaScholarship: Object{
     dynamic var finish: String = ""
     
     override static func primaryKey() -> String { return "id" }
+    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        
+        self.title              = json["title"].stringValue
+        //        self.date = json["date"].
+        self.content            = json["content"].stringValue
+        self.attachment_1       = json["attachment_1"].stringValue
+        self.attachment_1_url   = json["attachment_1_url"].stringValue
+        self.attachment_2       = json["attachment_2"].stringValue
+        self.attachment_2_url   = json["attachment_2_url"].stringValue
+        self.attachment_3       = json["attachment_3"].stringValue
+        self.attachment_3_url   = json["attachment_3_url"].stringValue
+        self.finish             = json["finish"].stringValue
+    }
 }
 
 
@@ -179,6 +298,29 @@ class IizukaOther: Object{
     dynamic var attachment_5_url: String = ""
     
     override static func primaryKey() -> String { return "id" }
+    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        
+        self.board_id           = json["board_id"].intValue
+        self.title              = json["title"].stringValue
+        //        self.date = json["date"].
+        self.responsibility     = json["responsibility"].stringValue
+        self.content            = json["content"].stringValue
+        self.note               = json["note"].stringValue
+        self.attachment_1       = json["attachment_1"].stringValue
+        self.attachment_1_url   = json["attachment_1_url"].stringValue
+        self.attachment_2       = json["attachment_2"].stringValue
+        self.attachment_2_url   = json["attachment_2_url"].stringValue
+        self.attachment_3       = json["attachment_3"].stringValue
+        self.attachment_3_url   = json["attachment_3_url"].stringValue
+        self.attachment_4       = json["attachment_4"].stringValue
+        self.attachment_4_url   = json["attachment_4_url"].stringValue
+        self.attachment_5       = json["attachment_5"].stringValue
+        self.attachment_5_url   = json["attachment_5_url"].stringValue
+    }
 }
 
 
@@ -194,4 +336,17 @@ class IizukaHomepage: Object{
     dynamic var inquiry: String = ""
     
     override static func primaryKey() -> String { return  "id" }
+    
+    convenience init(json: SwiftyJSON.JSON){
+        self.init()
+        self.id                 = json["id"].intValue
+        self.url                = json["url"].stringValue
+        
+        self.board_id           = json["board_id"].intValue
+        //        self.date = json["date"].
+        self.place              = json["place"].stringValue
+        self.content            = json["content"].stringValue
+        self.note               = json["note"].stringValue
+        self.inquiry            = json["inquiry"].stringValue
+    }
 }
