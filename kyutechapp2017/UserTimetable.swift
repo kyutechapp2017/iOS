@@ -12,6 +12,7 @@ import RealmSwift
 class UserTimetable: Object {
     
     dynamic var cellTag: Int = -1
+    dynamic var term: Int = 0
     dynamic var classname: String = ""
     dynamic var classroom: String = ""
 

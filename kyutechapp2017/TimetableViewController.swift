@@ -15,9 +15,10 @@ class TimetableViewController: UIViewController{
     // 曜日と時限のカスタムビュー
     @IBOutlet weak fileprivate var dayOfWeekView: DayOfWeek!
     @IBOutlet weak fileprivate var periodOfTimeView: PeriodOfTime!
-    // 曜日と時限の集合
+    // 曜日と時限の集合と選択された学期
     fileprivate let dow = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日"]
     fileprivate let pot = ["1限", "2限", "3限", "4限", "5限", "6限"]
+    fileprivate var term = 0
     // BTNavigationDropdownMenu
     var menuView: BTNavigationDropdownMenu!
     // 時間割編集モード切り替えボタン
@@ -29,7 +30,7 @@ class TimetableViewController: UIViewController{
     // UITableViewで選択された行を一時記憶する変数
     var selectedRow: Int = -1
     // UserTimetableのインスタンス
-    let userTimetableRealm = TimetableRealm()
+    let userTimetableRealm = KyutechRealm()
     // ユーザの時間割データを格納する配列
     let classes = Array(repeatElement(UserTimetable(), count: 30))
     // 授業及び担当教員のテスト配列
@@ -84,7 +85,7 @@ extension TimetableViewController {
         menuView.maskBackgroundColor = KyutechColor.lightGray()
         menuView.maskBackgroundOpacity = 0.3
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-            print("Did select item at index: \(indexPath)")
+            self.term = indexPath
         }
         self.navigationItem.titleView = menuView
         
@@ -161,17 +162,21 @@ extension TimetableViewController: TimetableCellDelegate {
             classNameLabel.text = ""
             classroomNumberLabel.text = ""
             self.classes[tag].cellTag = -1
+            self.classes[tag].term = 0
             self.classes[tag].classname = ""
             self.classes[tag].classroom = ""
             self.userTimetableRealm.removeUserTimetableInfo(cellTag: tag)
+            self.timetable.reloadData()
         })
         alert.addAction( UIAlertAction(title: "追加", style: .default) { action in
             classNameLabel.text = self.classesTestData[self.selectedRow]
             classroomNumberLabel.text = self.classroomsTestData[self.selectedRow]
             self.classes[tag].cellTag = tag
+            self.classes[tag].term = self.term
             self.classes[tag].classname = self.classesTestData[self.selectedRow]
             self.classes[tag].classroom = self.classroomsTestData[self.selectedRow]
-            self.userTimetableRealm.addUserTimetableInfo(cellTag: tag, classname: self.classesTestData[self.selectedRow], classroom: self.classroomsTestData[self.selectedRow])
+            self.userTimetableRealm.addUserTimetableInfo(cellTag: tag, term: self.term, classname: self.classesTestData[self.selectedRow], classroom: self.classroomsTestData[self.selectedRow])
+            self.timetable.reloadData()
         })
         
         // AlertController内のUITableViewControllerの設定
