@@ -32,7 +32,7 @@ class TimetableViewController: UIViewController{
     // UserTimetableのインスタンス
     let userTimetableRealm = KyutechRealm()
     // ユーザの時間割データを格納する配列
-    let classes = Array(repeatElement(UserTimetable(), count: 30))
+    var classes: [UserTimetable] = []
     // 授業及び担当教員のテスト配列
     fileprivate let classesTestData = ["データ構造とアルゴリズム", "情報メディアとコミュニケーション", "コンピュータ革命と現代社会", "英語III", "棒と軸の力学"]
     fileprivate let teachersTestData = ["中村　貞吾", "西野　和典", "安河内　恵子", "ウィリアムソン　ロジャー　スティル", "石原　大輔"]
@@ -92,6 +92,10 @@ extension TimetableViewController {
         // ユーザの時間割情報を配列に格納
         let classesObjects = Array(userTimetableRealm.getUserTimetableObjects())
 
+        for _ in 0 ..< 30 {
+            self.classes.append(UserTimetable())
+        }
+        
         for classesObject in classesObjects {
             self.classes[classesObject.cellTag].cellTag = classesObject.cellTag
             self.classes[classesObject.cellTag].classname = classesObject.classname
@@ -166,7 +170,7 @@ extension TimetableViewController: TimetableCellDelegate {
             self.classes[tag].classname = ""
             self.classes[tag].classroom = ""
             self.userTimetableRealm.removeUserTimetableInfo(cellTag: tag)
-            self.timetable.reloadData()
+            // self.timetable.reloadData()
         })
         alert.addAction( UIAlertAction(title: "追加", style: .default) { action in
             classNameLabel.text = self.classesTestData[self.selectedRow]
@@ -176,7 +180,7 @@ extension TimetableViewController: TimetableCellDelegate {
             self.classes[tag].classname = self.classesTestData[self.selectedRow]
             self.classes[tag].classroom = self.classroomsTestData[self.selectedRow]
             self.userTimetableRealm.addUserTimetableInfo(cellTag: tag, term: self.term, classname: self.classesTestData[self.selectedRow], classroom: self.classroomsTestData[self.selectedRow])
-            self.timetable.reloadData()
+            // self.timetable.reloadData()
         })
         
         // AlertController内のUITableViewControllerの設定
