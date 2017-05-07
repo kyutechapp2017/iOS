@@ -30,16 +30,9 @@ class DetailViewController: UIViewController {
     
     var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
     
-//    func createCellHeightsArray(){
-//        for _ in 0...kRowsCount {
-//            cellHeights.append(kCloseCellHeight)
-//        }
-//    }
-//    
     override func viewDidLoad() {
         super.viewDidLoad()
         getInfomations()
-//        createCellHeightsArray()
     }
     
     override func didReceiveMemoryWarning() {
