@@ -25,7 +25,20 @@ func getData(){
 //    }
 }
 
-
+func getttt(){
+    Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON{
+        response in
+        print(response.request)
+        print(response.response)
+        print(response.data)
+        print(response.result)
+        
+        if let json = response.result.value{
+            print("JSON: \(json)")
+        }
+        
+    }
+}
 
 
 class IizukaNoticeModel: NSObject {
