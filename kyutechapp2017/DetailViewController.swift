@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     
     let kRowsCount = 10
     
-    let data = ["tinitn", "joaiefj", "jfeow", "yamoko", "yamanko"]
+    let data = BulletinModel.bulletinModel
 
     fileprivate struct C{
         struct CellHeight {

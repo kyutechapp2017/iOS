@@ -25,6 +25,8 @@
 		E643D7191E648A17003F540A /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D7181E648A17003F540A /* ColorManager.swift */; };
 		E643D71D1E648A68003F540A /* CategoryButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryButtonModel.swift */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
+		E69CC0071EEAD0F4005A5713 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0061EEAD0F4005A5713 /* Router.swift */; };
+		E69CC0091EEAD121005A5713 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0081EEAD121005A5713 /* APIService.swift */; };
 		E6B26B331EA4C8510062B5C0 /* Bulletin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B321EA4C8510062B5C0 /* Bulletin.swift */; };
 		E6B26B351EA4CFA70062B5C0 /* BulletinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */; };
 		E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C61E76528B0049E007 /* DetailCell.swift */; };
@@ -80,6 +82,8 @@
 		E643D7181E648A17003F540A /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButtonModel.swift; sourceTree = "<group>"; };
 		E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewController.swift; sourceTree = "<group>"; };
+		E69CC0061EEAD0F4005A5713 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E69CC0081EEAD121005A5713 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6B26B321EA4C8510062B5C0 /* Bulletin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bulletin.swift; sourceTree = "<group>"; };
 		E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinModel.swift; sourceTree = "<group>"; };
 		E6F4E5C61E76528B0049E007 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		20BF1D7B1E546B1A00D36C38 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				E69CC0061EEAD0F4005A5713 /* Router.swift */,
+				E69CC0081EEAD121005A5713 /* APIService.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -725,10 +731,12 @@
 				E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */,
 				E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */,
 				20BF1D4C1E546AD600D36C38 /* ViewController.swift in Sources */,
+				E69CC0071EEAD0F4005A5713 /* Router.swift in Sources */,
 				E6B26B331EA4C8510062B5C0 /* Bulletin.swift in Sources */,
 				E6B26B351EA4CFA70062B5C0 /* BulletinModel.swift in Sources */,
 				E607C3041E81846200A7881A /* CategoryView.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
+				E69CC0091EEAD121005A5713 /* APIService.swift in Sources */,
 				E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */,
 				E643D7191E648A17003F540A /* ColorManager.swift in Sources */,
 				E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */,

@@ -41,6 +41,7 @@ class BulletinBoardViewController: UIViewController {
         super.viewDidLoad()
         classesButton.imageView?.contentMode = .scaleToFill
         
+            
 //        setButtonView(button: classesButton, type: .classes)
 //        setButtonView(button: intensiveButton, type: .intensive)
 //        setButtonView(button: newsButton, type: .news)
