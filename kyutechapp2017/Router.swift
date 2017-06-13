@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-
 import Alamofire
 
 enum Router: URLRequestConvertible {
@@ -19,19 +17,9 @@ enum Router: URLRequestConvertible {
     static let baseURL = "http://kyutechapp.planningdev.com"
     static let baseURLString = baseURL + prefix
     
-    var method: HTTPMethod {
-        switch self {
-        case .bulletinBoard:
-            return .get
-        }
-    }
+    var method: HTTPMethod { switch self { case .bulletinBoard: return .get }}
     
-    var path: String {
-        switch self {
-        case .bulletinBoard:
-            return "/bullettinboards.json"
-        }
-    }
+    var path: String { switch self { case .bulletinBoard: return "/bullettinboards.json" }}
     
     // MARK: URLRequestConvertible
     
@@ -42,13 +30,12 @@ enum Router: URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         
         switch self {
-            
         case .bulletinBoard(let genre,let last_update):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: ["genre_id":genre,"update_at":last_update])
-        default:
-            break
+        default: break
         }
         
         return urlRequest
     }
 }
+

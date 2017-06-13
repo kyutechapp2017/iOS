@@ -15,6 +15,7 @@ class APIService{
         Alamofire.request( Router.bulletinBoard(genreId: genre, lastUpdate: update)  ).responseJSON { (response) in
             
             // errir handle
+            
             let json = response.result.value as! JSON
             handler(json)
             

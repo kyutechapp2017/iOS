@@ -330,6 +330,7 @@
 		20BF1D8A1E546C6C00D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				E643D71C1E648A68003F540A /* CategoryButtonModel.swift */,
 				E6F4E5C61E76528B0049E007 /* DetailCell.swift */,
 				E607C3031E81846200A7881A /* CategoryView.swift */,
 				E607C3051E81847E00A7881A /* CategoryView.xib */,
@@ -354,7 +355,6 @@
 		20BF1D8D1E546C9A00D36C38 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				E643D71C1E648A68003F540A /* CategoryButtonModel.swift */,
 				E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */,
 				E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */,
 			);
