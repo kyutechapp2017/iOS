@@ -67,6 +67,9 @@
 		20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
 		20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
+		20D5E1191EBF606100AC814B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5E1181EBF606100AC814B /* UserSetting.swift */; };
+		20D5E11A1EBF606100AC814B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5E1181EBF606100AC814B /* UserSetting.swift */; };
+		20D5E11B1EBF606100AC814B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5E1181EBF606100AC814B /* UserSetting.swift */; };
 		20F03E0C1E654F9F002A3480 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
 		20F03E0D1E654F9F002A3480 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
 		20F03E111E655021002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
@@ -133,6 +136,7 @@
 		20CBD4671E57F519006333C3 /* PeriodOfTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriodOfTime.xib; sourceTree = "<group>"; };
 		20CBD4691E57F883006333C3 /* PeriodOfTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodOfTime.swift; sourceTree = "<group>"; };
 		20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		20D5E1181EBF606100AC814B /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 		2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D623E1032D1DE252D8BA1 /* Pods-kyutechapp2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.release.xcconfig"; sourceTree = "<group>"; };
@@ -481,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */,
+				20D5E1181EBF606100AC814B /* UserSetting.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -911,6 +916,7 @@
 				20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F3E1E628C1D00FCC3FA /* TimetableCell.swift in Sources */,
 				20F03E0C1E654F9F002A3480 /* Config.swift in Sources */,
+				20D5E11A1EBF606100AC814B /* UserSetting.swift in Sources */,
 				20613F3F1E628C1D00FCC3FA /* PeriodOfTime.swift in Sources */,
 				20613F401E628C1D00FCC3FA /* AppDelegate.swift in Sources */,
 			);
@@ -929,6 +935,7 @@
 				20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F591E628C2300FCC3FA /* TimetableCell.swift in Sources */,
 				20F03E0D1E654F9F002A3480 /* Config.swift in Sources */,
+				20D5E11B1EBF606100AC814B /* UserSetting.swift in Sources */,
 				20613F5A1E628C2300FCC3FA /* PeriodOfTime.swift in Sources */,
 				20613F5B1E628C2300FCC3FA /* AppDelegate.swift in Sources */,
 			);
@@ -947,6 +954,7 @@
 				20613F751E62969C00FCC3FA /* Config.swift in Sources */,
 				20C745AF1E5EA9B400978A72 /* TimetableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
+				20D5E1191EBF606100AC814B /* UserSetting.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
 				20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 			);
