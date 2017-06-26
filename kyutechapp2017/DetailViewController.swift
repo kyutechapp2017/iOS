@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     
     let kRowsCount = 10
     
-    let data = BulletinModel.sharedInstance.getNotice(genre: .call, update: <#T##Double#>)
+    let data = BulletinModel.sharedInstance
 
     fileprivate struct C{
         struct CellHeight {
