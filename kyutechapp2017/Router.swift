@@ -34,7 +34,6 @@ enum Router: URLRequestConvertible {
             urlRequest = try URLEncoding.default.encode(urlRequest, with: ["genre_id":genre,"update_at":last_update])
         default: break
         }
-        
         return urlRequest
     }
 }

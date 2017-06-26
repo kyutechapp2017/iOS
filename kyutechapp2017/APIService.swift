@@ -14,12 +14,13 @@ class APIService{
     static func getBoardInfo(genre: Genre, update: Double,  handler: @escaping (JSON)->Void){
         Alamofire.request( Router.bulletinBoard(genreId: genre, lastUpdate: update)  ).responseJSON { (response) in
             
-            // errir handle
-            
+            // error handle
+            if let error = response.result.error{
+                print(error)
+            }
             let json = response.result.value as! JSON
             handler(json)
             
         }
     }
-    
 }
