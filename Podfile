@@ -9,6 +9,9 @@ target 'kyutechapp2017' do
   pod 'SwiftyJSON'
   pod 'AlamofireSwiftyJSON' 
   pod "PDFramework", :git => 'https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git'
+  pod 'BTNavigationDropdownMenu', :git => 'https://github.com/PhamBaTho/BTNavigationDropdownMenu.git', :branch => 'swift-3.0'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   # Pods for kyutechapp2017
 
