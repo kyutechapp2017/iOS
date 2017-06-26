@@ -10,7 +10,7 @@
 		20613F3B1E628C1D00FCC3FA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
 		20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
 		20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B181E57436600C53FF1 /* TimetableViewController.swift */; };
-		20613F3E1E628C1D00FCC3FA /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TableCell.swift */; };
+		20613F3E1E628C1D00FCC3FA /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TimetableCell.swift */; };
 		20613F3F1E628C1D00FCC3FA /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		20613F401E628C1D00FCC3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D491E546AD600D36C38 /* AppDelegate.swift */; };
 		20613F441E628C1D00FCC3FA /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
@@ -18,13 +18,12 @@
 		20613F461E628C1D00FCC3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
 		20613F471E628C1D00FCC3FA /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20613F481E628C1D00FCC3FA /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
-		20613F491E628C1D00FCC3FA /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20613F4A1E628C1D00FCC3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20613F4B1E628C1D00FCC3FA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		20613F561E628C2300FCC3FA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
 		20613F571E628C2300FCC3FA /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
 		20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B181E57436600C53FF1 /* TimetableViewController.swift */; };
-		20613F591E628C2300FCC3FA /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TableCell.swift */; };
+		20613F591E628C2300FCC3FA /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TimetableCell.swift */; };
 		20613F5A1E628C2300FCC3FA /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		20613F5B1E628C2300FCC3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D491E546AD600D36C38 /* AppDelegate.swift */; };
 		20613F5F1E628C2300FCC3FA /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
@@ -32,13 +31,27 @@
 		20613F611E628C2300FCC3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
 		20613F621E628C2300FCC3FA /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20613F631E628C2300FCC3FA /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
-		20613F641E628C2300FCC3FA /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20613F651E628C2300FCC3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20613F661E628C2300FCC3FA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		20613F751E62969C00FCC3FA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
 		20613F781E6296FF00FCC3FA /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F771E6296FF00FCC3FA /* Api.plist */; };
 		20613F7A1E62972100FCC3FA /* DevApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F791E62972100FCC3FA /* DevApi.plist */; };
 		20613F7C1E62973200FCC3FA /* DemoApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20613F7B1E62973200FCC3FA /* DemoApi.plist */; };
+		206BC82B1E6C516F0089BA6B /* ClasstableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BC82A1E6C516F0089BA6B /* ClasstableCell.swift */; };
+		206BC82C1E6C516F0089BA6B /* ClasstableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BC82A1E6C516F0089BA6B /* ClasstableCell.swift */; };
+		206BC82D1E6C516F0089BA6B /* ClasstableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BC82A1E6C516F0089BA6B /* ClasstableCell.swift */; };
+		206BC82F1E6C51AA0089BA6B /* ClasstableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */; };
+		206BC8301E6C51AA0089BA6B /* ClasstableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */; };
+		206BC8311E6C51AA0089BA6B /* ClasstableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */; };
+		2073EECD1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073EECC1EAA28ED00B571D3 /* KyutechRealm.swift */; };
+		2073EECE1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073EECC1EAA28ED00B571D3 /* KyutechRealm.swift */; };
+		2073EECF1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073EECC1EAA28ED00B571D3 /* KyutechRealm.swift */; };
+		2076FA891E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */; };
+		2076FA8A1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */; };
+		2076FA8B1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */; };
+		20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
+		20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
+		20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */; };
 		20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D491E546AD600D36C38 /* AppDelegate.swift */; };
 		20BF1D4F1E546AD600D36C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D4D1E546AD600D36C38 /* Main.storyboard */; };
 		20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D501E546AD600D36C38 /* Assets.xcassets */; };
@@ -46,19 +59,25 @@
 		20BF1D5F1E546AD600D36C38 /* kyutechapp2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D5E1E546AD600D36C38 /* kyutechapp2017Tests.swift */; };
 		20BF1D6A1E546AD600D36C38 /* kyutechapp2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF1D691E546AD600D36C38 /* kyutechapp2017UITests.swift */; };
 		20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D961E54795000D36C38 /* BulletinBoard.storyboard */; };
-		20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D9A1E54798900D36C38 /* Setting.storyboard */; };
 		20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C47B121E570F7700C53FF1 /* DayOfWeek.xib */; };
 		20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */; };
 		20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C47B181E57436600C53FF1 /* TimetableViewController.swift */; };
-		20C745AF1E5EA9B400978A72 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TableCell.swift */; };
+		20C745AF1E5EA9B400978A72 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C745AE1E5EA9B400978A72 /* TimetableCell.swift */; };
 		20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CBD4671E57F519006333C3 /* PeriodOfTime.xib */; };
 		20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBD4691E57F883006333C3 /* PeriodOfTime.swift */; };
 		20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */; };
+		20D5E1191EBF606100AC814B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5E1181EBF606100AC814B /* UserSetting.swift */; };
+		20D5E11A1EBF606100AC814B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5E1181EBF606100AC814B /* UserSetting.swift */; };
+		20D5E11B1EBF606100AC814B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5E1181EBF606100AC814B /* UserSetting.swift */; };
+		20F03E0C1E654F9F002A3480 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
+		20F03E0D1E654F9F002A3480 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20613F741E62969C00FCC3FA /* Config.swift */; };
+		20F03E111E655021002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
+		20F03E121E655022002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
+		20F03E131E655023002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
 		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
-		F87EAA14FA746D9A2A771B0A /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +109,11 @@
 		20613F771E6296FF00FCC3FA /* Api.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
 		20613F791E62972100FCC3FA /* DevApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DevApi.plist; sourceTree = "<group>"; };
 		20613F7B1E62973200FCC3FA /* DemoApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DemoApi.plist; sourceTree = "<group>"; };
+		206BC82A1E6C516F0089BA6B /* ClasstableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasstableCell.swift; sourceTree = "<group>"; };
+		206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClasstableCell.xib; sourceTree = "<group>"; };
+		2073EECC1EAA28ED00B571D3 /* KyutechRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KyutechRealm.swift; sourceTree = "<group>"; };
+		2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimetable.swift; sourceTree = "<group>"; };
+		20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kyutechapp2017.swift; sourceTree = "<group>"; };
 		20BF1D461E546AD600D36C38 /* kyutechapp2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyutechapp2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF1D491E546AD600D36C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BF1D4E1E546AD600D36C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,10 +132,11 @@
 		20C47B121E570F7700C53FF1 /* DayOfWeek.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayOfWeek.xib; sourceTree = "<group>"; };
 		20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		20C47B181E57436600C53FF1 /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
-		20C745AE1E5EA9B400978A72 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		20C745AE1E5EA9B400978A72 /* TimetableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
 		20CBD4671E57F519006333C3 /* PeriodOfTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeriodOfTime.xib; sourceTree = "<group>"; };
 		20CBD4691E57F883006333C3 /* PeriodOfTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodOfTime.swift; sourceTree = "<group>"; };
 		20D097BF1E597F53002F73D4 /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		20D5E1181EBF606100AC814B /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 		2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyutechapp2017UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D623E1032D1DE252D8BA1 /* Pods-kyutechapp2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */,
-				F87EAA14FA746D9A2A771B0A /* Pods_kyutechapp2017.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +312,7 @@
 				20BF1D941E546CF200D36C38 /* Timetable */,
 				20BF1D951E546CFA00D36C38 /* Setting */,
 				20613F741E62969C00FCC3FA /* Config.swift */,
+				20A41D151E63D64B00CC1826 /* Kyutechapp2017.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -299,6 +324,7 @@
 				20BF1D8E1E546CA700D36C38 /* Timetable */,
 				20BF1D8F1E546CB100D36C38 /* Setting */,
 				20BF1D7E1E546B4200D36C38 /* Entity */,
+				2073EECC1EAA28ED00B571D3 /* KyutechRealm.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,9 +389,10 @@
 		20BF1D851E546C2800D36C38 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				20BF1D981E54795E00D36C38 /* Timetable.storyboard */,
 				20C47B121E570F7700C53FF1 /* DayOfWeek.xib */,
 				20CBD4671E57F519006333C3 /* PeriodOfTime.xib */,
-				20BF1D981E54795E00D36C38 /* Timetable.storyboard */,
+				206BC82E1E6C51AA0089BA6B /* ClasstableCell.xib */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -413,7 +440,8 @@
 			children = (
 				20C47B161E5739BE00C53FF1 /* DayOfWeek.swift */,
 				20CBD4691E57F883006333C3 /* PeriodOfTime.swift */,
-				20C745AE1E5EA9B400978A72 /* TableCell.swift */,
+				20C745AE1E5EA9B400978A72 /* TimetableCell.swift */,
+				206BC82A1E6C516F0089BA6B /* ClasstableCell.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -456,6 +484,8 @@
 		20BF1D911E546CC400D36C38 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				2076FA881E6FEE6A0054ACD9 /* UserTimetable.swift */,
+				20D5E1181EBF606100AC814B /* UserSetting.swift */,
 			);
 			name = Timetable;
 			sourceTree = "<group>";
@@ -616,7 +646,7 @@
 				TargetAttributes = {
 					20BF1D451E546AD600D36C38 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = DSH8Z98H89;
+						DevelopmentTeam = 2E5E462W28;
 						ProvisioningStyle = Automatic;
 					};
 					20BF1D591E546AD600D36C38 = {
@@ -661,10 +691,11 @@
 				20613F441E628C1D00FCC3FA /* PeriodOfTime.xib in Resources */,
 				20613F451E628C1D00FCC3FA /* LaunchScreen.storyboard in Resources */,
 				20613F461E628C1D00FCC3FA /* Assets.xcassets in Resources */,
+				20F03E121E655022002A3480 /* Timetable.storyboard in Resources */,
 				20613F471E628C1D00FCC3FA /* DayOfWeek.xib in Resources */,
 				20613F481E628C1D00FCC3FA /* BulletinBoard.storyboard in Resources */,
-				20613F491E628C1D00FCC3FA /* Timetable.storyboard in Resources */,
 				20613F4A1E628C1D00FCC3FA /* Main.storyboard in Resources */,
+				206BC8301E6C51AA0089BA6B /* ClasstableCell.xib in Resources */,
 				20613F7A1E62972100FCC3FA /* DevApi.plist in Resources */,
 				20613F4B1E628C1D00FCC3FA /* Setting.storyboard in Resources */,
 			);
@@ -677,10 +708,11 @@
 				20613F5F1E628C2300FCC3FA /* PeriodOfTime.xib in Resources */,
 				20613F601E628C2300FCC3FA /* LaunchScreen.storyboard in Resources */,
 				20613F7C1E62973200FCC3FA /* DemoApi.plist in Resources */,
+				20F03E131E655023002A3480 /* Timetable.storyboard in Resources */,
 				20613F611E628C2300FCC3FA /* Assets.xcassets in Resources */,
 				20613F621E628C2300FCC3FA /* DayOfWeek.xib in Resources */,
 				20613F631E628C2300FCC3FA /* BulletinBoard.storyboard in Resources */,
-				20613F641E628C2300FCC3FA /* Timetable.storyboard in Resources */,
+				206BC8311E6C51AA0089BA6B /* ClasstableCell.xib in Resources */,
 				20613F651E628C2300FCC3FA /* Main.storyboard in Resources */,
 				20613F661E628C2300FCC3FA /* Setting.storyboard in Resources */,
 			);
@@ -693,10 +725,11 @@
 				20613F781E6296FF00FCC3FA /* Api.plist in Resources */,
 				20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */,
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
+				20F03E111E655021002A3480 /* Timetable.storyboard in Resources */,
 				20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */,
 				20C47B131E570F7700C53FF1 /* DayOfWeek.xib in Resources */,
 				20BF1D971E54795000D36C38 /* BulletinBoard.storyboard in Resources */,
-				20BF1D991E54795E00D36C38 /* Timetable.storyboard in Resources */,
+				206BC82F1E6C51AA0089BA6B /* ClasstableCell.xib in Resources */,
 				20BF1D4F1E546AD600D36C38 /* Main.storyboard in Resources */,
 				20BF1D9B1E54798900D36C38 /* Setting.storyboard in Resources */,
 			);
@@ -874,10 +907,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206BC82C1E6C516F0089BA6B /* ClasstableCell.swift in Sources */,
 				20613F3B1E628C1D00FCC3FA /* DetailPageViewController.swift in Sources */,
+				20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
+				2073EECE1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */,
 				20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */,
+				2076FA8A1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */,
-				20613F3E1E628C1D00FCC3FA /* TableCell.swift in Sources */,
+				20613F3E1E628C1D00FCC3FA /* TimetableCell.swift in Sources */,
+				20F03E0C1E654F9F002A3480 /* Config.swift in Sources */,
+				20D5E11A1EBF606100AC814B /* UserSetting.swift in Sources */,
 				20613F3F1E628C1D00FCC3FA /* PeriodOfTime.swift in Sources */,
 				20613F401E628C1D00FCC3FA /* AppDelegate.swift in Sources */,
 			);
@@ -887,10 +926,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206BC82D1E6C516F0089BA6B /* ClasstableCell.swift in Sources */,
 				20613F561E628C2300FCC3FA /* DetailPageViewController.swift in Sources */,
+				20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
+				2073EECF1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */,
 				20613F571E628C2300FCC3FA /* DayOfWeek.swift in Sources */,
+				2076FA8B1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */,
-				20613F591E628C2300FCC3FA /* TableCell.swift in Sources */,
+				20613F591E628C2300FCC3FA /* TimetableCell.swift in Sources */,
+				20F03E0D1E654F9F002A3480 /* Config.swift in Sources */,
+				20D5E11B1EBF606100AC814B /* UserSetting.swift in Sources */,
 				20613F5A1E628C2300FCC3FA /* PeriodOfTime.swift in Sources */,
 				20613F5B1E628C2300FCC3FA /* AppDelegate.swift in Sources */,
 			);
@@ -900,13 +945,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206BC82B1E6C516F0089BA6B /* ClasstableCell.swift in Sources */,
 				20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */,
 				20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */,
+				2073EECD1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */,
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
+				2076FA891E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F751E62969C00FCC3FA /* Config.swift in Sources */,
-				20C745AF1E5EA9B400978A72 /* TableCell.swift in Sources */,
+				20C745AF1E5EA9B400978A72 /* TimetableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
+				20D5E1191EBF606100AC814B /* UserSetting.swift in Sources */,
 				20BF1D4A1E546AD600D36C38 /* AppDelegate.swift in Sources */,
+				20A41D161E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,6 +1015,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "kyutechapp2017/dev-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEV";
@@ -978,6 +1029,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "kyutechapp2017/dev-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEV";
@@ -991,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "kyutechapp2017/demo-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEMO";
@@ -1004,6 +1057,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "kyutechapp2017/demo-kyutechapp2017.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEMO";
@@ -1112,7 +1166,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = DSH8Z98H89;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2E5E462W28;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D PRODUCTION";
@@ -1128,7 +1183,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = DSH8Z98H89;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2E5E462W28;
 				INFOPLIST_FILE = kyutechapp2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D PRODUCTION";
