@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var headerView: CategoryView!
     
     let kCloseCellHeight: CGFloat = 110
     let kOpenCellHeight: CGFloat = 340
@@ -32,7 +33,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getInfomations()
+//        getInfomations()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -107,13 +109,11 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
 }
 
 
-extension DetailViewController{
-    func getInfomations(){
-        Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON{
-            response in
-            let json = JSON(response.result.value)
-        }
-    }
-}
-
-
+//extension DetailViewController{
+//    func getInfomations(){
+//        Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON{
+//            response in
+//            let json = JSON(response.result.value)
+//        }
+//    }
+//}

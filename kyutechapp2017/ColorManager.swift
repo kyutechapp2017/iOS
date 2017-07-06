@@ -25,6 +25,5 @@ extension UIColor{
     static let studyAbroad_2 = UIColor(red: 101/255, green: 191/255, blue: 189/255, alpha: 1.0)
     static let scholarship_1 = UIColor(red: 253/255, green: 177/255, blue: 123/255, alpha: 1.0)
     static let scholarship_2 = UIColor(red: 234/255, green: 137/255, blue: 191/255, alpha: 1.0)
-    
     static let labelColor = UIColor(red: 244/255, green: 249/255, blue: 249/255, alpha: 1.0)
 }

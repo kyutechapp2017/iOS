@@ -14,7 +14,7 @@
         <!--Kyutech-->
         <scene sceneID="IaP-3j-ABG">
             <objects>
-                <viewController id="Gt6-Em-QZO" customClass="BulletinBoardViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gt6-Em-QZO" customClass="BulletinBoardViewController" customModule="demo_kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyK-Sg-H3J"/>
                         <viewControllerLayoutGuide type="bottom" id="Iyg-cp-65D"/>
@@ -24,13 +24,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MJv-cS-Be3" userLabel="all">
-                                <rect key="frame" x="8" y="72" width="359" height="538"/>
+                                <rect key="frame" x="8" y="72" width="398" height="607"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-SF-PoV" userLabel="top">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="163.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-Qd-AbJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="252" height="144.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="279.33333333333331" height="163.33333333333334"/>
                                                 <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="3"/>
                                                 <state key="normal" image="classes"/>
@@ -39,7 +39,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
-                                                <rect key="frame" x="260" y="0.0" width="99" height="144.5"/>
+                                                <rect key="frame" x="287.33333333333326" y="0.0" width="110.66666666666669" height="163.33333333333334"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="intensive"/>
                                                 <connections>
@@ -52,13 +52,13 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-A9-vtU" userLabel="middle">
-                                        <rect key="frame" x="0.0" y="152.5" width="359" height="194"/>
+                                        <rect key="frame" x="0.0" y="171.33333333333337" width="398" height="218.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-BO-c7x">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="194"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="218.66666666666666"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-ss-FIw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="93"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="105.66666666666666"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="news"/>
                                                         <connections>
@@ -66,7 +66,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-g7-wUF">
-                                                        <rect key="frame" x="0.0" y="101" width="124.5" height="93"/>
+                                                        <rect key="frame" x="0.0" y="113.66666666666666" width="139" height="105"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="procedure"/>
                                                         <connections>
@@ -79,7 +79,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-L2-Z64">
-                                                <rect key="frame" x="132.5" y="0.0" width="226.5" height="194"/>
+                                                <rect key="frame" x="147" y="0.0" width="251" height="218.66666666666666"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="department"/>
                                                 <connections>
@@ -98,10 +98,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-n5-lki" userLabel="bottom">
-                                        <rect key="frame" x="0.0" y="354.5" width="359" height="183.5"/>
+                                        <rect key="frame" x="0.0" y="398" width="398" height="209"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="183.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="191.66666666666666" height="209"/>
                                                 <color key="backgroundColor" red="1" green="0.41954855238743594" blue="0.58456804303698351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="summon"/>
                                                 <connections>
@@ -109,10 +109,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-xr-IGv">
-                                                <rect key="frame" x="180.5" y="0.0" width="178.5" height="183.5"/>
+                                                <rect key="frame" x="199.66666666666663" y="0.0" width="198.33333333333337" height="209"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="198.33333333333334" height="100.33333333333337"/>
                                                         <color key="backgroundColor" red="0.29550126570000002" green="0.69537698510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="studyAbroad"/>
                                                         <connections>
@@ -120,7 +120,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
-                                                        <rect key="frame" x="0.0" y="95.5" width="178.5" height="88"/>
+                                                        <rect key="frame" x="0.0" y="108.33333333333337" width="198.33333333333334" height="100.66666666666663"/>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="scholarship"/>
                                                         <connections>
@@ -186,7 +186,7 @@
         <!--Detail View Controller-->
         <scene sceneID="zOy-5R-YNb">
             <objects>
-                <viewController id="iNK-NX-ApQ" customClass="DetailViewController" customModule="kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iNK-NX-ApQ" customClass="DetailViewController" customModule="demo_kyutechapp2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QkL-O5-cYt"/>
                         <viewControllerLayoutGuide type="bottom" id="NWy-vR-lZe"/>
@@ -196,22 +196,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="kyutechapp2017" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="kyutechapp2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106" width="375" height="455"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106" width="414" height="455"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="454.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="454.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="608" height="109"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-EZ-UB0" userLabel="DateLabel">
@@ -250,12 +250,12 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="608" height="109"/>
                                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="109" width="608" height="109"/>
                                                             <color key="backgroundColor" red="0.63784738519999995" green="1" blue="0.31592871160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView" customClass="RotatedView" customModule="kyutechapp2017" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="221" width="398.5" height="109"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="221" width="398.66666666666669" height="109"/>
                                                             <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="398" id="Z41-hg-YSg"/>
@@ -318,6 +318,9 @@
                             <constraint firstItem="NWy-vR-lZe" firstAttribute="top" secondItem="COR-Oe-Xsv" secondAttribute="bottom" id="zSn-wj-vBE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerView" destination="BYW-At-H9L" id="xVQ-Rh-nTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
