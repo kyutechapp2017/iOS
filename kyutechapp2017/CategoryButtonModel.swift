@@ -12,16 +12,16 @@ enum CategoryType{
     case classes, intensive, news,procedure,department,summon,studyAbroad,scholarship
     static let allValues = [classes,intensive,news,procedure,department,summon,studyAbroad,scholarship]
     
-    var getImageName: String{
+    var getImage: UIImage{
         switch self {
-        case .classes: return "classes"
-        case .intensive: return "intensive"
-        case .news: return "news"
-        case .procedure: return "proceduce"
-        case .department: return "department"
-        case .summon: return "summon"
-        case .studyAbroad: return "studyAbroad"
-        case .scholarship: return "scholarship"
+        case .classes: return #imageLiteral(resourceName: "classes")
+        case .intensive: return #imageLiteral(resourceName: "intensive")
+        case .news: return #imageLiteral(resourceName: "news")
+        case .procedure: return #imageLiteral(resourceName: "procedure")
+        case .department: return #imageLiteral(resourceName: "department")
+        case .summon: return #imageLiteral(resourceName: "summon")
+        case .studyAbroad: return #imageLiteral(resourceName: "studyAbroad")
+        case .scholarship: return #imageLiteral(resourceName: "scholarship")
         }
     }
     
@@ -104,6 +104,9 @@ enum CategoryType{
     }
 }
 
+
+
+
 //headerView --detailView
 func setHeaderView(view: UIView, imageView: UIImageView, label: UILabel, category: CategoryType){
     let gradient = CAGradientLayer()
@@ -119,56 +122,62 @@ func setHeaderView(view: UIView, imageView: UIImageView, label: UILabel, categor
 
 
 
-class CategoryBackgroundButton{
+//使わない
+//categorybutton
+func setButtonBackgroundView(category: CategoryType, button: UIButton){
     let position1 = NSNumber(value: 0.0 as Float)
     let position2 = NSNumber(value: 1.0 as Float)
     let gradient = CAGradientLayer()
-    var category: CategoryType
-    var color1: UIColor
-    var color2: UIColor
-    var startPoint: CGPoint
-    var endPoint: CGPoint
-    var labelName: String
-    var imageName: String
+    let color1 = category.getColor1
+    let color2 = category.getColor2
+    let startPoint = category.getStartPoint
+    let endPoint = category.getEndPoint
+    let labelName = category.getLabelName
+//    var imageName = category.getImage
     
-    init(button:UIButton, buttonCategory:CategoryType) {
-        self.category = buttonCategory
-        self.color1 = self.category.getColor1
-        self.color2 = self.category.getColor2
-        self.startPoint = self.category.getStartPoint
-        self.endPoint = self.category.getEndPoint
-        self.labelName = self.category.getLabelName
-        self.imageName = self.category.getImageName
-    }
-    
-    func setGradationValues(button: UIButton){
-        gradient.colors = [color1.cgColor, color2.cgColor]
-        gradient.startPoint = startPoint
-        gradient.endPoint = endPoint
-        gradient.frame = button.frame
-        gradient.locations = [position1, position2]
-        button.layer.insertSublayer(gradient, at: 0)
-    }
-    
-    
-    func setImage(button: UIButton){
-    }
-    
-    func setLabel(button: UIButton){
-        button.titleLabel?.text = self.labelName
-//        button.titleRect(forContentRect: button.bounds)
-    }
+    gradient.colors = [color1.cgColor, color2.cgColor]
+    gradient.startPoint = startPoint
+    gradient.endPoint = endPoint
+    gradient.frame = button.frame
+    gradient.locations = [position1, position2]
+    button.layer.insertSublayer(gradient, at: 0)
+    button.titleLabel?.text =  labelName
+
 }
 
 
 
-func setButtonView(button:UIButton, type:CategoryType){
-    var categoryButton = CategoryBackgroundButton(button: button, buttonCategory: type)
-    
-    // set backgroundview
-    categoryButton.setGradationValues(button: button)
-    
-    // set image
-    // set label
-    categoryButton.setLabel(button: button)
-}
+
+
+
+
+//class CategoryBackgroundButton{
+//    
+//    init(button:UIButton, buttonCategory:CategoryType) {
+//        self.category = buttonCategory
+//        self.color1 = self.category.getColor1
+//        self.color2 = self.category.getColor2
+//        self.startPoint = self.category.getStartPoint
+//        self.endPoint = self.category.getEndPoint
+//        self.labelName = self.category.getLabelName
+//        self.imageName = self.category.getImageName
+//    }
+//    
+
+//    func setLabel(button: UIButton){
+//       //        button.titleRect(forContentRect: button.bounds)
+//    }
+//}
+
+
+
+//func setButtonView(button:UIButton, type:CategoryType){
+//    var categoryButton = CategoryBackgroundButton(button: button, buttonCategory: type)
+//    
+//    // set backgroundview
+//    categoryButton.setGradationValues(button: button)
+//    
+//    // set image
+//    // set label
+//    categoryButton.setLabel(button: button)
+//}

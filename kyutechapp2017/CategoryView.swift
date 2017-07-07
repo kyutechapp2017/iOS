@@ -22,6 +22,8 @@ import SwiftyJSON
     required init?(coder aDecoder: NSCoder) {//storyboard/xibから初期化
         super.init(coder: aDecoder)
     }
+    
+    
 //    private func loadView
     
 //    
