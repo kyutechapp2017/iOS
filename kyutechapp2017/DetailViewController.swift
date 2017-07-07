@@ -12,16 +12,17 @@ import SwiftyJSON
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var headerView: CategoryView!
-    
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var headerImageView: UIImageView!
+       
     let kCloseCellHeight: CGFloat = 110
     let kOpenCellHeight: CGFloat = 340
-    var category:CategoryType?
-    
     let kRowsCount = 10
-    
+    var category:CategoryType?
     let data = BulletinModel.sharedInstance
-
+    var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
+    
     fileprivate struct C{
         struct CellHeight {
             static let close: CGFloat = 110
@@ -29,11 +30,10 @@ class DetailViewController: UIViewController {
         }
     }
     
-    var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getInfomations()
+        setHeaderView(view: headerView, imageView: headerImageView, label: headerLabel, category: category!)
+       //        getInfomations()
         
     }
     
@@ -42,7 +42,11 @@ class DetailViewController: UIViewController {
     }
 }
 
-
+extension DetailViewController{
+    
+}
+    
+    
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

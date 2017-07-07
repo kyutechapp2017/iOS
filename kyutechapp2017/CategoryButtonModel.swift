@@ -89,10 +89,37 @@ enum CategoryType{
         case .scholarship: return CGPoint(x: 1.0, y: 1.0)
         }
     }
-} 
+    
+    var headerIcon: UIImage{
+        switch self {
+        case .classes: return #imageLiteral(resourceName: "classesIcon")
+        case .intensive: return #imageLiteral(resourceName: "intensiveIcon")
+        case .news: return #imageLiteral(resourceName: "newsIcon")
+        case .procedure: return #imageLiteral(resourceName: "proceduceIcon")
+        case .department: return #imageLiteral(resourceName: "departmentIcon")
+        case .summon: return #imageLiteral(resourceName: "summonIcon")
+        case .studyAbroad: return #imageLiteral(resourceName: "studyAbroadIcon")
+        case .scholarship: return #imageLiteral(resourceName: "scholarshipIcon")
+        }
+    }
+}
+
+//headerView --detailView
+func setHeaderView(view: UIView, imageView: UIImageView, label: UILabel, category: CategoryType){
+    let gradient = CAGradientLayer()
+    gradient.colors = [category.getColor1.cgColor, category.getColor2.cgColor]
+    gradient.startPoint = category.getStartPoint
+    gradient.endPoint = category.getEndPoint
+    gradient.frame = view.frame
+    gradient.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: 1.0 as Float)]
+    view.layer.insertSublayer(gradient, at: 0)
+    imageView.image = category.headerIcon
+    label.text = category.getLabelName
+}
 
 
-struct CategoryBackgroundView{
+
+class CategoryBackgroundButton{
     let position1 = NSNumber(value: 0.0 as Float)
     let position2 = NSNumber(value: 1.0 as Float)
     let gradient = CAGradientLayer()
@@ -114,7 +141,7 @@ struct CategoryBackgroundView{
         self.imageName = self.category.getImageName
     }
     
-    mutating func setGradationValues(button: UIButton){
+    func setGradationValues(button: UIButton){
         gradient.colors = [color1.cgColor, color2.cgColor]
         gradient.startPoint = startPoint
         gradient.endPoint = endPoint
@@ -122,6 +149,7 @@ struct CategoryBackgroundView{
         gradient.locations = [position1, position2]
         button.layer.insertSublayer(gradient, at: 0)
     }
+    
     
     func setImage(button: UIButton){
     }
@@ -133,8 +161,9 @@ struct CategoryBackgroundView{
 }
 
 
+
 func setButtonView(button:UIButton, type:CategoryType){
-    var categoryButton = CategoryBackgroundView(button: button, buttonCategory: type)
+    var categoryButton = CategoryBackgroundButton(button: button, buttonCategory: type)
     
     // set backgroundview
     categoryButton.setGradationValues(button: button)
@@ -143,5 +172,3 @@ func setButtonView(button:UIButton, type:CategoryType){
     // set label
     categoryButton.setLabel(button: button)
 }
-
-

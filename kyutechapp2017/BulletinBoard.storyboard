@@ -199,13 +199,26 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owm-hs-JHX">
+                                            <rect key="frame" x="209" y="48" width="156" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzB-Ju-lAR">
+                                            <rect key="frame" x="69" y="18" width="85" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106" width="414" height="455"/>
+                                        <rect key="frame" x="0.0" y="121" width="414" height="455"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="454.5"/>
@@ -319,12 +332,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerImageView" destination="uzB-Ju-lAR" id="mPc-zc-6rQ"/>
+                        <outlet property="headerLabel" destination="owm-hs-JHX" id="6o2-K7-Tla"/>
                         <outlet property="headerView" destination="BYW-At-H9L" id="xVQ-Rh-nTh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="-46.326836581709152"/>
+            <point key="canvasLocation" x="1584.057971014493" y="-46.467391304347828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrW-8s-Y3x">
