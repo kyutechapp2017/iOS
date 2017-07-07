@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -195,37 +196,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="455" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="452" sectionHeaderHeight="1" sectionFooterHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owm-hs-JHX">
-                                            <rect key="frame" x="209" y="48" width="156" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owm-hs-JHX">
+                                            <rect key="frame" x="134" y="48" width="207" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzB-Ju-lAR">
-                                            <rect key="frame" x="69" y="18" width="85" height="85"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uzB-Ju-lAR">
+                                            <rect key="frame" x="60" y="39" width="54" height="53"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="uzB-Ju-lAR" secondAttribute="height" multiplier="113:115" constant="1.4782608695652186" id="7kO-6Z-HV2"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="uzB-Ju-lAR" firstAttribute="centerY" secondItem="BYW-At-H9L" secondAttribute="centerY" id="1oq-0f-7iL"/>
+                                        <constraint firstItem="uzB-Ju-lAR" firstAttribute="leading" secondItem="BYW-At-H9L" secondAttribute="leading" constant="60" id="Cn1-vp-Rsj"/>
+                                        <constraint firstItem="owm-hs-JHX" firstAttribute="height" secondItem="BYW-At-H9L" secondAttribute="height" multiplier="0.3" id="K6B-Pm-lSz"/>
+                                        <constraint firstItem="owm-hs-JHX" firstAttribute="leading" secondItem="uzB-Ju-lAR" secondAttribute="trailing" constant="20" id="QOM-Ld-TDx"/>
+                                        <constraint firstItem="uzB-Ju-lAR" firstAttribute="height" secondItem="BYW-At-H9L" secondAttribute="height" multiplier="0.41" id="cBI-OH-VOl"/>
+                                        <constraint firstItem="owm-hs-JHX" firstAttribute="top" secondItem="BYW-At-H9L" secondAttribute="top" constant="48" id="kzd-2z-mEX"/>
+                                        <constraint firstItem="owm-hs-JHX" firstAttribute="width" secondItem="BYW-At-H9L" secondAttribute="width" multiplier="0.5" id="n1q-xk-gqY"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="121" width="414" height="455"/>
+                                        <rect key="frame" x="0.0" y="131" width="414" height="455"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="454.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="454.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="608" height="109"/>
+                                                    <rect key="frame" x="8" y="8" width="398" height="109"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-EZ-UB0" userLabel="DateLabel">
                                                             <rect key="frame" x="10" y="13" width="100" height="21"/>
@@ -238,7 +249,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平成28年度後期第四クウォーター授業日調整15回目の授業・試験時間割" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-ZT-yyk" userLabel="TitleLabel">
-                                                            <rect key="frame" x="25" y="42" width="558" height="55"/>
+                                                            <rect key="frame" x="25" y="42" width="348" height="55"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -257,18 +268,18 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
-                                                    <rect key="frame" x="8" y="126" width="608" height="330"/>
+                                                    <rect key="frame" x="8" y="126" width="398" height="330"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="608" height="109"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="109"/>
                                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="109" width="608" height="109"/>
+                                                            <rect key="frame" x="0.0" y="109" width="398" height="109"/>
                                                             <color key="backgroundColor" red="0.63784738519999995" green="1" blue="0.31592871160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="221" width="398.66666666666669" height="109"/>
+                                                            <rect key="frame" x="0.0" y="221" width="398" height="109"/>
                                                             <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="398" id="Z41-hg-YSg"/>
@@ -325,7 +336,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="COR-Oe-Xsv" firstAttribute="top" secondItem="QkL-O5-cYt" secondAttribute="bottom" id="c3N-R3-X3F"/>
+                            <constraint firstItem="COR-Oe-Xsv" firstAttribute="top" secondItem="ILD-hI-Z2k" secondAttribute="top" id="7O5-uB-BMB"/>
                             <constraint firstItem="COR-Oe-Xsv" firstAttribute="leading" secondItem="ILD-hI-Z2k" secondAttribute="leading" id="g5S-az-DaO"/>
                             <constraint firstAttribute="trailing" secondItem="COR-Oe-Xsv" secondAttribute="trailing" id="y4F-Iy-L2r"/>
                             <constraint firstItem="NWy-vR-lZe" firstAttribute="top" secondItem="COR-Oe-Xsv" secondAttribute="bottom" id="zSn-wj-vBE"/>
