@@ -75,8 +75,6 @@
 		20F03E131E655023002A3480 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BF1D981E54795E00D36C38 /* Timetable.storyboard */; };
 		2257B15CE642EF34842751B0 /* Pods_kyutechapp2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54935265C3425CC1D9B608 /* Pods_kyutechapp2017.framework */; };
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
-		E607C3041E81846200A7881A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607C3031E81846200A7881A /* CategoryView.swift */; };
-		E607C3061E81847E00A7881A /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E607C3051E81847E00A7881A /* CategoryView.xib */; };
 		E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */; };
 		E643D71D1E648A68003F540A /* CategoryButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryButtonModel.swift */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
@@ -153,8 +151,6 @@
 		6A823575E550BFC38C3114FA /* Pods-kyutechapp2017UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017UITests/Pods-kyutechapp2017UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		728A5A54CA0DABEB61D44F37 /* Pods-kyutechapp2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017/Pods-kyutechapp2017.debug.xcconfig"; sourceTree = "<group>"; };
 		862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E607C3031E81846200A7881A /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		E607C3051E81847E00A7881A /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButtonModel.swift; sourceTree = "<group>"; };
 		E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewController.swift; sourceTree = "<group>"; };
@@ -460,8 +456,6 @@
 			children = (
 				E643D71C1E648A68003F540A /* CategoryButtonModel.swift */,
 				E6F4E5C61E76528B0049E007 /* DetailCell.swift */,
-				E607C3031E81846200A7881A /* CategoryView.swift */,
-				E607C3051E81847E00A7881A /* CategoryView.xib */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";
@@ -756,7 +750,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E607C3061E81847E00A7881A /* CategoryView.xib in Resources */,
 				20613F781E6296FF00FCC3FA /* Api.plist in Resources */,
 				20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */,
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
@@ -984,7 +977,6 @@
 				E69CC0071EEAD0F4005A5713 /* Router.swift in Sources */,
 				E6B26B331EA4C8510062B5C0 /* Bulletin.swift in Sources */,
 				E6B26B351EA4CFA70062B5C0 /* BulletinModel.swift in Sources */,
-				E607C3041E81846200A7881A /* CategoryView.swift in Sources */,
 				E69CC0091EEAD121005A5713 /* APIService.swift in Sources */,
 				E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */,
 				E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */,

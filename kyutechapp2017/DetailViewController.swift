@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     let kOpenCellHeight: CGFloat = 340
     let kRowsCount = 10
     var category:CategoryType?
+    var genre: Genre?
     let data = BulletinModel.sharedInstance
     var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
     
@@ -33,8 +34,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setHeaderView(view: headerView, imageView: headerImageView, label: headerLabel, category: category!)
-       //        getInfomations()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,24 +41,16 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController{
-    
-}
-    
-    
+
+
+
+
+
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 6
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = CategoryView()
-//        headerView.categoryLabel.text = "あいうえお"
-//        headerView.categoryImage.image = UIImage(named: "classes")
-//        headerView.backgroundColor = UIColor.blue
-//        return headerView
-//    }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         

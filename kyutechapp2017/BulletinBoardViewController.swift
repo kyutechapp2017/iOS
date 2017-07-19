@@ -24,9 +24,9 @@ class BulletinBoardViewController: UIViewController {
     
     @IBAction func goToDetail(_ sender: UIButton) {
         switch sender.tag {
-        case 0: category = CategoryType.classes
-        case 1: category = CategoryType.intensive
-        case 2: category = CategoryType.news
+        case 0: category = CategoryType.lecture
+        case 1: category = CategoryType.intensiveLecture
+        case 2: category = CategoryType.notice
         case 3: category = CategoryType.procedure
         case 4: category = CategoryType.department
         case 5: category = CategoryType.summon
