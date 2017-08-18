@@ -38,9 +38,7 @@ class BulletinModel{
             }
             
         })
-        
     }
-    
 }
 
 enum Genre: Int {

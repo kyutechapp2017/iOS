@@ -142,6 +142,22 @@ class Scholarship: BoardInfo{
     }
 }
 
+class Other: BoardInfo {
+    dynamic var boardId: Int = 0
+    dynamic var responsibility: String = ""
+    dynamic var note: String = ""
+    let attachments = List<Attachment>()
+    
+    convenience init(json: JSON){
+        self.init(json: json)
+        self.boardId = json["board_id"].intValue
+        self.responsibility = json["responsibility"].stringValue
+        self.note = json["note"].stringValue
+        let attachmentsJson = json["attachment"].arrayValue
+        _ = attachmentsJson.map{ self.attachments.append(Attachment(url: $0["Other"].stringValue))
+    }
+}
+
 class Homepage: BoardInfo{
     dynamic var boardId: Int = 0
     dynamic var place: String = ""

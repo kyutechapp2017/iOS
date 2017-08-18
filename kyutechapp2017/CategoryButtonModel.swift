@@ -9,17 +9,17 @@
 import UIKit
 
 enum CategoryType{
-    case lecture, intensiveLecture, notice, procedure,department,summon,studyAbroad,scholarship
-    static let allValues = [lecture,intensiveLecture,notice,procedure,department,summon,studyAbroad,scholarship]
+    case lecture, intensiveLecture, notice, other,department,call,studyAbroad,scholarship
+    static let allValues = [lecture,intensiveLecture,notice,other,department,call,studyAbroad,scholarship]
     
     var getImage: UIImage{
         switch self {
         case .lecture: return #imageLiteral(resourceName: "classes")
         case .intensiveLecture: return #imageLiteral(resourceName: "intensive")
         case .notice: return #imageLiteral(resourceName: "news")
-        case .procedure: return #imageLiteral(resourceName: "procedure")
+        case .other: return #imageLiteral(resourceName: "procedure")
         case .department: return #imageLiteral(resourceName: "department")
-        case .summon: return #imageLiteral(resourceName: "summon")
+        case .call: return #imageLiteral(resourceName: "summon")
         case .studyAbroad: return #imageLiteral(resourceName: "studyAbroad")
         case .scholarship: return #imageLiteral(resourceName: "scholarship")
         }
@@ -30,9 +30,9 @@ enum CategoryType{
         case .lecture: return "授業"
         case .intensiveLecture: return "集中講義"
         case .notice: return "お知らせ"
-        case .procedure: return "各種変更手続き"
+        case .other: return "各種変更手続き"
         case .department: return "学科別"
-        case .summon: return "学生呼び出し"
+        case .call: return "学生呼び出し"
         case .studyAbroad: return "留学"
         case .scholarship: return "奨学金"
         }
@@ -43,9 +43,9 @@ enum CategoryType{
         case .lecture: return .classesColor_1
         case .intensiveLecture: return .intensiveColor_1
         case .notice: return .news_1
-        case .procedure: return .procedure_1
+        case .other: return .procedure_1
         case .department: return .department_1
-        case .summon: return .summon_1
+        case .call: return .summon_1
         case .studyAbroad: return .studyAbroad_1
         case .scholarship: return .scholarship_1
         }
@@ -56,9 +56,9 @@ enum CategoryType{
         case .lecture: return .classesColor_2
         case .intensiveLecture: return .intensiveColor_2
         case .notice: return .news_2
-        case .procedure: return .procedure_2
+        case .other: return .procedure_2
         case .department: return .department_2
-        case .summon: return .summon_2
+        case .call: return .summon_2
         case .studyAbroad: return .studyAbroad_2
         case .scholarship: return .scholarship_2
         }
@@ -69,9 +69,9 @@ enum CategoryType{
         case .lecture: return CGPoint(x: 0.0, y: 0.0)
         case .intensiveLecture: return CGPoint(x: 1.0, y: 0.0)
         case .notice: return CGPoint(x: 1.0, y:1.0)
-        case .procedure: return CGPoint(x: 0.5, y: 0.0)
+        case .other: return CGPoint(x: 0.5, y: 0.0)
         case .department: return CGPoint(x: 0.0, y: 0.0)
-        case .summon: return CGPoint(x: 1.0, y: 0.0)
+        case .call: return CGPoint(x: 1.0, y: 0.0)
         case .studyAbroad: return CGPoint(x: 0.0, y: 0.0)
         case .scholarship: return CGPoint(x: 0.0, y: 0.0)
         }
@@ -82,9 +82,9 @@ enum CategoryType{
         case .lecture: return CGPoint(x: 1.0, y: 1.0)
         case .intensiveLecture: return CGPoint(x: 0.0, y: 1.0)
         case .notice: return CGPoint(x: 0.0, y: 1.0)
-        case .procedure: return CGPoint(x: 0.5, y: 1.0)
+        case .other: return CGPoint(x: 0.5, y: 1.0)
         case .department: return CGPoint(x: 1.0, y: 1.0)
-        case .summon: return CGPoint(x: 0.0, y: 1.0)
+        case .call: return CGPoint(x: 0.0, y: 1.0)
         case .studyAbroad: return CGPoint(x: 1.0, y: 1.0)
         case .scholarship: return CGPoint(x: 1.0, y: 1.0)
         }
@@ -95,11 +95,26 @@ enum CategoryType{
         case .lecture: return #imageLiteral(resourceName: "classesIcon")
         case .intensiveLecture: return #imageLiteral(resourceName: "intensiveIcon")
         case .notice: return #imageLiteral(resourceName: "newsIcon")
-        case .procedure: return #imageLiteral(resourceName: "proceduceIcon")
+        case .other: return #imageLiteral(resourceName: "proceduceIcon")
         case .department: return #imageLiteral(resourceName: "departmentIcon")
-        case .summon: return #imageLiteral(resourceName: "summonIcon")
+        case .call: return #imageLiteral(resourceName: "summonIcon")
         case .studyAbroad: return #imageLiteral(resourceName: "studyAbroadIcon")
         case .scholarship: return #imageLiteral(resourceName: "scholarshipIcon")
+        }
+    }
+    
+    var getGenre: Genre{
+        switch self {
+        case .lecture: return Genre.lecture
+        case .intensiveLecture: return Genre.intensiveLecture
+        case .notice: return Genre.notice
+//        case .procedure: return Genre.p
+        case .department : return Genre.
+        case .call: return Genre.call
+        case .studyAbroad: return Genre.studyAbroad
+        case .scholarship: return Genre.scholarship
+        case .department: return Genre.homepage
+        case .other: return Genre.other
         }
     }
 }
