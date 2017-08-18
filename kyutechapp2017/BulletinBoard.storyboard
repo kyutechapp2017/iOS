@@ -28,10 +28,10 @@
                                 <rect key="frame" x="8" y="72" width="398" height="607"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-SF-PoV" userLabel="top">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="163.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="163"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-Qd-AbJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="279.33333333333331" height="163.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="163"/>
                                                 <color key="backgroundColor" red="0.4614145831" green="1" blue="0.46773882649999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="3"/>
                                                 <state key="normal" image="classes"/>
@@ -40,7 +40,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-0C-FB8">
-                                                <rect key="frame" x="287.33333333333326" y="0.0" width="110.66666666666669" height="163.33333333333334"/>
+                                                <rect key="frame" x="287" y="0.0" width="111" height="163"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="intensive"/>
                                                 <connections>
@@ -53,13 +53,13 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-A9-vtU" userLabel="middle">
-                                        <rect key="frame" x="0.0" y="171.33333333333337" width="398" height="218.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="171" width="398" height="219"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-BO-c7x">
-                                                <rect key="frame" x="0.0" y="0.0" width="139" height="218.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="219"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-ss-FIw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="105.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="105.66666666666669"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="news"/>
                                                         <connections>
@@ -67,7 +67,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-g7-wUF">
-                                                        <rect key="frame" x="0.0" y="113.66666666666666" width="139" height="105"/>
+                                                        <rect key="frame" x="0.0" y="113.66666666666669" width="139" height="105.33333333333331"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="procedure"/>
                                                         <connections>
@@ -80,7 +80,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-L2-Z64">
-                                                <rect key="frame" x="147" y="0.0" width="251" height="218.66666666666666"/>
+                                                <rect key="frame" x="147" y="0.0" width="251" height="219"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="department"/>
                                                 <connections>
@@ -102,7 +102,7 @@
                                         <rect key="frame" x="0.0" y="398" width="398" height="209"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-4l-4bq">
-                                                <rect key="frame" x="0.0" y="0.0" width="191.66666666666666" height="209"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="209"/>
                                                 <color key="backgroundColor" red="1" green="0.41954855238743594" blue="0.58456804303698351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="summon"/>
                                                 <connections>
@@ -110,10 +110,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-xr-IGv">
-                                                <rect key="frame" x="199.66666666666663" y="0.0" width="198.33333333333337" height="209"/>
+                                                <rect key="frame" x="200" y="0.0" width="198" height="209"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-fd-tWQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="198.33333333333334" height="100.33333333333337"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="198" height="100.66666666666663"/>
                                                         <color key="backgroundColor" red="0.29550126570000002" green="0.69537698510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="studyAbroad"/>
                                                         <connections>
@@ -121,7 +121,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-Ff-f5A">
-                                                        <rect key="frame" x="0.0" y="108.33333333333337" width="198.33333333333334" height="100.66666666666663"/>
+                                                        <rect key="frame" x="0.0" y="108.66666666666663" width="198" height="100.33333333333337"/>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="scholarship"/>
                                                         <connections>
@@ -200,7 +200,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L" customClass="CategoryView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="BYW-At-H9L">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -236,7 +236,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="454.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="kyutechapp2017">
                                                     <rect key="frame" x="0.0" y="8" width="414" height="117"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017.2.10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Kb-pba">
@@ -267,19 +267,19 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
-                                                    <rect key="frame" x="0.0" y="126.00000000000003" width="414" height="320.66666666666674"/>
+                                                    <rect key="frame" x="0.0" y="126" width="414" height="320"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView">
                                                             <rect key="frame" x="0.0" y="109" width="414" height="109"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.63784738519999995" green="1" blue="0.31592871160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView">
                                                             <rect key="frame" x="0.0" y="221" width="414" height="109"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,14 +300,14 @@
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
-                                                <integer key="value" value="4"/>
+                                                <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="containerView" destination="3PX-ep-rBU" id="8dt-hc-jk8"/>
-                                            <outlet property="containerViewTop" destination="TE5-uu-E9o" id="pS9-tO-pBU"/>
-                                            <outlet property="foregroundView" destination="4Dn-84-tsy" id="6KV-th-yqG"/>
-                                            <outlet property="foregroundViewTop" destination="reE-Ld-Djk" id="Q31-ny-J1G"/>
+                                            <outlet property="containerView" destination="3PX-ep-rBU" id="cWu-oH-FdD"/>
+                                            <outlet property="containerViewTop" destination="TE5-uu-E9o" id="7ja-Hr-NLv"/>
+                                            <outlet property="foregroundView" destination="4Dn-84-tsy" id="8q1-ZS-7us"/>
+                                            <outlet property="foregroundViewTop" destination="reE-Ld-Djk" id="pzt-jg-xif"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

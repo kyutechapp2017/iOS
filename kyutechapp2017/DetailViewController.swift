@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var headerImageView: UIImageView!
-       
+        
     let kCloseCellHeight: CGFloat = 110
     let kOpenCellHeight: CGFloat = 340
     let kRowsCount = 10
@@ -24,10 +24,11 @@ class DetailViewController: UIViewController {
     let data = BulletinModel.sharedInstance
     var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
     
+    
     fileprivate struct C{
         struct CellHeight {
-            static let close: CGFloat = 110
-            static let open: CGFloat = 200
+            static let close: CGFloat = 117
+            static let open: CGFloat = 320
         }
     }
     
@@ -42,10 +43,6 @@ class DetailViewController: UIViewController {
 }
 
 
-
-
-
-
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,11 +50,9 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         guard case let cell as DetailCell = cell else {
             return
         }
-        
         if cellHeights[indexPath.row] == kCloseCellHeight {
             cell.selectedAnimation(false, animated: false, completion: nil)
         } else {
@@ -71,8 +66,8 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return cellHeights[indexPath.row]
     }
     
@@ -100,15 +95,4 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         tableView.endUpdates()
         }, completion: nil)
     }
-    
 }
-
-
-//extension DetailViewController{
-//    func getInfomations(){
-//        Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON{
-//            response in
-//            let json = JSON(response.result.value)
-//        }
-//    }
-//}

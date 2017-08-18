@@ -33,5 +33,9 @@ class DetailCell: FoldingCell {
         let durations = [0.33, 0.22, 0.26]
         return durations[itemIndex]
     }
+    
+    //override func setInfoToView(view: UIView, bulletinModel: BulletinModel, indexPath: IndexPath){
+    //    //set view and info
+    //}
 
 }

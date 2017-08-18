@@ -77,12 +77,14 @@
 		33394EC2489E9699F0A03739 /* Pods_kyutechapp2017UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491DC7FFDDF3797811D3C458 /* Pods_kyutechapp2017UITests.framework */; };
 		E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */; };
 		E643D71D1E648A68003F540A /* CategoryButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E643D71C1E648A68003F540A /* CategoryButtonModel.swift */; };
+		E64E1F771F46AFBE00D12289 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E1F761F46AFBE00D12289 /* DetailView.swift */; };
+		E64E1F791F46C8CD00D12289 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E1F781F46C8CD00D12289 /* ContentView.swift */; };
+		E64E1F7B1F46C8DD00D12289 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64E1F7A1F46C8DD00D12289 /* ContentView.xib */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
 		E69CC0071EEAD0F4005A5713 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0061EEAD0F4005A5713 /* Router.swift */; };
 		E69CC0091EEAD121005A5713 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0081EEAD121005A5713 /* APIService.swift */; };
 		E6B26B331EA4C8510062B5C0 /* Bulletin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B321EA4C8510062B5C0 /* Bulletin.swift */; };
 		E6B26B351EA4CFA70062B5C0 /* BulletinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */; };
-		E6B3CD971F219A41000E6BA4 /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B3CD961F219A41000E6BA4 /* DetailInfoView.swift */; };
 		E6BA5F271F011C53008C4A37 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA5F261F011C53008C4A37 /* ColorManager.swift */; };
 		E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C61E76528B0049E007 /* DetailCell.swift */; };
 		E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */; };
@@ -154,12 +156,14 @@
 		862A9C6A674B073DE2B58D15 /* Pods-kyutechapp2017Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyutechapp2017Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyutechapp2017Tests/Pods-kyutechapp2017Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E643D71C1E648A68003F540A /* CategoryButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButtonModel.swift; sourceTree = "<group>"; };
+		E64E1F761F46AFBE00D12289 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E64E1F781F46C8CD00D12289 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E64E1F7A1F46C8DD00D12289 /* ContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
 		E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinBoardViewController.swift; sourceTree = "<group>"; };
 		E69CC0061EEAD0F4005A5713 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E69CC0081EEAD121005A5713 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6B26B321EA4C8510062B5C0 /* Bulletin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bulletin.swift; sourceTree = "<group>"; };
 		E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinModel.swift; sourceTree = "<group>"; };
-		E6B3CD961F219A41000E6BA4 /* DetailInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
 		E6BA5F261F011C53008C4A37 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E6F4E5C61E76528B0049E007 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
@@ -458,7 +462,9 @@
 			children = (
 				E643D71C1E648A68003F540A /* CategoryButtonModel.swift */,
 				E6F4E5C61E76528B0049E007 /* DetailCell.swift */,
-				E6B3CD961F219A41000E6BA4 /* DetailInfoView.swift */,
+				E64E1F761F46AFBE00D12289 /* DetailView.swift */,
+				E64E1F781F46C8CD00D12289 /* ContentView.swift */,
+				E64E1F7A1F46C8DD00D12289 /* ContentView.xib */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";
@@ -755,6 +761,7 @@
 			files = (
 				20613F781E6296FF00FCC3FA /* Api.plist in Resources */,
 				20CBD4681E57F519006333C3 /* PeriodOfTime.xib in Resources */,
+				E64E1F7B1F46C8DD00D12289 /* ContentView.xib in Resources */,
 				20BF1D541E546AD600D36C38 /* LaunchScreen.storyboard in Resources */,
 				20F03E111E655021002A3480 /* Timetable.storyboard in Resources */,
 				20BF1D511E546AD600D36C38 /* Assets.xcassets in Resources */,
@@ -977,9 +984,11 @@
 				E643D71D1E648A68003F540A /* CategoryButtonModel.swift in Sources */,
 				E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */,
 				E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */,
+				E64E1F771F46AFBE00D12289 /* DetailView.swift in Sources */,
 				E69CC0071EEAD0F4005A5713 /* Router.swift in Sources */,
 				E6B26B331EA4C8510062B5C0 /* Bulletin.swift in Sources */,
 				E6B26B351EA4CFA70062B5C0 /* BulletinModel.swift in Sources */,
+				E64E1F791F46C8CD00D12289 /* ContentView.swift in Sources */,
 				E69CC0091EEAD121005A5713 /* APIService.swift in Sources */,
 				E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */,
 				E63AEE201E68441E00C20F4A /* DetailViewController.swift in Sources */,
@@ -991,7 +1000,6 @@
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
 				2076FA891E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F751E62969C00FCC3FA /* Config.swift in Sources */,
-				E6B3CD971F219A41000E6BA4 /* DetailInfoView.swift in Sources */,
 				20C745AF1E5EA9B400978A72 /* TimetableCell.swift in Sources */,
 				20CBD46A1E57F883006333C3 /* PeriodOfTime.swift in Sources */,
 				20D5E1191EBF606100AC814B /* UserSetting.swift in Sources */,

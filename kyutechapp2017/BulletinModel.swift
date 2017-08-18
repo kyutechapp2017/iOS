@@ -36,7 +36,6 @@ class BulletinModel{
             case .scholarship: BulletinModel.sharedInstance.scholarship = array.map{ Scholarship(json: $0)}
             case .homepage: BulletinModel.sharedInstance.homepage = array.map{ Homepage(json: $0)}
             }
-
             
         })
         
