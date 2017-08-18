@@ -154,7 +154,7 @@ class Other: BoardInfo {
         self.responsibility = json["responsibility"].stringValue
         self.note = json["note"].stringValue
         let attachmentsJson = json["attachment"].arrayValue
-        _ = attachmentsJson.map{ self.attachments.append(Attachment(url: $0["Other"].stringValue))
+        _ = attachmentsJson.map{ self.attachments.append(Attachment(url: $0["Other"].stringValue))}
     }
 }
 

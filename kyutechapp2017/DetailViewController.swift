@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var headerImageView: UIImageView!
-        
+    
     let kCloseCellHeight: CGFloat = 110
     let kOpenCellHeight: CGFloat = 340
     let kRowsCount = 10
@@ -23,7 +23,6 @@ class DetailViewController: UIViewController {
     var genre: Genre?
     let data = BulletinModel.sharedInstance
     var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
-    
     
     fileprivate struct C{
         struct CellHeight {
@@ -40,7 +39,22 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    fileprivate func setHeaderView(view: UIView, imageView: UIImageView, label: UILabel, category: CategoryType){
+        let gradient = CAGradientLayer()
+        gradient.colors = [category.getColor1.cgColor, category.getColor2.cgColor]
+        gradient.startPoint = category.getStartPoint
+        gradient.endPoint = category.getEndPoint
+        gradient.frame = view.frame
+        gradient.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: 1.0 as Float)]
+        view.layer.insertSublayer(gradient, at: 0)
+        imageView.image = category.headerIcon
+        label.text = category.getLabelName
+    }
 }
+
+
+
 
 
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
@@ -48,8 +62,9 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
-
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
         guard case let cell as DetailCell = cell else {
             return
         }
@@ -66,7 +81,6 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeights[indexPath.row]
     }
@@ -74,12 +88,10 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
-        
-        if cell.isAnimating() {
-            return
-        }
-        
         var duration = 0.0
+        
+        if cell.isAnimating() { return }
+        
         if cellHeights[(indexPath as NSIndexPath).row] == kCloseCellHeight {//open cell
             cellHeights[(indexPath as NSIndexPath).row] = kOpenCellHeight
             cell.selectedAnimation(true, animated: true, completion: nil)

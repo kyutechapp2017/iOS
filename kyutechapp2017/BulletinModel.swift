@@ -20,6 +20,7 @@ class BulletinModel{
     var studyAbroad = [StudyAbroad]()
     var scholarship = [Scholarship]()
     var homepage = [Homepage]()
+    var other = [Other]()
     
     
     func getNotice(genre: Genre, update: Double){
@@ -35,6 +36,7 @@ class BulletinModel{
             case .studyAbroad: BulletinModel.sharedInstance.studyAbroad = array.map{ StudyAbroad(json: $0)}
             case .scholarship: BulletinModel.sharedInstance.scholarship = array.map{ Scholarship(json: $0)}
             case .homepage: BulletinModel.sharedInstance.homepage = array.map{ Homepage(json: $0)}
+            case .other: BulletinModel.sharedInstance.other = array.map{ Other(json: $0)}
             }
             
         })
@@ -42,75 +44,5 @@ class BulletinModel{
 }
 
 enum Genre: Int {
-    case all, notice, lecture, call, intensiveLecture, studyAbroad, scholarship, homepage
+    case all, notice, lecture, call, intensiveLecture, studyAbroad, scholarship, homepage, other
 }
-
-
-
-
-
-
-//
-//func getData(){
-////    Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json", Parameters: ["guard_id": "0"]).responseJSON {
-////        response in
-////        let json = JSON(response.result.value)
-////        json["info"].forEach{(_, data) in
-////            let type = data["type"].string!
-////            print(type)
-////        }
-////    }
-////    Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json", method: .get, parameters: ["guard_id": "0"], encoding: JSONEncoding, headers: .get).responseJSON{
-////        response in
-////        let json = JSON(response.resuls)
-////    }
-//}
-//
-//func getttt(){
-//    Alamofire.request("http://kyutechapp.planningdev.com/api/v3/i/bullettinboards.json").responseJSON{
-//        response in
-//        print(response.request)
-//        print(response.response)
-//        print(response.data)
-//        print(response.result)
-//        
-//        if let json = response.result.value{
-//            print("JSON: \(json)")
-//        }
-//        
-//    }
-//}
-//
-//
-//class IizukaNoticeModel: NSObject {
-//    class var sharedInstanse: IizukaNoticeModel{
-//        struct Singleton {
-//            static var instance = IizukaNoticeModel()
-//        }
-//        return Singleton.instance
-//    }
-//    
-//    dynamic var bulletin: [IizukaNotice] = []
-//    
-//    private override init() {
-//        super.init()
-//    }
-//    
-//    func getList(){
-//        
-//    }
-//}
-//
-//class IizukaCallModel: NSObject{
-//    class var sharedInstance: IizukaCallModel{
-//        struct Singleton{
-//            static var instance = IizukaCallModel()
-//        }
-//        return Singleton.instance
-//    }
-//    dynamic var IizukaCall: [IizukaCallModel] = []
-//    
-//    private override init() {
-//        super.init()
-//    }
-//}

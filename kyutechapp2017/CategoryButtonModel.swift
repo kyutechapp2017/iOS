@@ -108,8 +108,6 @@ enum CategoryType{
         case .lecture: return Genre.lecture
         case .intensiveLecture: return Genre.intensiveLecture
         case .notice: return Genre.notice
-//        case .procedure: return Genre.p
-        case .department : return Genre.
         case .call: return Genre.call
         case .studyAbroad: return Genre.studyAbroad
         case .scholarship: return Genre.scholarship
@@ -123,17 +121,7 @@ enum CategoryType{
 
 
 //headerView --detailView
-func setHeaderView(view: UIView, imageView: UIImageView, label: UILabel, category: CategoryType){
-    let gradient = CAGradientLayer()
-    gradient.colors = [category.getColor1.cgColor, category.getColor2.cgColor]
-    gradient.startPoint = category.getStartPoint
-    gradient.endPoint = category.getEndPoint
-    gradient.frame = view.frame
-    gradient.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: 1.0 as Float)]
-    view.layer.insertSublayer(gradient, at: 0)
-    imageView.image = category.headerIcon
-    label.text = category.getLabelName
-}
+
 
 
 

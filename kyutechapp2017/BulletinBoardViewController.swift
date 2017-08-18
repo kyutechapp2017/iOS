@@ -27,9 +27,9 @@ class BulletinBoardViewController: UIViewController {
         case 0: category = CategoryType.lecture
         case 1: category = CategoryType.intensiveLecture
         case 2: category = CategoryType.notice
-        case 3: category = CategoryType.procedure
+        case 3: category = CategoryType.other
         case 4: category = CategoryType.department
-        case 5: category = CategoryType.summon
+        case 5: category = CategoryType.call
         case 6: category = CategoryType.studyAbroad
         case 7: category = CategoryType.scholarship
         default: print("error rrrrr")
