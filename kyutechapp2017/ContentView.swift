@@ -16,17 +16,17 @@ class ContentView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+//        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+//        setup()
     }
     
     func setup(){
-        titleLabel.textAlignment = NSTextAlignment.left
-        lineView.backgroundColor = UIColor.black
+//        titleLabel.textAlignment = NSTextAlignment.left
+//        lineView.backgroundColor = UIColor.black
 //        lineView.bounds = CGRect(x: 0, y: titleLabel.bounds.height, width: self.bounds.width, height: 1)
         let view = Bundle.main.loadNibNamed("TitleView", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
@@ -34,16 +34,17 @@ class ContentView: UIView {
         self.addSubview(view)
         self.addSubview(titleLabel)
         self.addSubview(lineView)
+    }
+    
+    convenience init(title: String, content: String){
+        self.init(frame: CGRect.zero)
+        contentLabel.textAlignment = NSTextAlignment.left
+        titleLabel.textAlignment = NSTextAlignment.left
+        contentLabel.text = content
+        titleLabel.text = title
+        lineView.backgroundColor = UIColor.black
+        self.addSubview(titleLabel)
+        self.addSubview(lineView)
         self.addSubview(contentLabel)
-
     }
-    
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 }

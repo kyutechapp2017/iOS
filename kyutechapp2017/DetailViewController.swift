@@ -16,8 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var headerImageView: UIImageView!
     
-    let kCloseCellHeight: CGFloat = 110
-    let kOpenCellHeight: CGFloat = 340
+    let kCloseCellHeight: CGFloat = 117
+    let kOpenCellHeight: CGFloat = 320
     let kRowsCount = 10
     var category:CategoryType?
     var genre: Genre?
@@ -54,13 +54,10 @@ class DetailViewController: UIViewController {
 }
 
 
-
-
-
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 10
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -68,38 +65,52 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         guard case let cell as DetailCell = cell else {
             return
         }
+        
+        cell.backgroundColor = .clear
+        
         if cellHeights[indexPath.row] == kCloseCellHeight {
-            cell.selectedAnimation(false, animated: false, completion: nil)
+            cell.selectedAnimation(false, animated: false, completion:nil)
         } else {
             cell.selectedAnimation(true, animated: false, completion: nil)
         }
+//        cell.number = indexPath.row
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailCell
+//        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
+//        cell.durationsForExpandedState = durations
+//        cell.durationsForCollapsedState = durations
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeights[indexPath.row]
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
+//        guard case let cell as DetailCell = tableView.cellForRow(at: indexPath) else { return }
+        let cell = tableView.cellForRow(at: indexPath) as! DetailCell
+        
+        if cell.isAnimating(){
+            return
+        }
+        
         var duration = 0.0
-        
-        if cell.isAnimating() { return }
-        
         if cellHeights[(indexPath as NSIndexPath).row] == kCloseCellHeight {//open cell
             cellHeights[(indexPath as NSIndexPath).row] = kOpenCellHeight
             cell.selectedAnimation(true, animated: true, completion: nil)
+//            let view = NoticeView(noticeModel: data.notices[indexPath.row])
             duration = 0.5
         }else{//close cell
             cellHeights[(indexPath as NSIndexPath).row] = kCloseCellHeight
             cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 0.8
+            duration = 1.1
         }
         
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in

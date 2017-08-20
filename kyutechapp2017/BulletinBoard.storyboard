@@ -270,19 +270,9 @@
                                                     <rect key="frame" x="0.0" y="126" width="414" height="320"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-dO-CuZ" userLabel="SecondView">
-                                                            <rect key="frame" x="0.0" y="109" width="414" height="109"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.63784738519999995" green="1" blue="0.31592871160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2G-x0-Jse" userLabel="ThirdView">
-                                                            <rect key="frame" x="0.0" y="221" width="414" height="109"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="1" green="0.94370199269999999" blue="0.29835359659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -293,9 +283,9 @@
                                                 <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leading" id="GNN-Za-lEJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Dn-84-tsy" secondAttribute="trailing" id="KM8-gI-20W"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3PX-ep-rBU" secondAttribute="bottom" id="OjB-Zn-tXZ"/>
-                                                <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="126" id="TE5-uu-E9o"/>
+                                                <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="126" identifier="containerViewTop" id="TE5-uu-E9o"/>
                                                 <constraint firstAttribute="trailing" secondItem="3PX-ep-rBU" secondAttribute="trailing" id="fBv-gc-JJf"/>
-                                                <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="8" id="reE-Ld-Djk"/>
+                                                <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="8" identifier="foregroundViewTop" id="reE-Ld-Djk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>

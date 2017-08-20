@@ -117,14 +117,7 @@ enum CategoryType{
     }
 }
 
-
-
-
 //headerView --detailView
-
-
-
-
 
 //使わない
 //categorybutton
@@ -148,40 +141,3 @@ func setButtonBackgroundView(category: CategoryType, button: UIButton){
     button.titleLabel?.text =  labelName
 
 }
-
-
-
-
-
-
-
-//class CategoryBackgroundButton{
-//    
-//    init(button:UIButton, buttonCategory:CategoryType) {
-//        self.category = buttonCategory
-//        self.color1 = self.category.getColor1
-//        self.color2 = self.category.getColor2
-//        self.startPoint = self.category.getStartPoint
-//        self.endPoint = self.category.getEndPoint
-//        self.labelName = self.category.getLabelName
-//        self.imageName = self.category.getImageName
-//    }
-//    
-
-//    func setLabel(button: UIButton){
-//       //        button.titleRect(forContentRect: button.bounds)
-//    }
-//}
-
-
-
-//func setButtonView(button:UIButton, type:CategoryType){
-//    var categoryButton = CategoryBackgroundButton(button: button, buttonCategory: type)
-//    
-//    // set backgroundview
-//    categoryButton.setGradationValues(button: button)
-//    
-//    // set image
-//    // set label
-//    categoryButton.setLabel(button: button)
-//}
