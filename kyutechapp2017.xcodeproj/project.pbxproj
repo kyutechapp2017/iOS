@@ -80,6 +80,14 @@
 		E64E1F771F46AFBE00D12289 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E1F761F46AFBE00D12289 /* DetailView.swift */; };
 		E64E1F791F46C8CD00D12289 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E1F781F46C8CD00D12289 /* ContentView.swift */; };
 		E64E1F7B1F46C8DD00D12289 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64E1F7A1F46C8DD00D12289 /* ContentView.xib */; };
+		E64E1FBB1F542C2000D12289 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */; };
+		E64E1FBC1F542C2000D12289 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */; };
+		E64E1FBD1F542C2500D12289 /* BulletinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */; };
+		E64E1FBE1F542C2500D12289 /* BulletinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */; };
+		E64E1FBF1F543CD400D12289 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */; };
+		E64E1FC01F543CD800D12289 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE1F1E68441E00C20F4A /* DetailViewController.swift */; };
+		E64E1FC31F544D7700D12289 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E1F761F46AFBE00D12289 /* DetailView.swift */; };
+		E64E1FC41F544D7700D12289 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E1F761F46AFBE00D12289 /* DetailView.swift */; };
 		E64E21891E598C6C00527DC5 /* BulletinBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E21881E598C6C00527DC5 /* BulletinBoardViewController.swift */; };
 		E69CC0071EEAD0F4005A5713 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0061EEAD0F4005A5713 /* Router.swift */; };
 		E69CC0091EEAD121005A5713 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0081EEAD121005A5713 /* APIService.swift */; };
@@ -950,12 +958,16 @@
 				20A41D171E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 				2073EECE1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */,
 				20613F3C1E628C1D00FCC3FA /* DayOfWeek.swift in Sources */,
+				E64E1FBD1F542C2500D12289 /* BulletinModel.swift in Sources */,
 				2076FA8A1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F3D1E628C1D00FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F3E1E628C1D00FCC3FA /* TimetableCell.swift in Sources */,
+				E64E1FC31F544D7700D12289 /* DetailView.swift in Sources */,
 				20F03E0C1E654F9F002A3480 /* Config.swift in Sources */,
 				20D5E11A1EBF606100AC814B /* UserSetting.swift in Sources */,
 				20613F3F1E628C1D00FCC3FA /* PeriodOfTime.swift in Sources */,
+				E64E1FBC1F542C2000D12289 /* FoldingCell.swift in Sources */,
+				E64E1FBF1F543CD400D12289 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,12 +980,16 @@
 				20A41D181E63D64B00CC1826 /* Kyutechapp2017.swift in Sources */,
 				2073EECF1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */,
 				20613F571E628C2300FCC3FA /* DayOfWeek.swift in Sources */,
+				E64E1FBE1F542C2500D12289 /* BulletinModel.swift in Sources */,
 				2076FA8B1E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F581E628C2300FCC3FA /* TimetableViewController.swift in Sources */,
 				20613F591E628C2300FCC3FA /* TimetableCell.swift in Sources */,
+				E64E1FC41F544D7700D12289 /* DetailView.swift in Sources */,
 				20F03E0D1E654F9F002A3480 /* Config.swift in Sources */,
 				20D5E11B1EBF606100AC814B /* UserSetting.swift in Sources */,
 				20613F5A1E628C2300FCC3FA /* PeriodOfTime.swift in Sources */,
+				E64E1FBB1F542C2000D12289 /* FoldingCell.swift in Sources */,
+				E64E1FC01F543CD800D12289 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

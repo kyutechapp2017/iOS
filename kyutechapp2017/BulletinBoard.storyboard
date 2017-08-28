@@ -196,7 +196,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="452" sectionHeaderHeight="1" sectionFooterHeight="9" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="446" sectionHeaderHeight="1" sectionFooterHeight="9" translatesAutoresizingMaskIntoConstraints="NO" id="COR-Oe-Xsv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
@@ -229,15 +229,15 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="455" id="cnC-xu-be0" customClass="DetailCell" customModule="demo_kyutechapp2017" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="131" width="414" height="455"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="446" id="cnC-xu-be0" customClass="DetailCell" customModule="kyutechapp2017">
+                                        <rect key="frame" x="0.0" y="131" width="414" height="446"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="454.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="445.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="kyutechapp2017">
-                                                    <rect key="frame" x="0.0" y="8" width="414" height="117"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017.2.10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Kb-pba">
                                                             <rect key="frame" x="20" y="15" width="137" height="23"/>
@@ -267,7 +267,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
-                                                    <rect key="frame" x="0.0" y="126" width="414" height="320"/>
+                                                    <rect key="frame" x="0.0" y="125.00000000000003" width="414" height="312.66666666666674"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
@@ -283,9 +283,9 @@
                                                 <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leading" id="GNN-Za-lEJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Dn-84-tsy" secondAttribute="trailing" id="KM8-gI-20W"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3PX-ep-rBU" secondAttribute="bottom" id="OjB-Zn-tXZ"/>
-                                                <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="126" identifier="containerViewTop" id="TE5-uu-E9o"/>
+                                                <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" constant="117" id="TE5-uu-E9o"/>
                                                 <constraint firstAttribute="trailing" secondItem="3PX-ep-rBU" secondAttribute="trailing" id="fBv-gc-JJf"/>
-                                                <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" constant="8" identifier="foregroundViewTop" id="reE-Ld-Djk"/>
+                                                <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" id="reE-Ld-Djk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
@@ -294,10 +294,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="containerView" destination="3PX-ep-rBU" id="cWu-oH-FdD"/>
-                                            <outlet property="containerViewTop" destination="TE5-uu-E9o" id="7ja-Hr-NLv"/>
-                                            <outlet property="foregroundView" destination="4Dn-84-tsy" id="8q1-ZS-7us"/>
-                                            <outlet property="foregroundViewTop" destination="reE-Ld-Djk" id="pzt-jg-xif"/>
+                                            <outlet property="containerView" destination="peI-q4-AwM" id="oen-EV-J7J"/>
+                                            <outlet property="containerViewTop" destination="TE5-uu-E9o" id="fWU-kR-GkF"/>
+                                            <outlet property="foregroundView" destination="4Dn-84-tsy" id="MKU-bA-xAg"/>
+                                            <outlet property="foregroundViewTop" destination="reE-Ld-Djk" id="r8K-CN-zbY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -323,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.057971014493" y="-46.467391304347828"/>
+            <point key="canvasLocation" x="2153.6231884057975" y="-46.467391304347828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrW-8s-Y3x">

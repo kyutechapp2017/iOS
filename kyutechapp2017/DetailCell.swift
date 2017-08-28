@@ -11,7 +11,6 @@ import UIKit
 
 class DetailCell: FoldingCell {
     
-
 //    var number: Int = 0{
 //        didSet{
 //            closeNumberLabel.text = String(number)
@@ -26,7 +25,6 @@ class DetailCell: FoldingCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -34,9 +32,4 @@ class DetailCell: FoldingCell {
         let durations = [0.33, 0.22, 0.26]
         return durations[itemIndex]
     }
-    
-    //override func setInfoToView(view: UIView, bulletinModel: BulletinModel, indexPath: IndexPath){
-    //    //set view and info
-    //}
-
 }

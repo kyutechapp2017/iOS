@@ -5,9 +5,6 @@
 //  Created by 山浦功 on 2017/03/13.
 //  Copyright © 2017年 塩田宰. All rights reserved.
 //
-
-import UIKit
-
 //
 //  FoldingCell.swift
 //
@@ -319,8 +316,11 @@ open class FoldingCell: UITableViewCell {
     // MARK: animations
     open func animationDuration(_ itemIndex:NSInteger, type:AnimationType)-> TimeInterval {
         assert(false, "added this method to cell")
-        return 0
+        return type == .close ? durationsForCollapsedState[itemIndex] : durationsForExpandedState[itemIndex]
     }
+    
+    open var durationsForExpandedState: [TimeInterval] = []
+    open var durationsForCollapsedState: [TimeInterval] = []
     
     func durationSequence(_ type: AnimationType)-> [TimeInterval] {
         var durations  = [TimeInterval]()
@@ -532,6 +532,7 @@ extension UIView {
         self.layer.render(in: currentContext)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
         
         return image
     }

@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var headerImageView: UIImageView!
+
     
     let kCloseCellHeight: CGFloat = 117
     let kOpenCellHeight: CGFloat = 320
@@ -66,23 +67,20 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
             return
         }
         
-        cell.backgroundColor = .clear
-        
         if cellHeights[indexPath.row] == kCloseCellHeight {
             cell.selectedAnimation(false, animated: false, completion:nil)
         } else {
             cell.selectedAnimation(true, animated: false, completion: nil)
         }
-//        cell.number = indexPath.row
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailCell
-//        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
-//        cell.durationsForExpandedState = durations
-//        cell.durationsForCollapsedState = durations
+        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
+        cell.durationsForExpandedState = durations
+        cell.durationsForCollapsedState = durations
         return cell
     }
     
@@ -95,7 +93,8 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 //        guard case let cell as DetailCell = tableView.cellForRow(at: indexPath) else { return }
-        let cell = tableView.cellForRow(at: indexPath) as! DetailCell
+//        let cell = tableView.cellForRow(at: indexPath) as! DetailCell
+         let cell = tableView.cellForRow(at: indexPath) as! DetailCell
         
         if cell.isAnimating(){
             return
@@ -110,7 +109,7 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         }else{//close cell
             cellHeights[(indexPath as NSIndexPath).row] = kCloseCellHeight
             cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 1.1
+            duration = 0.8
         }
         
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
