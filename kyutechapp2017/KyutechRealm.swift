@@ -13,8 +13,9 @@ class KyutechRealm: NSObject {
     
     let realm = try! Realm()
     
-    func getUserTimetableObjects() -> Results<UserTimetable> {
-        return realm.objects(UserTimetable.self)
+    // Timetable
+    func getUserTimetableObjects(term: Int) -> Results<UserTimetable> {
+        return realm.objects(UserTimetable.self).filter("term == %@", term)
     }
     
     func addUserTimetableInfo(cellTag: Int, term: Int, classname: String, classroom: String) {
@@ -28,13 +29,19 @@ class KyutechRealm: NSObject {
         }
     }
     
-    func removeUserTimetableInfo(cellTag: Int) {
-        let classData = realm.objects(UserTimetable.self).filter("cellTag == %@", cellTag)
-        //        _ = try? realm.write {
-        //            realm.delete(classData)
-        //        }
+    func removeUserTimetableInfo(cellTag: Int, term: Int) {
+        let classData = realm.objects(UserTimetable.self).filter("cellTag == %@ && term == %@", cellTag, term)
         try! realm.write {
             realm.delete(classData)
+        }
+    }
+    
+    // UserSetting
+    func addUserSettingTermInfo(term: Int) {
+        let userSetting = UserSetting()
+        userSetting.term = term
+        try! realm.write {
+            
         }
     }
 

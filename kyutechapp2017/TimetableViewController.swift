@@ -18,7 +18,7 @@ class TimetableViewController: UIViewController{
     // 曜日と時限の集合と選択された学期
     fileprivate let dow = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日"]
     fileprivate let pot = ["1限", "2限", "3限", "4限", "5限", "6限"]
-    fileprivate var term = 0
+    fileprivate var selectedTerm = 1
     // BTNavigationDropdownMenu
     var menuView: BTNavigationDropdownMenu!
     // 時間割編集モード切り替えボタン
@@ -38,6 +38,11 @@ class TimetableViewController: UIViewController{
     fileprivate let teachersTestData = ["中村　貞吾", "西野　和典", "安河内　恵子", "ウィリアムソン　ロジャー　スティル", "石原　大輔"]
     fileprivate let classroomsTestData = ["1101講義室", "MILAiS(講義棟側)", "1204講義室", "1301講義室", "2102講義室"]
     fileprivate let classesTermData = [1, 2, 3, 4, 2]
+    // 選択しているクォーターの授業データを格納する配列
+    fileprivate var classesSelectedTerm: [String] = []
+    fileprivate var teachersSelectedTerm: [String] = []
+    fileprivate var classroomsSelectedTerm: [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +76,7 @@ extension TimetableViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: KyutechColor.themeColor()]
         
-        menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "学期を選択", items: items as [AnyObject])
+        menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "第1クォーター", items: items as [AnyObject])
         menuView.cellHeight = 50
         menuView.cellBackgroundColor = UIColor.white
         menuView.cellSelectionColor = KyutechColor.themeColor()
@@ -79,6 +84,7 @@ extension TimetableViewController {
         menuView.shouldKeepSelectedCellColor = false
         menuView.cellTextLabelColor = KyutechColor.darkGray()
         menuView.selectedCellTextLabelColor = KyutechColor.lightGray()
+        menuView.arrowTintColor = KyutechColor.darkGray()
         menuView.cellTextLabelFont = UIFont(name: "Avenir-Heavy", size: 17)
         menuView.cellTextLabelAlignment = .left // .center // .right // .left
         menuView.arrowPadding = 15
@@ -86,12 +92,49 @@ extension TimetableViewController {
         menuView.maskBackgroundColor = KyutechColor.lightGray()
         menuView.maskBackgroundOpacity = 0.3
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-            self.term = indexPath
+            self.selectedTerm = indexPath + 1
+            
+            let classesObjects = Array(self.kyutechRealm.getUserTimetableObjects(term: self.selectedTerm))
+            
+            // 一つ前に選択していたクォーターの時間割情報を削除
+            self.classes.removeAll()
+            self.classesSelectedTerm.removeAll()
+            self.teachersSelectedTerm.removeAll()
+            self.classroomsSelectedTerm.removeAll()
+            
+            for _ in 0 ..< 30 {
+                self.classes.append(UserTimetable())
+            }
+            
+            // Realmにあるユーザの時間割情報をclassesに格納する
+            // 基本はこのデータを操作して、節目でRealmの情報を更新する
+            for classesObject in classesObjects {
+                self.classes[classesObject.cellTag].cellTag = classesObject.cellTag
+                self.classes[classesObject.term].term = classesObject.term
+                self.classes[classesObject.cellTag].classname = classesObject.classname
+                self.classes[classesObject.cellTag].classroom = classesObject.classroom
+            }
+            
+            // 選択されたクォーターの時間割情報を抽出する
+            for (idx, classTerm) in self.classesTermData.enumerated() {
+                if classTerm == self.selectedTerm {
+                    self.classesSelectedTerm.append(self.classesTestData[idx])
+                    self.teachersSelectedTerm.append(self.teachersTestData[idx])
+                    self.classroomsSelectedTerm.append(self.classroomsTestData[idx])
+                }
+            }
+            
+            // collectionViewの更新
+            self.timetable.reloadData()
+            
         }
         self.navigationItem.titleView = menuView
         
+        // ここから下はアプリ起動時の挙動
+        // didSelectItemIndexHandlerの中身と一緒(要リファクタリング)
+        
         // ユーザの時間割情報を配列に格納
-        let classesObjects = Array(kyutechRealm.getUserTimetableObjects())
+        let classesObjects = Array(kyutechRealm.getUserTimetableObjects(term: self.selectedTerm))
 
         for _ in 0 ..< 30 {
             self.classes.append(UserTimetable())
@@ -102,6 +145,14 @@ extension TimetableViewController {
             self.classes[classesObject.term].term = classesObject.term
             self.classes[classesObject.cellTag].classname = classesObject.classname
             self.classes[classesObject.cellTag].classroom = classesObject.classroom
+        }
+        
+        for (idx, classTerm) in self.classesTermData.enumerated() {
+            if classTerm == self.selectedTerm {
+                self.classesSelectedTerm.append(self.classesTestData[idx])
+                self.teachersSelectedTerm.append(self.teachersTestData[idx])
+                self.classroomsSelectedTerm.append(self.classroomsTestData[idx])
+            }
         }
         
     }
@@ -164,23 +215,23 @@ extension TimetableViewController: TimetableCellDelegate {
     func didPushedEditClassButton(tag: Int, classNameLabel: UILabel, classroomNumberLabel: UILabel) {
         // AlertControllerの設定
         let alert = UIAlertController(title: dow[tag % 5] + " " + pot[tag / 5], message: "", preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "削除", style: .destructive) { action in
+        alert.addAction(UIAlertAction(title: "削除", style: .destructive) { action in
             classNameLabel.text = ""
             classroomNumberLabel.text = ""
-            self.classes[tag].cellTag = -1
-            self.classes[tag].term = -1
+            self.classes[tag].cellTag = 0
+            self.classes[tag].term = 0
             self.classes[tag].classname = ""
             self.classes[tag].classroom = ""
-            self.kyutechRealm.removeUserTimetableInfo(cellTag: tag)
+            self.kyutechRealm.removeUserTimetableInfo(cellTag: tag, term: self.selectedTerm)
         })
-        alert.addAction( UIAlertAction(title: "追加", style: .default) { action in
-            classNameLabel.text = self.classesTestData[self.selectedRow]
-            classroomNumberLabel.text = self.classroomsTestData[self.selectedRow]
+        alert.addAction(UIAlertAction(title: "追加", style: .default) { action in
+            classNameLabel.text = self.classesSelectedTerm[self.selectedRow]
+            classroomNumberLabel.text = self.classroomsSelectedTerm[self.selectedRow]
             self.classes[tag].cellTag = tag
-            self.classes[tag].term = self.term
-            self.classes[tag].classname = self.classesTestData[self.selectedRow]
-            self.classes[tag].classroom = self.classroomsTestData[self.selectedRow]
-            self.kyutechRealm.addUserTimetableInfo(cellTag: tag, term: self.term, classname: self.classesTestData[self.selectedRow], classroom: self.classroomsTestData[self.selectedRow])
+            self.classes[tag].term = self.selectedTerm
+            self.classes[tag].classname = self.classesSelectedTerm[self.selectedRow]
+            self.classes[tag].classroom = self.classroomsSelectedTerm[self.selectedRow]
+            self.kyutechRealm.addUserTimetableInfo(cellTag: tag, term: self.selectedTerm, classname: self.classesSelectedTerm[self.selectedRow], classroom: self.classroomsSelectedTerm[self.selectedRow])
         })
         
         // AlertController内のUITableViewControllerの設定
@@ -210,13 +261,14 @@ extension TimetableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classesTestData.count
+        return classesSelectedTerm.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "classtableCell", for: indexPath) as! ClasstableCell
-        cell.classNameLabel.text = classesTestData[indexPath.row]
-        cell.teacherNameLabel.text = teachersTestData[indexPath.row]
+        cell.classNameLabel.text = classesSelectedTerm[indexPath.row]
+        cell.teacherNameLabel.text = teachersSelectedTerm[indexPath.row]
+        
         return cell
     }
     
