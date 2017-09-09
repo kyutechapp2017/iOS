@@ -233,16 +233,18 @@
                                         <rect key="frame" x="0.0" y="131" width="414" height="446"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnC-xu-be0" id="RLs-Qc-6zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="445.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="445.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017.2.10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Kb-pba">
-                                                            <rect key="frame" x="20" y="15" width="137" height="23"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.2.10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Kb-pba">
+                                                            <rect key="frame" x="20" y="15" width="120" height="20"/>
                                                             <color key="backgroundColor" red="0.57248467206954956" green="0.57258617877960205" blue="0.57247823476791382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="6oA-zc-AG2"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -252,9 +254,8 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2月10日(金)に期末試験をする科目について" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkq-l2-iV5">
-                                                            <rect key="frame" x="29" y="46" width="342" height="45"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2月10日(金)に期末試験をする科目について" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkq-l2-iV5">
+                                                            <rect key="frame" x="35.333333333333343" y="45.333333333333329" width="343.33333333333337" height="19.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -263,7 +264,12 @@
                                                     <color key="backgroundColor" red="0.98028594255447388" green="0.98045331239700317" blue="0.98027533292770386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="82e-Kb-pba" firstAttribute="leading" secondItem="4Dn-84-tsy" secondAttribute="leading" constant="20" id="FWO-Al-Kpy"/>
+                                                        <constraint firstItem="82e-Kb-pba" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="top" constant="15" id="SqZ-KS-4Iz"/>
+                                                        <constraint firstItem="rkq-l2-iV5" firstAttribute="width" secondItem="4Dn-84-tsy" secondAttribute="width" multiplier="0.83" id="Z56-bR-Qmj"/>
                                                         <constraint firstAttribute="height" constant="117" id="hY3-Su-tYc"/>
+                                                        <constraint firstItem="rkq-l2-iV5" firstAttribute="top" secondItem="82e-Kb-pba" secondAttribute="bottom" constant="10" id="jab-Zb-tYt"/>
+                                                        <constraint firstItem="rkq-l2-iV5" firstAttribute="centerX" secondItem="4Dn-84-tsy" secondAttribute="centerX" id="lau-f3-DBm"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
@@ -316,9 +322,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="82e-Kb-pba" id="l4P-RE-ZbR"/>
                         <outlet property="headerImageView" destination="uzB-Ju-lAR" id="mPc-zc-6rQ"/>
                         <outlet property="headerLabel" destination="owm-hs-JHX" id="6o2-K7-Tla"/>
                         <outlet property="headerView" destination="BYW-At-H9L" id="xVQ-Rh-nTh"/>
+                        <outlet property="titleLabel" destination="rkq-l2-iV5" id="7RV-6j-YHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>

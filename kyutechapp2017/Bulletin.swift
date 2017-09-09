@@ -69,6 +69,7 @@ class Lecture: BoardInfo{
     dynamic var boardId: Int = 0
     dynamic var subject: String = ""
     dynamic var period: String = ""
+    dynamic var responsibility: String = ""
     dynamic var placeOrBefore: String = ""
     dynamic var after: String = ""
     dynamic var department: String = ""
@@ -81,6 +82,7 @@ class Lecture: BoardInfo{
         self.boardId = json["boardId"].intValue
         self.subject = json["subject"].stringValue
         self.period = json["period"].stringValue
+        self.responsibility = json["responsibility"].stringValue
         self.placeOrBefore = json["placeOrBefore"].stringValue
         self.after = json["after"].stringValue
         self.department = json["department"].stringValue
