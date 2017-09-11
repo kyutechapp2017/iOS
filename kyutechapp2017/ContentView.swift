@@ -14,114 +14,82 @@ class ContentView: UIView {
         super.init(frame: frame)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     convenience init(model: BulletinModel, genre: Genre, num: Int){
         self.init(frame: CGRect.zero)
         switch genre {
         case .all: break
-        case .notice: noticeView(notice: model.notices[num])
-        case .lecture: lectureView(lecture: model.lectures[num])
-        case .call: callView(call: model.calls[num])
-        case .intensiveLecture: intensiveLectureView(intensiveLecture: model.intensiveLectures[num])
-        case .studyAbroad: studyAbroadView(studyAbroad: model.studyAbroads[num])
-        case .scholarship: scholarshipView(scholarship: model.scholarships[num])
-        case .homepage: homepageView(homepage: model.homepages[num])
-        case .other: otherView(other: model.others[num])
+        case .notice:
+            let notice = model.notices[num]
+            let contents = [(title:"詳細", content: notice.content),(title: "対象学科", content: notice.department),(title: "対象学年", content: notice.grade), (title: "時限", content: notice.period), (title: "場所", content: notice.placeOrBefore)]
+            
+            makeView(contents: contents)
+            
+        case .lecture:
+            let lecture = model.lectures[num]
+            let contents = [(title:"詳細", content: lecture.content), (title: "科目", content: lecture.subject), (title: "対象学科", content: lecture.department), (title: "対象学年", content: lecture.grade), (title: "時限", content: lecture.period),(title: "担当教員/担当部署", content: lecture.responsibility), (title: "場所/教室(変更前)", content: lecture.placeOrBefore), (title: "場所/教室(変更後", content: lecture.after), (title: "備考/注記/特記/種別", content: lecture.note)]
+            var attachments = [String]() //attachment
+            
+            for t in lecture.attachments {
+                attachments.append(t.url)
+            }
+            makeViewWithAttachments(contents: contents, attachments: attachments)
+            
+        case .call:
+            let call = model.calls[num]
+            let contents = [(title: "詳細", content: call.content), (title: "対象学科", content: call.department), (title: "対象学年", content: call.grade), (title: "備考/注記/特記/種別", content: call.note), (title: "期日", content: call.finish)]
+            
+            makeView(contents: contents)
+
+        case .intensiveLecture:
+            let intensiveLecture = model.intensiveLectures[num]
+            let contents = [(title: "詳細", content: intensiveLecture.content), (title: "備考/注記/特記/種別", content: intensiveLecture.note)]
+            var attachments = [String]() //添付資料
+            
+            for t in intensiveLecture.attachments{
+                attachments.append(t.url)
+            }
+            makeViewWithAttachments(contents: contents, attachments: attachments)
+            
+        case .studyAbroad:
+            let studyAbroad = model.studyAbroads[num]
+            let contents = [(title: "詳細", content: studyAbroad.content),(title: "担当教員/担当部署", content: studyAbroad.responsibility)]
+            var attachments = [String]()//添付資料
+            
+            for t in studyAbroad.attachments{
+                attachments.append(t.url)
+            }
+            makeViewWithAttachments(contents: contents, attachments: attachments)
+            
+        case .scholarship:
+            let scholarship = model.scholarships[num]
+            let contents = [(title: "詳細", content: scholarship.content),(title: "備考/注記/特記/種別", content: scholarship.note)]
+            var attachments = [String]()
+            
+            for t in scholarship.attachments{
+                attachments.append(t.url)
+            }
+            makeViewWithAttachments(contents: contents, attachments: attachments)
+            
+        case .homepage:
+            let homepage = model.homepages[num]
+            let contents = [(title: "詳細", content: homepage.content),(title: "備考/注記/特記/種別", content: homepage.note),(title: "場所", content: homepage.place), (title: "問い合わせ先", content: homepage.inquiry)]
+            //board idは？
+            makeView(contents: contents)
+
+        case .other:
+            let other = model.others[num]
+            let contents = [(title: "詳細", content: other.content), (title: "備考/注記/特記/種別", content: other.note), (title: "担当教員/担当部署", content: other.responsibility)]
+            var attachments = [String]()
+            
+            for t in other.attachments{
+                attachments.append(t.url)
+            }
+            makeViewWithAttachments(contents: contents, attachments: attachments)
         }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-}
-
-
-
-extension ContentView{
-    
-    func noticeView(notice: Notice){
-        
-        let contents = [(title:"詳細", content: notice.content),(title: "対象学科", content: notice.department),(title: "対象学年", content: notice.grade), (title: "時限", content: notice.period), (title: "場所", content: notice.placeOrBefore)]
-        
-        makeView(contents: contents)
-    }
-    
-    
-    func lectureView(lecture: Lecture){
-        
-        let contents = [(title:"詳細", content: lecture.content), (title: "科目", content: lecture.subject), (title: "対象学科", content: lecture.department), (title: "対象学年", content: lecture.grade), (title: "時限", content: lecture.period),(title: "担当教員/担当部署", content: lecture.responsibility), (title: "場所/教室(変更前)", content: lecture.placeOrBefore), (title: "場所/教室(変更後", content: lecture.after), (title: "備考/注記/特記/種別", content: lecture.note)]
-    
-        var attachments = [String]() //attachment
-        for t in lecture.attachments {
-            attachments.append(t.url)
-        }
-
-        makeViewWithAttachments(contents: contents, attachments: attachments)
-    }
-
-    
-    func callView(call: Call){
-        
-        let contents = [(title: "詳細", content: call.content), (title: "対象学科", content: call.department), (title: "対象学年", content: call.grade), (title: "備考/注記/特記/種別", content: call.note), (title: "期日", content: call.finish)]
-        
-        makeView(contents: contents)
-    }
-
-    func intensiveLectureView(intensiveLecture: IntensiveLecture){
-        
-        let contents = [(title: "詳細", content: intensiveLecture.content), (title: "備考/注記/特記/種別", content: intensiveLecture.note)]
-        //添付資料
-        var attachments = [String]()
-        for t in intensiveLecture.attachments{
-            attachments.append(t.url)
-        }
-        
-        makeViewWithAttachments(contents: contents, attachments: attachments)
-    }
-    
-    
-    func studyAbroadView(studyAbroad: StudyAbroad){
-        let contents = [(title: "詳細", content: studyAbroad.content),(title: "担当教員/担当部署", content: studyAbroad.responsibility)]
-        
-        //添付資料
-        var attachments = [String]()
-        for t in studyAbroad.attachments{
-            attachments.append(t.url)
-        }
-        
-        makeViewWithAttachments(contents: contents, attachments: attachments)
-    }
-    
-    
-    func scholarshipView(scholarship: Scholarship){
-        
-        let contents = [(title: "詳細", content: scholarship.content),(title: "備考/注記/特記/種別", content: scholarship.note)]
-       
-        var attachments = [String]()
-        for t in scholarship.attachments{
-            attachments.append(t.url)
-        }
-        
-        makeViewWithAttachments(contents: contents, attachments: attachments)
-    }
-    
-    func homepageView(homepage: Homepage){
-
-        let contents = [(title: "詳細", content: homepage.content),(title: "備考/注記/特記/種別", content: homepage.note),(title: "場所", content: homepage.place), (title: "問い合わせ先", content: homepage.inquiry)]
-        //board idは？
-        
-        makeView(contents: contents)
-    }
-    
-    
-    func otherView(other: Other){
-        let contents = [(title: "詳細", content: other.content), (title: "備考/注記/特記/種別", content: other.note), (title: "担当教員/担当部署", content: other.responsibility)]
-        
-        var attachments = [String]()
-        for t in other.attachments{
-            attachments.append(t.url)
-        }
-        
-        makeViewWithAttachments(contents: contents, attachments: attachments)
     }
 }
 
