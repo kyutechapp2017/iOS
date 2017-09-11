@@ -36,4 +36,10 @@ class DetailCell: FoldingCell {
         let durations = [0.33, 0.22, 0.26]
         return durations[itemIndex]
     }
+    
+    override func layoutSubviews() {
+        dateLabel.layer.cornerRadius = 5
+        dateLabel.clipsToBounds = true
+        titleLabel.numberOfLines = 0
+    }
 }

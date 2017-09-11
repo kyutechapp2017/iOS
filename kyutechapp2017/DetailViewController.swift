@@ -115,9 +115,10 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         if cell.isAnimating(){
             return
         }
-        genre = category.getGenre
         
+        genre = category.getGenre
         var duration = 0.0
+        
         if cellHeights[(indexPath as NSIndexPath).row] == kCloseCellHeight {//open cell
             cell.containerView = ContentView(model: data, genre: genre!, num: indexPath.row)
             cellHeights[(indexPath as NSIndexPath).row] = cell.contentView.frame.height
