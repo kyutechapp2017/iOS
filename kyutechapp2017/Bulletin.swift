@@ -111,10 +111,13 @@ class Call: BoardInfo{
 
 class IntensiveLecture: BoardInfo{
     dynamic var note: String = ""
+    let attachments = List<Attachment>()
     
     convenience init(json: JSON){
         self.init(json: json)
         self.note = json["note"].stringValue
+        let attachmentsJson = json["attachment"].arrayValue
+        _ = attachmentsJson.map{ self.attachments.append(Attachment(url: $0["hogehoge"].stringValue)) }
     }
 }
 

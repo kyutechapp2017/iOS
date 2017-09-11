@@ -239,24 +239,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-84-tsy" customClass="RotatedView" customModule="demo_kyutechapp2017" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.2.10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Kb-pba">
-                                                            <rect key="frame" x="20" y="15" width="120" height="20"/>
-                                                            <color key="backgroundColor" red="0.57248467206954956" green="0.57258617877960205" blue="0.57247823476791382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.12.31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzg-3w-HvJ">
+                                                            <rect key="frame" x="30" y="15" width="100" height="25"/>
+                                                            <color key="backgroundColor" red="0.95686274509803915" green="0.72941176470588232" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="120" id="6oA-zc-AG2"/>
+                                                                <constraint firstAttribute="width" constant="100" id="204-C4-WJE"/>
+                                                                <constraint firstAttribute="height" constant="25" id="VEo-ep-fQT"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="9"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2月10日(金)に期末試験をする科目について" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkq-l2-iV5">
-                                                            <rect key="frame" x="35.333333333333343" y="45.333333333333329" width="343.33333333333337" height="19.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルがありません" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAp-4H-GcZ">
+                                                            <rect key="frame" x="35.333333333333343" y="50" width="343.33333333333337" height="57"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -264,12 +260,13 @@
                                                     <color key="backgroundColor" red="0.98028594255447388" green="0.98045331239700317" blue="0.98027533292770386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="82e-Kb-pba" firstAttribute="leading" secondItem="4Dn-84-tsy" secondAttribute="leading" constant="20" id="FWO-Al-Kpy"/>
-                                                        <constraint firstItem="82e-Kb-pba" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="top" constant="15" id="SqZ-KS-4Iz"/>
-                                                        <constraint firstItem="rkq-l2-iV5" firstAttribute="width" secondItem="4Dn-84-tsy" secondAttribute="width" multiplier="0.83" id="Z56-bR-Qmj"/>
+                                                        <constraint firstItem="zAp-4H-GcZ" firstAttribute="centerX" secondItem="4Dn-84-tsy" secondAttribute="centerX" id="9qa-e7-5p4"/>
+                                                        <constraint firstItem="zAp-4H-GcZ" firstAttribute="width" secondItem="4Dn-84-tsy" secondAttribute="width" multiplier="0.83" id="Mro-dD-QWf"/>
+                                                        <constraint firstItem="Dzg-3w-HvJ" firstAttribute="leading" secondItem="4Dn-84-tsy" secondAttribute="leading" constant="30" id="NFY-sU-uJr"/>
+                                                        <constraint firstItem="zAp-4H-GcZ" firstAttribute="top" secondItem="Dzg-3w-HvJ" secondAttribute="bottom" constant="10" id="OFr-Rs-bm9"/>
+                                                        <constraint firstItem="Dzg-3w-HvJ" firstAttribute="top" secondItem="4Dn-84-tsy" secondAttribute="top" constant="15" id="SmW-o4-oxl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zAp-4H-GcZ" secondAttribute="bottom" constant="10" id="cbd-hs-0Ma"/>
                                                         <constraint firstAttribute="height" constant="117" id="hY3-Su-tYc"/>
-                                                        <constraint firstItem="rkq-l2-iV5" firstAttribute="top" secondItem="82e-Kb-pba" secondAttribute="bottom" constant="10" id="jab-Zb-tYt"/>
-                                                        <constraint firstItem="rkq-l2-iV5" firstAttribute="centerX" secondItem="4Dn-84-tsy" secondAttribute="centerX" id="lau-f3-DBm"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
@@ -302,8 +299,10 @@
                                         <connections>
                                             <outlet property="containerView" destination="peI-q4-AwM" id="oen-EV-J7J"/>
                                             <outlet property="containerViewTop" destination="TE5-uu-E9o" id="fWU-kR-GkF"/>
+                                            <outlet property="dateLabel" destination="Dzg-3w-HvJ" id="mjx-2a-6Cc"/>
                                             <outlet property="foregroundView" destination="4Dn-84-tsy" id="MKU-bA-xAg"/>
                                             <outlet property="foregroundViewTop" destination="reE-Ld-Djk" id="r8K-CN-zbY"/>
+                                            <outlet property="titleLabel" destination="zAp-4H-GcZ" id="5z8-bF-3zm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -322,16 +321,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="82e-Kb-pba" id="l4P-RE-ZbR"/>
                         <outlet property="headerImageView" destination="uzB-Ju-lAR" id="mPc-zc-6rQ"/>
                         <outlet property="headerLabel" destination="owm-hs-JHX" id="6o2-K7-Tla"/>
                         <outlet property="headerView" destination="BYW-At-H9L" id="xVQ-Rh-nTh"/>
-                        <outlet property="titleLabel" destination="rkq-l2-iV5" id="7RV-6j-YHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAY-09-gD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2153.6231884057975" y="-46.467391304347828"/>
+            <point key="canvasLocation" x="2000" y="-46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrW-8s-Y3x">

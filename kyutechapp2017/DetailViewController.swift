@@ -5,11 +5,11 @@
 //  Created by 山浦功 on 2017/03/02.
 //  Copyright © 2017年 塩田宰. All rights reserved.
 //
-
-
 import UIKit
 import Alamofire
 import SwiftyJSON
+
+
 
 
 
@@ -18,8 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var headerImageView: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    
     
     let kCloseCellHeight: CGFloat = 117
     let kOpenCellHeight: CGFloat = 320
@@ -30,7 +29,6 @@ class DetailViewController: UIViewController {
     var cellHeights:[CGFloat] = (0..<10).map { _ in C.CellHeight.close }
     
     
-    
     fileprivate struct C{
         struct CellHeight {
             static let close: CGFloat = 117
@@ -38,16 +36,19 @@ class DetailViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         genre = category.getGenre
         setHeaderView(view: headerView, imageView: headerImageView, label: headerLabel, category: category!)
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    
     fileprivate func setHeaderView(view: UIView, imageView: UIImageView, label: UILabel, category: CategoryType){
         let gradient = CAGradientLayer()
         gradient.colors = [category.getColor1.cgColor, category.getColor2.cgColor]
@@ -59,10 +60,6 @@ class DetailViewController: UIViewController {
         imageView.image = category.headerIcon
         label.text = category.getLabelName
     }
-    
-    fileprivate func getGenre(){
-        genre = category.getGenre
-    }
 }
 
 
@@ -70,7 +67,6 @@ class DetailViewController: UIViewController {
 
 
 extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -96,8 +92,8 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         
-        titleLabel.text = data.getTitle(genre: genre!, model: data, num: indexPath.row)
-        dateLabel.text = data.getDate(genre: genre!, model: data, num: indexPath.row)
+        cell.dateLabel.text = data.getDate(genre: genre!, model: data, num: indexPath.row)
+        cell.titleLabel.text = data.getTitle(genre: genre!, model: data, num: indexPath.row)
         
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations

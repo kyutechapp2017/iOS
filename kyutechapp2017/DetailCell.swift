@@ -18,6 +18,10 @@ class DetailCell: FoldingCell {
 //        }
 //    }
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
