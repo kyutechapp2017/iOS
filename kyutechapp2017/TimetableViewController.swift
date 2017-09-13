@@ -42,6 +42,8 @@ class TimetableViewController: UIViewController{
     fileprivate var classesSelectedTerm: [String] = []
     fileprivate var teachersSelectedTerm: [String] = []
     fileprivate var classroomsSelectedTerm: [String] = []
+    // editClassButtonの画像
+    let notSelectedImage = UIImage(named: "not_selected")
     
     
     override func viewDidLoad() {
@@ -196,28 +198,30 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
 */
 extension TimetableViewController: TimetableCellDelegate {
     // 授業編集ボタンが押されたときの処理
-    func didPushedEditClassButton(tag: Int, classNameLabel: UILabel, classroomNumberLabel: UILabel) {
+    func didPushedEditClassButton(editClassButton: UIButton, classNameLabel: UILabel, classroomNumberLabel: UILabel) {
         // AlertControllerの設定
-        let alert = UIAlertController(title: dow[tag % 5] + " " + pot[tag / 5], message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: dow[editClassButton.tag % 5] + " " + pot[editClassButton.tag / 5], message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "削除", style: .destructive) { action in
             classNameLabel.text = ""
             classroomNumberLabel.text = ""
-            self.classes[tag].cellTag = -1
-            self.classes[tag].term = -1
-            self.classes[tag].classname = ""
-            self.classes[tag].classroom = ""
-            self.kyutechRealm.removeUserTimetableInfo(cellTag: tag, term: self.selectedTerm)
+            self.classes[editClassButton.tag].cellTag = -1
+            self.classes[editClassButton.tag].term = -1
+            self.classes[editClassButton.tag].classname = ""
+            self.classes[editClassButton.tag].classroom = ""
+            self.kyutechRealm.removeUserTimetableInfo(cellTag: editClassButton.tag, term: self.selectedTerm)
+            editClassButton.setImage(self.notSelectedImage, for: UIControlState.normal)
         })
         alert.addAction(UIAlertAction(title: "追加", style: .default) { action in
             if self.selectedRow != -1 {
                 classNameLabel.text = self.classesSelectedTerm[self.selectedRow]
                 classroomNumberLabel.text = self.classroomsSelectedTerm[self.selectedRow]
-                self.classes[tag].cellTag = tag
-                self.classes[tag].term = self.selectedTerm
-                self.classes[tag].classname = self.classesSelectedTerm[self.selectedRow]
-                self.classes[tag].classroom = self.classroomsSelectedTerm[self.selectedRow]
-                self.kyutechRealm.addUserTimetableInfo(cellTag: tag, term: self.selectedTerm, classname: self.classesSelectedTerm[self.selectedRow], classroom: self.classroomsSelectedTerm[self.selectedRow])
+                self.classes[editClassButton.tag].cellTag = editClassButton.tag
+                self.classes[editClassButton.tag].term = self.selectedTerm
+                self.classes[editClassButton.tag].classname = self.classesSelectedTerm[self.selectedRow]
+                self.classes[editClassButton.tag].classroom = self.classroomsSelectedTerm[self.selectedRow]
+                self.kyutechRealm.addUserTimetableInfo(cellTag: editClassButton.tag, term: self.selectedTerm, classname: self.classesSelectedTerm[self.selectedRow], classroom: self.classroomsSelectedTerm[self.selectedRow])
                 self.selectedRow = -1
+                editClassButton.setImage(self.notSelectedImage, for: UIControlState.normal)
             }
         })
         

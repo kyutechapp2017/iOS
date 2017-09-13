@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TimetableCellDelegate {
-    func didPushedEditClassButton(tag: Int, classNameLabel: UILabel, classroomNumberLabel: UILabel)
+    func didPushedEditClassButton(editClassButton: UIButton, classNameLabel: UILabel, classroomNumberLabel: UILabel)
 }
 
 class TimetableCell: UICollectionViewCell {
@@ -19,7 +19,7 @@ class TimetableCell: UICollectionViewCell {
     @IBOutlet weak var editClassButton: UIButton!
     
     let selectedImage = UIImage(named: "selected")
-    let notSelectedImage = UIImage(named: "not_selected")
+    // let notSelectedImage = UIImage(named: "not_selected")
     
     var delegate: TimetableCellDelegate?
     
@@ -30,8 +30,8 @@ class TimetableCell: UICollectionViewCell {
     
     @IBAction func pushEditClassButton(_ sender: Any) {
         self.editClassButton.setImage(self.selectedImage, for: UIControlState.normal)
-        self.delegate?.didPushedEditClassButton(tag: self.editClassButton.tag, classNameLabel: self.classNameLabel, classroomNumberLabel: self.classroomNumberLabel)
-        self.editClassButton.setImage(self.notSelectedImage, for: UIControlState.normal)
+        self.delegate?.didPushedEditClassButton(editClassButton: self.editClassButton, classNameLabel: self.classNameLabel, classroomNumberLabel: self.classroomNumberLabel)
+        // self.editClassButton.setImage(self.notSelectedImage, for: UIControlState.normal)
     }
     
 }
