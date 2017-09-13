@@ -65,9 +65,43 @@ class TimetableViewController: UIViewController{
 
 
 /*
-    setUp --------------------
+    setUp & etc --------------------
 */
 extension TimetableViewController {
+    
+    func resetClassesArray() {
+        self.classes.removeAll()
+        self.classesSelectedTerm.removeAll()
+        self.teachersSelectedTerm.removeAll()
+        self.classroomsSelectedTerm.removeAll()
+    }
+    
+    func setClassesArray() {
+        let classesObjects = Array(self.kyutechRealm.getUserTimetableObjects(term: self.selectedTerm))
+        
+        // 一つ前に選択していたクォーターの時間割情報を削除
+        for _ in 0 ..< 30 {
+            self.classes.append(UserTimetable())
+        }
+        
+        // Realmにあるユーザの時間割情報をclassesに格納する
+        // 基本はこのデータを操作して、節目でRealmの情報を更新する
+        for classesObject in classesObjects {
+            self.classes[classesObject.cellTag].cellTag = classesObject.cellTag
+            self.classes[classesObject.cellTag].term = classesObject.term
+            self.classes[classesObject.cellTag].classname = classesObject.classname
+            self.classes[classesObject.cellTag].classroom = classesObject.classroom
+        }
+        
+        // 選択されたクォーターの時間割情報を抽出する
+        for (idx, classTerm) in self.classesTermData.enumerated() {
+            if classTerm == self.selectedTerm {
+                self.classesSelectedTerm.append(self.classesTestData[idx])
+                self.teachersSelectedTerm.append(self.teachersTestData[idx])
+                self.classroomsSelectedTerm.append(self.classroomsTestData[idx])
+            }
+        }
+    }
     
     func setUp() {
         // NavigationDropdownMenuの設定
@@ -94,35 +128,9 @@ extension TimetableViewController {
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             self.selectedTerm = indexPath + 1
             
-            let classesObjects = Array(self.kyutechRealm.getUserTimetableObjects(term: self.selectedTerm))
-            
-            // 一つ前に選択していたクォーターの時間割情報を削除
-            self.classes.removeAll()
-            self.classesSelectedTerm.removeAll()
-            self.teachersSelectedTerm.removeAll()
-            self.classroomsSelectedTerm.removeAll()
-            
-            for _ in 0 ..< 30 {
-                self.classes.append(UserTimetable())
-            }
-            
-            // Realmにあるユーザの時間割情報をclassesに格納する
-            // 基本はこのデータを操作して、節目でRealmの情報を更新する
-            for classesObject in classesObjects {
-                self.classes[classesObject.cellTag].cellTag = classesObject.cellTag
-                self.classes[classesObject.term].term = classesObject.term
-                self.classes[classesObject.cellTag].classname = classesObject.classname
-                self.classes[classesObject.cellTag].classroom = classesObject.classroom
-            }
-            
-            // 選択されたクォーターの時間割情報を抽出する
-            for (idx, classTerm) in self.classesTermData.enumerated() {
-                if classTerm == self.selectedTerm {
-                    self.classesSelectedTerm.append(self.classesTestData[idx])
-                    self.teachersSelectedTerm.append(self.teachersTestData[idx])
-                    self.classroomsSelectedTerm.append(self.classroomsTestData[idx])
-                }
-            }
+            // 一つ前に選択していたクォーターの時間割情報を削除して、新たなデータを格納
+            self.resetClassesArray()
+            self.setClassesArray()
             
             // collectionViewの更新
             self.timetable.reloadData()
@@ -131,30 +139,7 @@ extension TimetableViewController {
         self.navigationItem.titleView = menuView
         
         // ここから下はアプリ起動時の挙動
-        // didSelectItemIndexHandlerの中身と一緒(要リファクタリング)
-        
-        // ユーザの時間割情報を配列に格納
-        let classesObjects = Array(kyutechRealm.getUserTimetableObjects(term: self.selectedTerm))
-
-        for _ in 0 ..< 30 {
-            self.classes.append(UserTimetable())
-        }
-        
-        for classesObject in classesObjects {
-            self.classes[classesObject.cellTag].cellTag = classesObject.cellTag
-            self.classes[classesObject.term].term = classesObject.term
-            self.classes[classesObject.cellTag].classname = classesObject.classname
-            self.classes[classesObject.cellTag].classroom = classesObject.classroom
-        }
-        
-        for (idx, classTerm) in self.classesTermData.enumerated() {
-            if classTerm == self.selectedTerm {
-                self.classesSelectedTerm.append(self.classesTestData[idx])
-                self.teachersSelectedTerm.append(self.teachersTestData[idx])
-                self.classroomsSelectedTerm.append(self.classroomsTestData[idx])
-            }
-        }
-        
+        self.setClassesArray()
     }
 }
 
@@ -197,13 +182,12 @@ extension TimetableViewController: UICollectionViewDataSource, UICollectionViewD
         cell.classroomNumberLabel.text = classes[indexPath.row].classroom
         return cell
     }
-    // セルが選ばれたとき
+    // 通常モードでcellが選択されたとき
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // segueの呼び出し
         print(indexPath.row)
         performSegue(withIdentifier: "toDetailPageVC",sender: nil)
     }
-    
 }
 
 
@@ -218,20 +202,23 @@ extension TimetableViewController: TimetableCellDelegate {
         alert.addAction(UIAlertAction(title: "削除", style: .destructive) { action in
             classNameLabel.text = ""
             classroomNumberLabel.text = ""
-            self.classes[tag].cellTag = 0
-            self.classes[tag].term = 0
+            self.classes[tag].cellTag = -1
+            self.classes[tag].term = -1
             self.classes[tag].classname = ""
             self.classes[tag].classroom = ""
             self.kyutechRealm.removeUserTimetableInfo(cellTag: tag, term: self.selectedTerm)
         })
         alert.addAction(UIAlertAction(title: "追加", style: .default) { action in
-            classNameLabel.text = self.classesSelectedTerm[self.selectedRow]
-            classroomNumberLabel.text = self.classroomsSelectedTerm[self.selectedRow]
-            self.classes[tag].cellTag = tag
-            self.classes[tag].term = self.selectedTerm
-            self.classes[tag].classname = self.classesSelectedTerm[self.selectedRow]
-            self.classes[tag].classroom = self.classroomsSelectedTerm[self.selectedRow]
-            self.kyutechRealm.addUserTimetableInfo(cellTag: tag, term: self.selectedTerm, classname: self.classesSelectedTerm[self.selectedRow], classroom: self.classroomsSelectedTerm[self.selectedRow])
+            if self.selectedRow != -1 {
+                classNameLabel.text = self.classesSelectedTerm[self.selectedRow]
+                classroomNumberLabel.text = self.classroomsSelectedTerm[self.selectedRow]
+                self.classes[tag].cellTag = tag
+                self.classes[tag].term = self.selectedTerm
+                self.classes[tag].classname = self.classesSelectedTerm[self.selectedRow]
+                self.classes[tag].classroom = self.classroomsSelectedTerm[self.selectedRow]
+                self.kyutechRealm.addUserTimetableInfo(cellTag: tag, term: self.selectedTerm, classname: self.classesSelectedTerm[self.selectedRow], classroom: self.classroomsSelectedTerm[self.selectedRow])
+                self.selectedRow = -1
+            }
         })
         
         // AlertController内のUITableViewControllerの設定

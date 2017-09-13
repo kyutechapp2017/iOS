@@ -17,6 +17,10 @@ class TimetableCell: UICollectionViewCell {
     @IBOutlet weak var classNameLabel: UILabel!
     @IBOutlet weak var classroomNumberLabel: UILabel!
     @IBOutlet weak var editClassButton: UIButton!
+    
+    let selectedImage = UIImage(named: "selected")
+    let notSelectedImage = UIImage(named: "not_selected")
+    
     var delegate: TimetableCellDelegate?
     
     override func draw(_ rect: CGRect) {
@@ -25,7 +29,9 @@ class TimetableCell: UICollectionViewCell {
     }
     
     @IBAction func pushEditClassButton(_ sender: Any) {
+        self.editClassButton.setImage(self.selectedImage, for: UIControlState.normal)
         self.delegate?.didPushedEditClassButton(tag: self.editClassButton.tag, classNameLabel: self.classNameLabel, classroomNumberLabel: self.classroomNumberLabel)
+        self.editClassButton.setImage(self.notSelectedImage, for: UIControlState.normal)
     }
     
 }
