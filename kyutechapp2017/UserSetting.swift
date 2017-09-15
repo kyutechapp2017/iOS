@@ -11,6 +11,6 @@ import RealmSwift
 
 class UserSetting: Object {
     
-    dynamic var termId = 0
+    dynamic var term = 0
 
 }
