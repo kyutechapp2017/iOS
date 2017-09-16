@@ -40,7 +40,7 @@ class ContentView: UIView {
             
         case .call:
             let call = model.calls[num]
-            let contents = [(title: "詳細", content: call.content), (title: "対象学科", content: call.department), (title: "対象学年", content: call.grade), (title: "備考/注記/特記/種別", content: call.note), (title: "期日", content: call.finish)]
+            let contents = [(title: "詳細", content: call.content), (title: "対象学科", content: call.department), (title: "対象学年", content: call.grade), (title: "備考/注記/特記/種別", content: call.note)]
             
             makeView(contents: contents)
 

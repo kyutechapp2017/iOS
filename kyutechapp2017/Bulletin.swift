@@ -97,14 +97,14 @@ class Call: BoardInfo{
     dynamic var department: String = ""
     dynamic var grade: String = ""
     dynamic var note: String = ""
-    dynamic var finish: String = ""
+//    dynamic var finish: String = ""
     
     convenience init(json: JSON){
         self.init(json: json)
         self.department = json["department"].stringValue
         self.grade = json["grade"].stringValue
         self.note = json["note"].stringValue
-        self.finish = json["finish"].stringValue
+//        self.finish = json["finish"].stringValue
     }
     
 }
@@ -135,13 +135,13 @@ class StudyAbroad: BoardInfo{
 
 class Scholarship: BoardInfo{
     dynamic var note: String = ""
-    dynamic var finish: String = ""
+//    dynamic var finish: String = ""
     let attachments = List<Attachment>()
     
     convenience init(json: JSON){
         self.init(json: json)
         self.note = json["note"].stringValue
-        self.finish = json["finish"].stringValue
+//        self.finish = json["finish"].stringValue
         let attachmentsJson = json["attachment"].arrayValue
         _ = attachmentsJson.map{ self.attachments.append(Attachment(url: $0["hogehoge"].stringValue)) }
     }
