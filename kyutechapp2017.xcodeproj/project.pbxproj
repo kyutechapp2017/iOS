@@ -89,7 +89,6 @@
 		E69CC0091EEAD121005A5713 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69CC0081EEAD121005A5713 /* APIService.swift */; };
 		E6B26B331EA4C8510062B5C0 /* Bulletin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B321EA4C8510062B5C0 /* Bulletin.swift */; };
 		E6B26B351EA4CFA70062B5C0 /* BulletinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */; };
-		E6BA5F271F011C53008C4A37 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA5F261F011C53008C4A37 /* ColorManager.swift */; };
 		E6F4E5C71E76528B0049E007 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C61E76528B0049E007 /* DetailCell.swift */; };
 		E6F4E5C91E765B1D0049E007 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */; };
 		F69140E58E0A0AF0442AEDBA /* Pods_kyutechapp2017Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BECC88191FF389BFE51FE2C /* Pods_kyutechapp2017Tests.framework */; };
@@ -166,7 +165,6 @@
 		E69CC0081EEAD121005A5713 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6B26B321EA4C8510062B5C0 /* Bulletin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bulletin.swift; sourceTree = "<group>"; };
 		E6B26B341EA4CFA70062B5C0 /* BulletinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletinModel.swift; sourceTree = "<group>"; };
-		E6BA5F261F011C53008C4A37 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E6F4E5C61E76528B0049E007 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		E6F4E5C81E765B1D0049E007 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,7 +234,6 @@
 		20613F7F1E62FD5200FCC3FA /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				E6BA5F261F011C53008C4A37 /* ColorManager.swift */,
 			);
 			name = BulletinBoard;
 			sourceTree = "<group>";
@@ -1000,7 +997,6 @@
 				20D097C01E597F53002F73D4 /* DetailPageViewController.swift in Sources */,
 				20C47B171E5739BE00C53FF1 /* DayOfWeek.swift in Sources */,
 				2073EECD1EAA28ED00B571D3 /* KyutechRealm.swift in Sources */,
-				E6BA5F271F011C53008C4A37 /* ColorManager.swift in Sources */,
 				20C47B191E57436600C53FF1 /* TimetableViewController.swift in Sources */,
 				2076FA891E6FEE6A0054ACD9 /* UserTimetable.swift in Sources */,
 				20613F751E62969C00FCC3FA /* Config.swift in Sources */,

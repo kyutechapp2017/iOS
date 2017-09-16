@@ -23,6 +23,7 @@ class BulletinModel{
     var others = [Other]()
     
     
+    
     func getNotice(genre: Genre, update: Double){
         APIService.getBoardInfo(genre: genre, update: update, handler: { (json) in
             let array = json.arrayValue

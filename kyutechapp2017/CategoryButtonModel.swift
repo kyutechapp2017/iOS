@@ -9,12 +9,12 @@
 import UIKit
 
 enum CategoryType{
-    case lecture, intensiveLecture, notice, other,department,call,studyAbroad,scholarship
-    static let allValues = [lecture,intensiveLecture,notice,other,department,call,studyAbroad,scholarship]
+    case classes, intensiveLecture, notice, other,department,call,studyAbroad,scholarship
+    static let allValues = [classes,intensiveLecture,notice,other,department,call,studyAbroad,scholarship]
     
     var getImage: UIImage{
         switch self {
-        case .lecture: return #imageLiteral(resourceName: "classes")
+        case .classes: return #imageLiteral(resourceName: "classes")
         case .intensiveLecture: return #imageLiteral(resourceName: "intensive")
         case .notice: return #imageLiteral(resourceName: "news")
         case .other: return #imageLiteral(resourceName: "procedure")
@@ -27,7 +27,7 @@ enum CategoryType{
     
     var getLabelName: String{
         switch self {
-        case .lecture: return "授業"
+        case .classes: return "授業"
         case .intensiveLecture: return "集中講義"
         case .notice: return "お知らせ"
         case .other: return "各種変更手続き"
@@ -40,33 +40,33 @@ enum CategoryType{
     
     var getColor1: UIColor{
         switch self {
-        case .lecture: return .classesColor_1
-        case .intensiveLecture: return .intensiveColor_1
-        case .notice: return .news_1
-        case .other: return .procedure_1
-        case .department: return .department_1
-        case .call: return .summon_1
-        case .studyAbroad: return .studyAbroad_1
-        case .scholarship: return .scholarship_1
+        case .classes: return KyutechColor.classesColor1()
+        case .intensiveLecture: return KyutechColor.intensiveColor1()
+        case .notice: return KyutechColor.newsColor1()
+        case .other: return KyutechColor.procedureColor1()
+        case .department: return KyutechColor.departmentColor1()
+        case .call: return KyutechColor.summonColor1()
+        case .studyAbroad: return KyutechColor.studyAbroadColor1()
+        case .scholarship: return KyutechColor.scholarshipColor1()
         }
     }
     
     var getColor2: UIColor{
         switch self {
-        case .lecture: return .classesColor_2
-        case .intensiveLecture: return .intensiveColor_2
-        case .notice: return .news_2
-        case .other: return .procedure_2
-        case .department: return .department_2
-        case .call: return .summon_2
-        case .studyAbroad: return .studyAbroad_2
-        case .scholarship: return .scholarship_2
+        case .classes: return KyutechColor.classesColor2()
+        case .intensiveLecture: return KyutechColor.intensiveColor2()
+        case .notice: return KyutechColor.newsColor2()
+        case .other: return KyutechColor.procedureColor2()
+        case .department: return KyutechColor.departmentColor2()
+        case .call: return KyutechColor.summonColor2()
+        case .studyAbroad: return KyutechColor.studyAbroadColor2()
+        case .scholarship: return KyutechColor.scholarshipColor2()
         }
     }
     
     var getStartPoint:CGPoint{
         switch self {
-        case .lecture: return CGPoint(x: 0.0, y: 0.0)
+        case .classes: return CGPoint(x: 0.0, y: 0.0)
         case .intensiveLecture: return CGPoint(x: 1.0, y: 0.0)
         case .notice: return CGPoint(x: 1.0, y:1.0)
         case .other: return CGPoint(x: 0.5, y: 0.0)
@@ -79,7 +79,7 @@ enum CategoryType{
     
     var getEndPoint:CGPoint{
         switch self {
-        case .lecture: return CGPoint(x: 1.0, y: 1.0)
+        case .classes: return CGPoint(x: 1.0, y: 1.0)
         case .intensiveLecture: return CGPoint(x: 0.0, y: 1.0)
         case .notice: return CGPoint(x: 0.0, y: 1.0)
         case .other: return CGPoint(x: 0.5, y: 1.0)
@@ -92,7 +92,7 @@ enum CategoryType{
     
     var headerIcon: UIImage{
         switch self {
-        case .lecture: return #imageLiteral(resourceName: "classesIcon")
+        case .classes: return #imageLiteral(resourceName: "classesIcon")
         case .intensiveLecture: return #imageLiteral(resourceName: "intensiveIcon")
         case .notice: return #imageLiteral(resourceName: "newsIcon")
         case .other: return #imageLiteral(resourceName: "proceduceIcon")
@@ -105,7 +105,7 @@ enum CategoryType{
     
     var getGenre: Genre{
         switch self {
-        case .lecture: return Genre.lecture
+        case .classes: return Genre.lecture
         case .intensiveLecture: return Genre.intensiveLecture
         case .notice: return Genre.notice
         case .call: return Genre.call

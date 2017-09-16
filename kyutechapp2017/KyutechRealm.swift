@@ -37,5 +37,9 @@ class KyutechRealm: NSObject {
             realm.delete(classData)
         }
     }
-
 }
+
+
+
+
+

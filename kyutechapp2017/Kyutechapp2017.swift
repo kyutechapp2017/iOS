@@ -39,6 +39,30 @@ fileprivate struct Kyutechapp2017 {
     
 }
 
+
+extension Kyutechapp2017{
+    struct bulletinBoardColor{
+        static let classesColor_1 = UIColor(red: 129/255, green: 171/255, blue: 115/255, alpha: 1.0)
+        static let classesColor_2 = UIColor(red: 103/255, green: 179/255, blue: 126/255, alpha: 1.0)
+        static let intensiveColor_1 = UIColor(red: 0/255, green: 169/255, blue: 157/255, alpha: 1.0)
+        static let intensiveColor_2 = UIColor(red: 79/255, green: 206/255, blue: 173/255, alpha: 1.0)
+        static let news_1 = UIColor(red: 244/255, green: 186/255, blue: 78/255, alpha: 1.0)
+        static let news_2 = UIColor(red: 245/255, green: 146/255, blue: 69/255, alpha: 1.0)
+        static let procedure_1 = UIColor(red: 231/255, green: 88/255, blue: 69/255, alpha: 1.0)
+        static let procedure_2 = UIColor(red: 250/255, green: 111/255, blue: 87/255, alpha: 1.0)
+        static let department_1 = UIColor(red: 85/255, green: 186/255, blue: 225/255, alpha: 1.0)
+        static let department_2 = UIColor(red: 96/255, green: 159/255, blue: 233/255, alpha: 1.0)
+        static let summon_1 = UIColor(red: 216/255, green: 70/255, blue: 85/255, alpha: 1.0)
+        static let summon_2 = UIColor(red: 231/255, green: 88/255, blue: 69/255, alpha: 1.0)
+        static let studyAbroad_1 = UIColor(red: 85/255, green: 192/255, blue: 231/255, alpha: 1.0)
+        static let studyAbroad_2 = UIColor(red: 101/255, green: 191/255, blue: 189/255, alpha: 1.0)
+        static let scholarship_1 = UIColor(red: 253/255, green: 177/255, blue: 123/255, alpha: 1.0)
+        static let scholarship_2 = UIColor(red: 234/255, green: 137/255, blue: 191/255, alpha: 1.0)
+        static let labelColor = UIColor(red: 244/255, green: 249/255, blue: 249/255, alpha: 1.0)
+    }
+}
+
+
 /*
     Timetable's
 */
@@ -118,5 +142,80 @@ struct KyutechColor {
     
     static func cellBackgroundSub8() -> UIColor {
         return Kyutechapp2017.timetableColor.cellBackgroundSub8
+    }
+}
+
+
+/*
+ * BlletinBoard's
+ */
+extension KyutechColor{
+    
+    static func classesColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.classesColor_1
+    }
+    
+    static func classesColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.classesColor_2
+    }
+    
+    static func intensiveColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.intensiveColor_1
+    }
+    
+    static func intensiveColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.intensiveColor_2
+    }
+    
+    static func newsColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.news_1
+    }
+    
+    static func newsColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.news_2
+    }
+    
+    static func procedureColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.procedure_1
+    }
+    
+    static func procedureColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.procedure_2
+    }
+    
+    static func departmentColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.department_1
+    }
+    
+    static func departmentColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.department_2
+    }
+    
+    static func summonColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.summon_1
+    }
+    
+    static func summonColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.summon_2
+    }
+    
+    static func studyAbroadColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.studyAbroad_1
+    }
+    
+    static func studyAbroadColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.studyAbroad_2
+    }
+    
+    static func scholarshipColor1() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.scholarship_1
+    }
+    
+    static func scholarshipColor2() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.scholarship_2
+    }
+    
+    static func labelColor() -> UIColor{
+        return Kyutechapp2017.bulletinBoardColor.labelColor
     }
 }

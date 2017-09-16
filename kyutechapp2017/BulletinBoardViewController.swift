@@ -38,7 +38,7 @@ extension BulletinBoardViewController{
     
     @IBAction func goToDetail(_ sender: UIButton) {
         switch sender.tag {
-        case 0: category = CategoryType.lecture
+        case 0: category = CategoryType.classes
         case 1: category = CategoryType.intensiveLecture
         case 2: category = CategoryType.notice
         case 3: category = CategoryType.other
