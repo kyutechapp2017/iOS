@@ -92,8 +92,8 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         
-        cell.dateLabel.text = data.getDate(genre: genre!, model: data, num: indexPath.row)
-        cell.titleLabel.text = data.getTitle(genre: genre!, model: data, num: indexPath.row)
+//        cell.dateLabel.text = data.getDate(genre: genre!, model: data, num: indexPath.row)
+//        cell.titleLabel.text = data.getTitle(genre: genre!, model: data, num: indexPath.row)
         
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
@@ -120,8 +120,9 @@ extension DetailViewController: UITableViewDataSource,UITableViewDelegate{
         var duration = 0.0
         
         if cellHeights[(indexPath as NSIndexPath).row] == kCloseCellHeight {//open cell
-            cell.containerView = ContentView(model: data, genre: genre!, num: indexPath.row)
-            cellHeights[(indexPath as NSIndexPath).row] = cell.contentView.frame.height
+            (cell.containerView as! ContentView).setup(model: data, genre: genre!, num: indexPath.row)
+//            cell.containerView = ContentView(model: data, genre: genre!, num: indexPath.row)
+            cellHeights[(indexPath as NSIndexPath).row] = cell.containerView.frame.height
             cell.selectedAnimation(true, animated: true, completion: nil)
             duration = 0.5
         }else{//close cell

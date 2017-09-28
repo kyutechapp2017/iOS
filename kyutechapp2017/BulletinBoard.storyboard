@@ -269,8 +269,8 @@
                                                         <constraint firstAttribute="height" constant="117" id="hY3-Su-tYc"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU">
-                                                    <rect key="frame" x="0.0" y="125.00000000000003" width="414" height="312.66666666666674"/>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-ep-rBU" customClass="ContentView" customModule="kyutechapp2017">
+                                                    <rect key="frame" x="0.0" y="125" width="414" height="320"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peI-q4-AwM" userLabel="FirstView">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
@@ -285,7 +285,6 @@
                                                 <constraint firstItem="4Dn-84-tsy" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leading" id="As9-gn-qoS"/>
                                                 <constraint firstItem="3PX-ep-rBU" firstAttribute="leading" secondItem="RLs-Qc-6zB" secondAttribute="leading" id="GNN-Za-lEJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Dn-84-tsy" secondAttribute="trailing" id="KM8-gI-20W"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3PX-ep-rBU" secondAttribute="bottom" id="OjB-Zn-tXZ"/>
                                                 <constraint firstItem="3PX-ep-rBU" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="topMargin" constant="117" id="TE5-uu-E9o"/>
                                                 <constraint firstAttribute="trailing" secondItem="3PX-ep-rBU" secondAttribute="trailing" id="fBv-gc-JJf"/>
                                                 <constraint firstItem="4Dn-84-tsy" firstAttribute="top" secondItem="RLs-Qc-6zB" secondAttribute="top" id="reE-Ld-Djk"/>
@@ -293,11 +292,11 @@
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
-                                                <integer key="value" value="3"/>
+                                                <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="containerView" destination="peI-q4-AwM" id="oen-EV-J7J"/>
+                                            <outlet property="containerView" destination="3PX-ep-rBU" id="nN3-b1-6SG"/>
                                             <outlet property="containerViewTop" destination="TE5-uu-E9o" id="fWU-kR-GkF"/>
                                             <outlet property="dateLabel" destination="Dzg-3w-HvJ" id="mjx-2a-6Cc"/>
                                             <outlet property="foregroundView" destination="4Dn-84-tsy" id="MKU-bA-xAg"/>
